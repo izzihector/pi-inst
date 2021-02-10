@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="crm_lead_view_form_debrand" model="ir.ui.view">
+            <field name="name">crm.lead.view.form.debrand</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//small[hasclass('oe_grey')]" position="replace">
+                    <small class="oe_grey"
+                           attrs="{'invisible': [('is_automated_probability', '=', True)]}">
+                        <field name="automated_probability"/>
+                        %% (Estimated by Pivotino)
+                    </small>
+                </xpath>
+
+                <xpath expr="//field[@name='website']" position="attributes">
+                    <attribute name="placeholder">e.g. https://www.pivotino.com</attribute>
+                </xpath>
+
+                <xpath expr="//page[@name='lead']/group/group[1]/field[@name='website']" position="attributes">
+                    <attribute name="placeholder">e.g. https://www.pivotino.com</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- CRM root icon -->
+        <record id="crm.crm_menu_root" model="ir.ui.menu">
+            <field name="sequence">7</field>
+            <field name="web_icon">pivotino_branding_crm,static/description/icon.png</field>
+            <field name="web_large_icon">pivotino_branding_crm,static/description/icon_large.png</field>
+        </record>
+    </data>
+</odoo>

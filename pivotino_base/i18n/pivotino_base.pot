@@ -1,0 +1,298 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pivotino_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-25 02:43+0000\n"
+"PO-Revision-Date: 2020-08-25 02:43+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pivotino_base
+#: model:ir.model,name:pivotino_base.model_analytic_tracking
+msgid "Analytic Tracking"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model.fields,field_description:pivotino_base.field_res_company__currency_id
+msgid "Base Currency"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model.fields.selection,name:pivotino_base.selection__res_users__user_role__owner
+#: model:res.groups,name:pivotino_base.group_pivotino_owner
+msgid "Business Owner"
+msgstr ""
+
+#. module: pivotino_base
+#: model_terms:ir.ui.view,arch_db:pivotino_base.pivotino_change_password_wizard_view
+msgid "Cancel"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.actions.act_window,name:pivotino_base.pivotino_change_password_wizard_action
+#: model_terms:ir.ui.view,arch_db:pivotino_base.pivotino_change_password_wizard_view
+msgid "Change Password"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model,name:pivotino_base.model_res_company
+#: model:ir.ui.menu,name:pivotino_base.menu_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.ui.menu,name:pivotino_base.menu_user_company_root
+msgid "Configurations"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model,name:pivotino_base.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model.fields,field_description:pivotino_base.field_analytic_tracking__create_uid
+#: model:ir.model.fields,field_description:pivotino_base.field_pivotino_industry__create_uid
+#: model:ir.model.fields,field_description:pivotino_base.field_pivotino_password_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model.fields,field_description:pivotino_base.field_analytic_tracking__create_date
+#: model:ir.model.fields,field_description:pivotino_base.field_pivotino_industry__create_date
+#: model:ir.model.fields,field_description:pivotino_base.field_pivotino_password_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model,name:pivotino_base.model_res_currency_rate
+msgid "Currency Rate"
+msgstr ""
+
+#. module: pivotino_base
+#: code:addons/pivotino_base/models/res_partner.py:0
+#: code:addons/pivotino_base/models/res_partner.py:0
+#: code:addons/pivotino_base/models/res_users.py:0
+#: code:addons/pivotino_base/models/res_users.py:0
+#, python-format
+msgid "Currently our system does not support Yahoo domain for emails!"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model.fields,field_description:pivotino_base.field_res_users__customer_client_id
+msgid "Customer ID"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model.fields,field_description:pivotino_base.field_analytic_tracking__display_name
+#: model:ir.model.fields,field_description:pivotino_base.field_pivotino_industry__display_name
+#: model:ir.model.fields,field_description:pivotino_base.field_pivotino_password_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model.fields,field_description:pivotino_base.field_res_users__client_domain
+msgid "Domain"
+msgstr ""
+
+#. module: pivotino_base
+#: model_terms:ir.ui.view,arch_db:pivotino_base.pivotino_base_view_company_form
+msgid "GENERIC"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model.fields,field_description:pivotino_base.field_res_users__is_hide_access
+msgid "Hide Setting Access Right Tab"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model.fields,field_description:pivotino_base.field_analytic_tracking__id
+#: model:ir.model.fields,field_description:pivotino_base.field_pivotino_industry__id
+#: model:ir.model.fields,field_description:pivotino_base.field_pivotino_password_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: pivotino_base
+#: code:addons/pivotino_base/models/res_partner.py:0
+#, python-format
+msgid "Import Template for Customers"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model.fields,field_description:pivotino_base.field_res_company__industry
+msgid "Industry"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model.fields,field_description:pivotino_base.field_pivotino_industry__name
+msgid "Industry Name"
+msgstr ""
+
+#. module: pivotino_base
+#: model:res.groups,name:pivotino_base.hide
+msgid "Invisible"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model.fields,field_description:pivotino_base.field_res_partner__is_admin
+#: model:ir.model.fields,field_description:pivotino_base.field_res_users__is_admin
+msgid "Is Admin"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model.fields,field_description:pivotino_base.field_ir_ui_menu__web_large_icon
+msgid "Large Icon File"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model.fields,field_description:pivotino_base.field_ir_ui_menu__web_large_icon_data
+msgid "Large Icon Image"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model.fields,field_description:pivotino_base.field_analytic_tracking____last_update
+#: model:ir.model.fields,field_description:pivotino_base.field_pivotino_industry____last_update
+#: model:ir.model.fields,field_description:pivotino_base.field_pivotino_password_wizard____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model.fields,field_description:pivotino_base.field_analytic_tracking__write_uid
+#: model:ir.model.fields,field_description:pivotino_base.field_pivotino_industry__write_uid
+#: model:ir.model.fields,field_description:pivotino_base.field_pivotino_password_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model.fields,field_description:pivotino_base.field_analytic_tracking__write_date
+#: model:ir.model.fields,field_description:pivotino_base.field_pivotino_industry__write_date
+#: model:ir.model.fields,field_description:pivotino_base.field_pivotino_password_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: pivotino_base
+#: model:res.groups,name:pivotino_base.group_view_access
+msgid "Manage Access Right Settings"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model,name:pivotino_base.model_ir_ui_menu
+msgid "Menu"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model.fields,field_description:pivotino_base.field_analytic_tracking__name
+msgid "Name"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model.fields,field_description:pivotino_base.field_pivotino_password_wizard__new_password
+msgid "New Password"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model.fields,field_description:pivotino_base.field_pivotino_industry__is_others
+msgid "Others?"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model,name:pivotino_base.model_mail_mail
+msgid "Outgoing Mails"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model.fields,field_description:pivotino_base.field_res_users__main_user
+msgid "Owner of Database"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model,name:pivotino_base.model_pivotino_password_wizard
+msgid "Pivotino Change Password Wizard"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model,name:pivotino_base.model_pivotino_industry
+msgid "Pivotino Industry"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.module.category,name:pivotino_base.module_category_pivotino
+msgid "Pivotino Settings"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model.fields,field_description:pivotino_base.field_res_users__odoobot_state
+msgid "PivotinoBot Status"
+msgstr ""
+
+#. module: pivotino_base
+#: model_terms:ir.ui.view,arch_db:pivotino_base.res_users_view_form_pivotino
+msgid "Quick User Setup"
+msgstr ""
+
+#. module: pivotino_base
+#: model_terms:ir.ui.view,arch_db:pivotino_base.pivotino_base_view_company_form
+msgid "SaaS Config"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.actions.server,name:pivotino_base.ir_cron_create_cpanel_email_ir_actions_server
+#: model:ir.cron,cron_name:pivotino_base.ir_cron_create_cpanel_email
+#: model:ir.cron,name:pivotino_base.ir_cron_create_cpanel_email
+msgid "SaaS: Create cPanel Email"
+msgstr ""
+
+#. module: pivotino_base
+#: code:addons/pivotino_base/models/pivotino_res_currency.py:0
+#, python-format
+msgid "The currency %s is a base currency and should have rate of 1."
+msgstr ""
+
+#. module: pivotino_base
+#: code:addons/pivotino_base/models/pivotino_res_company.py:0
+#, python-format
+msgid ""
+"The currency rate for base currency should be 1. \n"
+"You may change the rate under Sales > Currencies "
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model.fields.selection,name:pivotino_base.selection__res_users__user_role__user
+#: model:res.groups,name:pivotino_base.group_pivotino_user
+msgid "User"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model.fields,field_description:pivotino_base.field_res_users__user_role
+msgid "User Role"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model,name:pivotino_base.model_res_users
+#: model:ir.ui.menu,name:pivotino_base.menu_res_users
+msgid "Users"
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model.fields,field_description:pivotino_base.field_analytic_tracking__value
+msgid "Value"
+msgstr ""
+
+#. module: pivotino_base
+#: code:addons/pivotino_base/models/res_users.py:0
+#, python-format
+msgid "You have entered an invalid e-mail address. Please try again."
+msgstr ""
+
+#. module: pivotino_base
+#: model:ir.model.fields,field_description:pivotino_base.field_res_users__cust_email_creation
+msgid "cPanel Email Creation Successfull?"
+msgstr ""

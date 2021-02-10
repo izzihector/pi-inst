@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Invoicing only visible for Administration: Settings -->
+        <record id="account.menu_finance" model="ir.ui.menu">
+            <field name="groups_id" eval="[(6,0, [ref('pivotino_base.hide')])]"/>
+        </record>
+
+        <!-- Hide Invoicing Overview Onboarding Panel -->
+        <record id="account_journal_dashboard_hide_onboarding" model="ir.ui.view">
+            <field name="name">account.journal.dashboard.hide.onboarding</field>
+            <field name="model">account.journal</field>
+            <field name="inherit_id" ref="account.account_journal_dashboard_kanban_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//kanban" position="attributes">
+                    <attribute name="banner_route" value="False"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Hide Invoices Onboarding Panel -->
+        <record id="view_invoice_tree_hide_onboarding" model="ir.ui.view">
+            <field name="name">account.invoice.tree.hide.onboarding</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_invoice_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="banner_route" value="False"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

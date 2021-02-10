@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="lost_reason_category_1" model="crm.lost.reason.category">
+            <field name="name">Competitor</field>
+        </record>
+
+        <record id="lost_reason_category_2" model="crm.lost.reason.category">
+            <field name="name">Product</field>
+        </record>
+
+        <record id="lost_reason_category_3" model="crm.lost.reason.category">
+            <field name="name">Customer</field>
+        </record>
+
+        <record id="lost_reason_category_4" model="crm.lost.reason.category">
+            <field name="name">Sales Team</field>
+        </record>
+
+        <record id="crm.lost_reason_1" model="crm.lost.reason">
+            <field name="name">Went with competitor</field>
+            <field name="reason_category_id" ref="pivotino_crm.lost_reason_category_1"/>
+        </record>
+        <record id="crm.lost_reason_2" model="crm.lost.reason">
+            <field name="name">Product missing feature</field>
+            <field name="reason_category_id" ref="pivotino_crm.lost_reason_category_2"/>
+        </record>
+        <record id="crm.lost_reason_3" model="crm.lost.reason">
+            <field name="name">Product out of stock</field>
+            <field name="reason_category_id" ref="pivotino_crm.lost_reason_category_2"/>
+        </record>
+        <record id="lost_reason_4" model="crm.lost.reason">
+            <field name="name">Product pricing</field>
+            <field name="reason_category_id" ref="pivotino_crm.lost_reason_category_2"/>
+        </record>
+        <record id="lost_reason_5" model="crm.lost.reason">
+            <field name="name">Timing</field>
+            <field name="reason_category_id" ref="pivotino_crm.lost_reason_category_3"/>
+        </record>
+        <record id="lost_reason_6" model="crm.lost.reason">
+            <field name="name">No interest</field>
+            <field name="reason_category_id" ref="pivotino_crm.lost_reason_category_3"/>
+        </record>
+        <record id="lost_reason_7" model="crm.lost.reason">
+            <field name="name">Poor contract terms</field>
+            <field name="reason_category_id" ref="pivotino_crm.lost_reason_category_4"/>
+        </record>
+        <record id="lost_reason_8" model="crm.lost.reason">
+            <field name="name">Poor follow-up time</field>
+            <field name="reason_category_id" ref="pivotino_crm.lost_reason_category_4"/>
+        </record>
+        <record id="lost_reason_9" model="crm.lost.reason">
+            <field name="name">Product Quality</field>
+            <field name="reason_category_id" ref="pivotino_crm.lost_reason_category_2"/>
+        </record>
+        
+    </data>
+</odoo>

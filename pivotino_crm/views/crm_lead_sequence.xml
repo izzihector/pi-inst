@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="crm_lead_sequence_config_form" model="ir.ui.view">
+        <field name="name">crm_lead_sequence_config_form</field>
+        <field name="model">crm.lead.sequence</field>
+        <field name="arch" type="xml">
+            <form string="Crm Lead Sequence">
+                <sheet>
+                    <div class="oe_title">
+                        <div class="oe_edit_only">
+                            <label for="name"/>
+                        </div>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="field_id" required="True"/>
+                            <field name="asc_desc"/>
+                        </group>
+                        <group>
+                            <field name="lead_sequence"/>
+                            <field name="include_sequence"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="crm_lead_sequence_config_tree" model="ir.ui.view">
+        <field name="name">crm_lead_sequence_config_tree</field>
+        <field name="model">crm.lead.sequence</field>
+        <field name="arch" type="xml">
+            <tree string="Crm Lead Sequence">
+                <field name="name"/>
+                <field name="field_id"/>
+                <field name="asc_desc"/>
+                <field name="lead_sequence"/>
+                <field name="include_sequence"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_lead_sequence" model="ir.actions.act_window">
+            <field name="name">Crm Lead Sequence</field>
+            <field name="res_model">crm.lead.sequence</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create a new Crm Lead Sequence.
+                </p>
+            </field>
+        </record>
+
+    <menuitem id="pivotino_crm_lead_sequence"
+              name="Lead Sequence"
+              parent="pivotino_crm.pivotino_saas_crm_menu"
+              action="action_lead_sequence"
+              sequence="5"
+              groups="base.group_system"/>
+
+</odoo>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<odoo noupdate="1">
+
+    <record id="mail_activity_first_activity" model="mail.activity.type">
+        <field name="name">First Activity</field>
+        <field name="icon">fa-file-text-o</field>
+        <field name="res_model_id" ref="crm.model_crm_lead"/>
+        <field name="delay_count">7</field>
+        <field name="delay_unit">days</field>
+        <field name="delay_from">current_date</field>
+<!--        <field name="note">System has helped you to set up this activity. Please contact your opportunity to start the First Activity</field>-->
+    </record>
+
+</odoo>

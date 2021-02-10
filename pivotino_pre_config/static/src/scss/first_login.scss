@@ -1,0 +1,32 @@
+#carouselExampleIndicators {
+    //.carousel-control-next-icon,
+    //.carousel-control-prev-icon {
+    //    background-color: grey;
+    //}
+    .carousel-inner {
+        text-align: center;
+    }
+    .carousel-indicators {
+        position: fixed;
+    }
+    .carousel-indicators li {
+        background-color: #4c4c4c;
+    }
+    .fa-angle-left,
+    .fa-angle-right {
+        color: black;
+    }
+    .carousel-item {
+        height: 400px;
+        vertical-align: middle;
+    }
+    .align_left {
+        text-align: left;
+    }
+    .text-width {
+        width: 200px;
+    }
+    .text-width1 {
+        width: 100px;
+    }
+}

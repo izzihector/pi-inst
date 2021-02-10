@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Discuss only visible for Administration: Settings -->
+        <record id="mail.menu_root_discuss" model="ir.ui.menu">
+            <field name="groups_id" eval="[(6,0, [ref('pivotino_base.hide')])]"/>
+        </record>
+    </data>
+</odoo>

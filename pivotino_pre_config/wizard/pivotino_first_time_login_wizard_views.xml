@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="first_time_login_wizard" model="ir.ui.view">
+        <field name="name">first.time.login.wizard.form</field>
+        <field name="model">first.time.login</field>
+        <field name="arch" type="xml">
+            <form string="First Time Login">
+                <sheet>
+                    <script>
+                        $(document).ready(function(){
+                            $('.modal-content').css({'height': '600px'});
+                            $('.modal-body').css({'height': '600px'});
+                            $(".text-width").autoNumeric('init', {mDec: '0', aPad: true});
+                            $(".text-width1").autoNumeric('init', {mDec: '0', aPad: true});
+                        });
+                    </script>
+                </sheet>
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="0" data-wrap="false">
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                        <li data-target="#myCarousel" data-slide-to="4"></li>
+                        <li data-target="#myCarousel" data-slide-to="5"></li>
+                    </ol>
+                    <div class="carousel-outer">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active first">
+                                <br/><br/>
+                                <span style="horizontal-align: middle; font-size: 15px;"><b>WELCOME!</b></span><br/>
+                                <span style="horizontal-align: middle; font-size: 15px;"><b>Let's get started by setting up your dashboard</b></span><br/>
+                                <!--                                <img class="d-md-inline" src="pivotino_pre_config/static/src/img/new_login_wizard_image.png" alt="First slide"/>-->
+                                <img class="d-block-inline" src="pivotino_pre_config/static/src/img/small_login_img.png" alt="First slide"/>
+                                <br/>
+                            </div>
+                            <div class="carousel-item">
+                                <br/><br/><br/><br/>
+                                <span style="horizontal-align: middle; font-size: 15px;"><b>In which of the below industries do your company belong to?</b></span><br/><br/><br/>
+                                <field name="industry" widget="radio" class="align_left"/>
+                                <field name="is_other_industry" invisible="1"/><br/>
+                                <field name="industry_others" attrs="{'invisible': [('is_other_industry', '=', False)]}" class="text-width" placeholder='Other Industries'/><br/>
+                                <span style="horizontal-align: middle; font-size: 15px;">** You may change this later under Configurations > Companies > SaaS Config **</span><br/>
+                            </div>
+                            <div class="carousel-item">
+                                <br/><br/><br/><br/>
+                                <span style="horizontal-align: middle; font-size: 15px;"><b>We can automatically set a due date</b></span><br/>
+                                <span style="horizontal-align: middle; font-size: 15px;"><b>to your leads in each stage.</b></span><br/>
+                                <span style="horizontal-align: middle; font-size: 15px;"><b>On average, how many DAYS would you estimate</b></span><br/>
+                                <span style="horizontal-align: middle; font-size: 15px;"><b>for leads in each stage to be due?</b></span><br/><br/><br/>
+                                <field name="leads_due_day" widget="radio" class="align_left"/><br/>
+                                <field name="due_day_others" attrs="{'invisible': [('leads_due_day', '!=', 'other')]}" class="text-width1"/><br/>
+                                <span style="horizontal-align: middle; font-size: 15px;">** You may change this later under Configurations > Companies > SaaS Config **</span><br/>
+                            </div>
+                            <div class="carousel-item">
+                                <br/><br/><br/><br/>
+                                <span style="horizontal-align: middle; font-size: 15px;"><b>We can help you to move inactive leads to "LOST" state.</b></span><br/>
+                                <span style="horizontal-align: middle; font-size: 15px;"><b>After how many DAYS of no action since lead is created </b></span><br/>
+                                <span style="horizontal-align: middle; font-size: 15px;"><b>would you prefer it to be considered as a lost lead?</b></span><br/><br/><br/>
+                                <field name="days_before_lead_lost" widget="radio" class="align_left"/><br/>
+                                <field name="days_before_lead_lost_others" attrs="{'invisible': [('days_before_lead_lost', '!=', 'other')]}" class="text-width1"/><br/>
+                                <span style="horizontal-align: middle; font-size: 15px;">** You may change this later under Configurations > Companies > SaaS Config **</span><br/>
+                            </div>
+                            <div class="carousel-item">
+                                <br/><br/><br/><br/><br/><br/><br/>
+                                <span style="horizontal-align: middle; font-size: 15px;"><b>We can help set KPIs to reach your ultimate goal.</b></span><br/>
+                                <span style="horizontal-align: middle; font-size: 15px;"><b>What is your target sales per month?</b></span><br/>
+                                <span style="horizontal-align: middle; font-size: 15px;">i,e, RM 5000 / $1000 </span><br/><br/><br/>
+                                <field name="target_sales" id="SalesTarget" contenteditable="True" class="text-width"/><br/>
+                                <span style="horizontal-align: middle; font-size: 15px;">** You may change this later under Sales > Sales Target **</span><br/>
+                            </div>
+                            <div class="carousel-item last">
+                                <span style="horizontal-align: middle; font-size: 15px;"><b>Thank you !</b></span><br/>
+                                <span style="horizontal-align: middle; font-size: 15px;"><b>That was a quick one !</b></span><br/><br/>
+                                <span style="horizontal-align: middle; font-size: 15px;">Hang on while we are working on the final configuration.</span><br/><br/><br/>
+                                <img class="d-md-inline" src="pivotino_pre_config/static/src/img/first_login_last_page_img.png" alt="Last slide"/><br/><br/>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <i class="fa fa-4x fa-angle-left"/>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <i class="fa fa-4x fa-angle-right"/>
+                    </a>
+                </div>
+                <footer>
+                    <button string="Proceed/Skip" name="update_pre_configured_data" type="object" default_focus="1" class="btn-primary skip"/>
+                    <button string="Done" name="update_pre_configured_data" type="object" default_focus="1" class="btn-primary done"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_first_time_login_wizard" model="ir.actions.act_window">
+        <field name="name">First Time Login Wizard</field>
+        <field name="res_model">first.time.login</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="first_time_login_wizard"/>
+        <field name="target">new</field>
+    </record>
+
+<!--    <menuitem id="pivotino_saas_first_time_login"-->
+<!--              name="First Time Login"-->
+<!--              parent="pivotino_crm.pivotino_saas_crm_menu"-->
+<!--              action="action_first_time_login_wizard"-->
+<!--              sequence="100"-->
+<!--              groups="base.group_system"/>-->
+
+</odoo>

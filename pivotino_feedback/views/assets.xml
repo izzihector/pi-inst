@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="assets_backend" name="snackbar assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/pivotino_feedback/static/src/scss/snackbar.scss"/>
+
+                <script type="text/javascript" src="/pivotino_feedback/static/src/js/views/feedback_snackbar.js"></script>
+            </xpath>
+        </template>
+    </data>
+</odoo>

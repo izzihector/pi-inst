@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="assets_backend" name="web_responsive assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/pivotino_web_responsive/static/src/css/chatter.css"/>
+                <link rel="stylesheet" href="/pivotino_web_responsive/static/src/scss/style.scss"/>
+                <link rel="stylesheet" href="/pivotino_web_responsive/static/src/scss/form_view.scss"/>
+                <link rel="stylesheet" href="/pivotino_web_responsive/static/src/scss/pivo_web.scss"/>
+                <link rel="stylesheet" href="/pivotino_web_responsive/static/src/scss/list_view.scss"/>
+                <link rel="stylesheet" href="/pivotino_web_responsive/static/src/scss/modal.scss"/>
+                <link rel="stylesheet" href="/pivotino_web_responsive/static/src/scss/calendar.scss"/>
+                <link rel="stylesheet" href="/pivotino_web_responsive/static/src/scss/control_panel.scss"/>
+
+                <script type="text/javascript" src="/pivotino_web_responsive/static/src/js/views/mobile_control_panel_renderer.js"></script>
+                <script type="text/javascript" src="/pivotino_web_responsive/static/src/js/views/relational_fields.js"></script>
+                <script type="text/javascript" src="/pivotino_web_responsive/static/src/js/views/view_dialogs.js"></script>
+                <script type="text/javascript" src="/pivotino_web_responsive/static/src/js/web_responsive.js"></script>
+                <script type="text/javascript" src="/pivotino_web_responsive/static/src/js/views/nav_footer.js"></script>
+                <script type="text/javascript" src="/pivotino_web_responsive/static/src/js/web_client.js"></script>
+                <script type="text/javascript" src="/pivotino_web_responsive/static/src/js/views/form_view.js"></script>
+                <script type="text/javascript" src="/pivotino_web_responsive/static/src/js/apps_menu.js"></script>
+                <script type="text/javascript" src="/pivotino_web_responsive/static/src/js/views/calendar.js"></script>
+            </xpath>
+
+            <xpath expr="//link[last()]" position="after">
+                <link rel="stylesheet" type="text/scss" href="/pivotino_web_responsive/static/src/css/control_panel_layout.scss"/>
+            </xpath>
+        </template>
+
+        <template id="_assets_primary_variables" inherit_id="web._assets_primary_variables" priority="15">
+            <xpath expr="//link[last()]" position="after">
+                <link rel="stylesheet" type="text/scss" href="/pivotino_web_responsive/static/src/scss/primary_variables.scss"/>
+            </xpath>
+        </template>
+
+        <!-- *** Common Assets *** -->
+        <template id="assets_common" inherit_id="web.assets_common">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" type="text/scss"
+                      href="/pivotino_web_responsive/static/src/scss/navbar.scss"/>
+            </xpath>
+        </template>
+
+        <!-- *** Common Assets : web_tour *** -->
+        <template id="tour_assets_common" inherit_id="web_tour.assets_common">
+            <xpath expr="//link[@href='/web_tour/static/src/scss/tip.scss']" position="replace">
+                <link rel="stylesheet" type="text/scss"
+                      href="/pivotino_web_responsive/static/src/scss/tip.scss"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

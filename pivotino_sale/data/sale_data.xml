@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <function name="write" model="ir.model.data">
+            <function name="search" model="ir.model.data">
+                <value eval="[('module', '=', 'sale'), ('name', '=', 'model_sale_order_action_share')]"/>
+            </function>
+            <value eval="{'noupdate': False}"/>
+        </function>
+
+        <record id="sale.model_sale_order_action_share" model="ir.actions.server">
+            <field name="groups_id" eval="[(6,0, (ref('pivotino_base.hide'),))]"/>
+        </record>
+    </data>
+</odoo>

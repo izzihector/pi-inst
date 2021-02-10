@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!--        For now using pivotino.com configuration-->
+        <record id="api_configuration1" model="api.configuration">
+            <field name="url">https://pivotino.com</field>
+            <field name="db_name">pivotino_web_prod_v1</field>
+            <field name="username">apicall</field>
+            <field name="password">oNT1#@NEeP#aDhHiQ</field>
+            <field name="is_default">True</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_pivotino_industry_user,pivotino_industry_user,model_pivotino_industry,,1,1,1,1
+base.access_res_company_group_erp_manager,res_company group_erp_manager,model_res_company,base.group_erp_manager,1,1,0,0
+access_res_company_owner,res_company_owner,model_res_company,pivotino_base.group_pivotino_owner,1,1,0,0
+access_res_company_group_system,res_company_group_system,model_res_company,base.group_system,1,1,1,1
+access_analytic_tracking_user,analytic_tracking_user,model_analytic_tracking,,1,1,1,1

@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!--    Lead Lost Wizard Form Inherit   -->
+    <record id="crm_lead_lost_view_form_inherit" model="ir.ui.view">
+        <field name="name">crm.lead.lost.form.inherit</field>
+        <field name="model">crm.lead.lost</field>
+        <field name="inherit_id" ref="crm.crm_lead_lost_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@class='oe_title']" position="before">
+                <group>
+                    <field name="display_message" nolabel="1" widget="html" readonly="1"/>
+                </group>
+            </xpath>
+            <xpath expr="//button[@name='action_lost_reason_apply']" position="attributes">
+                <attribute name="class">btn btn-primary reason-apply</attribute>
+            </xpath>
+            <xpath expr="//form/footer/button[2]" position="attributes">
+                <attribute name="class">btn btn-secondary reason-cancel</attribute>
+            </xpath>
+            <xpath expr="//field[@name='lost_reason_id']" position="attributes">
+                <attribute name="required">True</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!--    Lead Form View Inherit   -->
+    <record id="crm_lead_view_inherit_form" model="ir.ui.view">
+        <field name="name">crm.lead.view.inherit.form</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_set_won_rainbowman']" position="attributes">
+                <attribute name="attrs">{'invisible': ['|','|','|', ('active','=',False), ('probability', '=', 100), ('type', '=', 'lead'),('is_lost','=',True)]}</attribute>
+            </xpath>
+            <xpath expr="//button[@name='%(crm.crm_lead_lost_action)d']" position="attributes">
+                <attribute name="attrs">{'invisible': ['|','|',('is_won', '=', True),('is_lost','=',True),'|', ('type', '=', 'lead'),('active', '=', False)]}</attribute>
+            </xpath>
+            <xpath expr="//widget[1]" position="attributes">
+                <attribute name="attrs">{'invisible': [('is_lost', '=', False)]}</attribute>
+            </xpath>
+             <xpath expr="//widget[2]" position="attributes">
+                <attribute name="attrs">{'invisible': [('is_won', '=', False)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='lost_reason']" position="before">
+                <field name="is_won" invisible="1"/>
+                <field name="is_lost" invisible="1"/>
+                <field name="is_won" invisible="1"/>
+                <field name="lost_reason_category"
+                       options="{'no_create': True, 'no_open': True}"
+                       attrs="{'invisible': [('is_lost', '!=', True)]}"/>
+                <field name="activity_due_date" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='lost_reason']" position="attributes">
+                <attribute name="attrs">{'invisible': [('is_lost', '!=', True)]}</attribute>
+                <attribute name="options">{'no_create': True, 'no_open': True}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!--    Lead Form View Sale CRM Inherit   -->
+    <record id="crm_case_form_view_oppor_inherit" model="ir.ui.view">
+        <field name="name">crm.case.form.view.oppor.inherit</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="sale_crm.crm_case_form_view_oppor"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_sale_quotations_new']" position="attributes">
+                <attribute name="attrs">{'invisible': ['|','|',('probability', '=', 100),('is_lost','=',True),'|', ('type', '=', 'lead'), '&amp;', ('probability', '=', 0), ('active', '=', False)]}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!--    Lost Reason Form View Inherit   -->
+    <record id="crm_lost_reason_view_inherit_form" model="ir.ui.view">
+        <field name="name">crm.lost.reason.inherit.form</field>
+        <field name="model">crm.lost.reason</field>
+        <field name="inherit_id" ref="crm.crm_lost_reason_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='active']" position="before">
+                <field name="reason_category_id" required="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!--    Lost Reason Tree View Inherit   -->
+    <record id="crm_lost_reason_view_inherit_tree" model="ir.ui.view">
+        <field name="name">crm.lost.reason.inherit.tree</field>
+        <field name="model">crm.lost.reason</field>
+        <field name="inherit_id" ref="crm.crm_lost_reason_view_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="reason_category_id" required="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!--    Lost Reason Category Form View   -->
+    <record id="crm_lost_reason_category_view_form" model="ir.ui.view">
+        <field name="name">crm.lost.reason.category.form</field>
+        <field name="model">crm.lost.reason.category</field>
+        <field name="arch" type="xml">
+            <form string="Category">
+                <sheet>
+                    <field name="name"/>
+                    <field name="lost_reason_ids"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--    Lost Reason Category Tree View   -->
+    <record id="crm_lost_reason_category_view_tree" model="ir.ui.view">
+        <field name="name">crm.lost.reason.category.tree</field>
+        <field name="model">crm.lost.reason.category</field>
+        <field name="arch" type="xml">
+            <tree string="Lost Reason Category" editable="bottom">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--    Lost Reason Category Action   -->
+    <record id="crm_lost_reason_category_action" model="ir.actions.act_window">
+        <field name="name">Lost Reason Category</field>
+        <field name="res_model">crm.lost.reason.category</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!--    Lost Reason Category Menuitem   -->
+    <menuitem
+            id="menu_crm_lost_reason_category"
+            action="crm_lost_reason_category_action"
+            parent="crm.menu_crm_config_lead"
+            sequence="6"/>
+
+    <!--    Lost Reason Business Owner Menuitem   -->
+    <menuitem
+            id="menu_crm_lost_reason_business_owner"
+            action="crm.crm_lost_reason_action"
+            parent="crm.crm_menu_root"
+            sequence="4"
+            groups="pivotino_base.group_pivotino_owner"/>
+
+</odoo>

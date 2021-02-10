@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!--    Mail Activity: Kanban View    -->
+        <record id="pivotino_mail_activity_view_kanban" model="ir.ui.view">
+            <field name="name">pivotino.mail.activity.view.kanban</field>
+            <field name="model">mail.activity</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="date_deadline:day" class="o_kanban_mobile" colors='{"planned": "success", "overdue": "danger"}' create="false">
+                    <field name="res_name"/>
+                    <field name="activity_type_id"/>
+                    <field name="summary"/>
+                    <field name="res_model"/>
+                    <field name="res_id"/>
+                    <field name="date_deadline"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_content">
+                                <div>
+                                    Summary: <strong><field name="summary"/></strong>
+                                </div>
+                                <div>
+                                    Type: <strong><field name="activity_type_id"/></strong>
+                                </div>
+                                <div class="o_kanban_record_subtitle_base">
+                                    Due Date: <strong><field name="date_deadline"/></strong>
+                                </div>
+                                <div>
+                                    Assignee: <strong><field name="user_id"/></strong>
+                                </div>
+                                <div>
+                                    <button class="btn-mark-done"
+                                            context="{'mark_activity_as_done': True}"
+                                            type="action">Mark As Done</button>
+                                    <button class="btn-mark-cancel"
+                                            context="{'cancel_activity': True}"
+                                            type="action">Cancel</button>
+                                    <button class="btn-view-document"
+                                            context="{'view_source_document': True}"
+                                            type="action">View Document</button>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <!--    Mail Activity: Tree View    -->
+        <record id="pivotino_mail_activity_view_tree" model="ir.ui.view">
+            <field name="name">pivotino.mail.activity.view.tree</field>
+            <field name="model">mail.activity</field>
+            <field name="priority">10</field>
+            <field name="arch" type="xml">
+                <tree decoration-danger="date_deadline &lt; current_date" decoration-info="date_deadline == current_date" default_order="date_deadline" create="false">
+                    <field name="summary" string="Summary"/>
+                    <field name="activity_type_id" string="Activity Type"/>
+                    <field name="date_deadline" string="Due Date"/>
+                    <field name="res_model_id" string="Model"/>
+                    <field name="res_name" string="Source Document"/>
+                    <button class="btn-mark-done" name="%(pivotino_mail.mail_feedback_wizard_action)d" type="action"
+                            string="Mark As Done"/>
+                    <button class="btn-mark-cancel" name="unlink" type="object"
+                            string="Cancel"/>
+                    <button class="btn-view-document" name="action_view_document"
+                            type="object" string="View Document"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="pivotino_mail_activity_view_search_inherit" model="ir.ui.view">
+            <field name="name">mail.activity.view.search.inherit</field>
+            <field name="model">mail.activity</field>
+            <field name="inherit_id" ref="mail.mail_activity_view_search"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='activities_overdue']" position="before">
+                    <filter name="my_activities" string="My Activities"
+                             domain="[('user_id', '=', uid)]"/>
+                </xpath>
+            </field>
+    </record>
+
+    </data>
+</odoo>

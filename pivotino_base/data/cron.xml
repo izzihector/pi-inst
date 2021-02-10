@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!--        re-create email if failed during signup-->
+        <record id="ir_cron_create_cpanel_email" model="ir.cron">
+            <field name="name">SaaS: Create cPanel Email</field>
+            <field name="model_id" ref="model_res_users"/>
+            <field name="state">code</field>
+            <field name="code">model._cron_create_cPanel_email()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="active" eval="True"/>
+        </record>
+
+    </data>
+</odoo>

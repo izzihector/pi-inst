@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_config_settings_view_form_debrand" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.account.debrand</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <!-- Taxes > TaxCloud -->
+                <xpath expr="//div[@id='taxcloud_settings']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <!-- Currencies > Automatic Currency Rates -->
+                <xpath expr="//field[@name='module_currency_rate_live']/ancestor::div[hasclass('o_setting_box')]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <!-- Customer Invoices > Intrastat -->
+                <xpath expr="//field[@name='module_account_intrastat']/ancestor::div[hasclass('o_setting_box')]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <!-- Customer Payments > Use batch payments -->
+                <xpath expr="//field[@name='module_account_batch_payment']/ancestor::div[hasclass('o_setting_box')]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <!-- Customer Payments > SEPA Direct Debit (SDD) -->
+                <xpath expr="//field[@name='module_account_sepa_direct_debit']/ancestor::div[hasclass('o_setting_box')]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <!-- Customer Payments > SEPA QR Code -->
+                <xpath expr="//field[@name='qr_code']/ancestor::div[hasclass('o_setting_box')]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <!-- Vendor Bills -->
+                <xpath expr="//h2[contains(text(),'Vendor Bills')]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//div[@id='account_vendor_bills']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <!-- Vendor Payments -->
+                <xpath expr="//h2[contains(text(),'Vendor Payments')]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='module_account_check_printing']/ancestor::div[hasclass('o_settings_container')]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <!-- Bank & Cash -->
+                <!-- Automatic Import -->
+                <xpath expr="//field[@name='module_account_yodlee']/ancestor::div[hasclass('o_setting_box')]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <!-- CSV Import -->
+                <xpath expr="//field[@name='module_account_bank_statement_import_csv']/ancestor::div[hasclass('o_setting_box')]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <!-- QIF Import -->
+                <xpath expr="//field[@name='module_account_bank_statement_import_qif']/ancestor::div[hasclass('o_setting_box')]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <!-- OFX Import -->
+                <xpath expr="//field[@name='module_account_bank_statement_import_ofx']/ancestor::div[hasclass('o_setting_box')]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <!-- CAMT Import -->
+                <xpath expr="//field[@name='module_account_bank_statement_import_camt']/ancestor::div[hasclass('o_setting_box')]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <!-- Analytics > Budget Management -->
+                <xpath expr="//field[@name='module_account_budget']/ancestor::div[hasclass('o_setting_box')]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

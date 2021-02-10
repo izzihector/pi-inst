@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<!--    Activity Quick Access Menu Client Action    -->
+		<record id="pivotino_action_activity_quick_access_menu" model="ir.actions.client">
+			<field name="name">Activity Quick Access Menu</field>
+			<field name="tag">pivotino_mail.activity_quick_access_menu</field>
+		</record>
+
+		<!--    Top Menu: Activities    -->
+		<menuitem name="Activities" id="pivotino_activity_menu"/>
+		<record id="pivotino_mail.pivotino_activity_menu" model="ir.ui.menu">
+			<field name="sequence">1</field>
+			<field name="web_icon">pivotino_mail,static/src/img/activity.png</field>
+			<field name="web_large_icon">pivotino_mail,static/src/img/activity_large.png</field>
+		</record>
+
+		<!--    Menuitem: Activity Quick Access Menu    -->
+		<menuitem id="pivotino_menu_activity_quick_access_menu"
+				  name="Activity Quick Access Menu"
+				  action="pivotino_action_activity_quick_access_menu"
+				  parent="pivotino_activity_menu"
+				  sequence="1"/>
+
+		<template id="assets_backend" name="Activity assets" inherit_id="web.assets_backend">
+			<xpath expr="." position="inside">
+				<script type="text/javascript" src="/pivotino_mail/static/src/js/activity_quick_access_menu.js"/>
+				<script type="text/javascript" src="/pivotino_mail/static/src/js/kanban_controller.js"/>
+                <link rel="stylesheet" href="/pivotino_mail/static/src/css/activity_quick_access_menu.css"/>
+			</xpath>
+		</template>
+
+		<!--    Activity Dashboard Counter Area    -->
+		<template id="pivotino_activity_count_box" name="Activities">
+			<div id="pivotino_activity_cards">
+				<div id="pivotino_activities">
+					<div class="row card-header">
+						<span style="font-size:40px;font-weight:bold;color:#274d5f;">Activities</span>
+						<div class="row">
+							<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col">
+								<div class="card card_action_all_activity custom-card" href="#">
+									<div class="sh-card-body">
+										<div class="media">
+											<img src="/pivotino_mail/static/src/img/all_activities.png" style="height:90px"/>
+											<div class="media-body text-white">
+												<p class="mt-0"><t t-esc="all_activity_count"/></p>
+												<p>All Activities</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col">
+								<div class="card card_action_today_activity custom-card" href="#">
+									<div class="sh-card-body">
+										<div class="media">
+											<img src="/pivotino_mail/static/src/img/today_activities.png" style="height:90px"/>
+											<div class="media-body text-white">
+												<p class="mt-0"><t t-esc="today_activity_count"/></p>
+												<p>Today Activities</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col">
+								<div class="card card_action_future_due_activity custom-card" href="#">
+									<div class="sh-card-body">
+										<div class="media">
+											<img src="/pivotino_mail/static/src/img/future_due_activities.png" style="height:90px"/>
+											<div class="media-body text-white">
+												<p class="mt-0"><t t-esc="future_due_activity_count"/></p>
+												<p>Future Due Activities</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col">
+								<div class="card card_action_overdue_activity custom-card" href="#">
+									<div class="sh-card-body">
+										<div class="media">
+											<img src="/pivotino_mail/static/src/img/overdue_activities.png" style="height:90px"/>
+											<div class="media-body text-white">
+												<p class="mt-0"><t t-esc="overdue_activity_count"/></p>
+												<p>Overdue Activities</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</template>
+
+	</data>
+</odoo>

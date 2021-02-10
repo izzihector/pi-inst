@@ -1,0 +1,100 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pivotino_product
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-25 04:29+0000\n"
+"PO-Revision-Date: 2020-08-25 04:29+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pivotino_product
+#: model:ir.model.fields,help:pivotino_product.field_product_product__type
+#: model:ir.model.fields,help:pivotino_product.field_product_template__type
+msgid ""
+"A storable product is a product for which you manage stock. The Inventory app has to be installed.\n"
+"A consumable product is a product for which stock is not managed.\n"
+"A service is a non-material product you provide."
+msgstr ""
+
+#. module: pivotino_product
+#: model:ir.model.fields,field_description:pivotino_product.field_res_currency__active
+msgid "Active"
+msgstr ""
+
+#. module: pivotino_product
+#: model:ir.model.fields,field_description:pivotino_product.field_product_product__purchase_ok
+#: model:ir.model.fields,field_description:pivotino_product.field_product_template__purchase_ok
+msgid "Can be Purchased"
+msgstr ""
+
+#. module: pivotino_product
+#: model:ir.model.fields.selection,name:pivotino_product.selection__product_template__type__consu
+msgid "Consumable"
+msgstr ""
+
+#. module: pivotino_product
+#: model:ir.model,name:pivotino_product.model_res_currency
+msgid "Currency"
+msgstr ""
+
+#. module: pivotino_product
+#: model:ir.model,name:pivotino_product.model_res_currency_rate
+msgid "Currency Rate"
+msgstr ""
+
+#. module: pivotino_product
+#: model:ir.model.fields,help:pivotino_product.field_res_currency__position
+msgid ""
+"Determines where the currency symbol should be placed after or before the "
+"amount."
+msgstr ""
+
+#. module: pivotino_product
+#: model:ir.model,name:pivotino_product.model_product_pricelist
+msgid "Pricelist"
+msgstr ""
+
+#. module: pivotino_product
+#: model:ir.model,name:pivotino_product.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: pivotino_product
+#: model:ir.model.fields,field_description:pivotino_product.field_product_product__type
+#: model:ir.model.fields,field_description:pivotino_product.field_product_template__type
+msgid "Product Type"
+msgstr ""
+
+#. module: pivotino_product
+#: model:ir.model.fields.selection,name:pivotino_product.selection__product_template__type__service
+msgid "Service"
+msgstr ""
+
+#. module: pivotino_product
+#: model:ir.model.fields,field_description:pivotino_product.field_res_currency__position
+msgid "Symbol Position"
+msgstr ""
+
+#. module: pivotino_product
+#: code:addons/pivotino_product/models/pivotino_res_currency.py:0
+#: code:addons/pivotino_product/models/pivotino_res_currency.py:0
+#, python-format
+msgid ""
+"The new rate will only be applied for all records that are created from this"
+" moment. All old records will still be using the old rate"
+msgstr ""
+
+#. module: pivotino_product
+#: code:addons/pivotino_product/models/pivotino_res_currency.py:0
+#: code:addons/pivotino_product/models/pivotino_res_currency.py:0
+#, python-format
+msgid "Warning!"
+msgstr ""

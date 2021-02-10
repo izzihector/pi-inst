@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Deactivate USD Currency due to the l10n_generic_coa will activate USD -->
+        <record id="base.USD" model="res.currency">
+            <field name="active" eval="False"/>
+        </record>
+
+    </data>
+</odoo>

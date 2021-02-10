@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="pivotino_saas_crm_menu"
+              name="Saas"
+              parent="crm.crm_menu_root"
+              sequence="100"
+              groups="base.group_system"/>
+
+    <record id="pivotino_view_crm_case_opportunities_filter" model="ir.ui.view">
+        <field name="name">pivotino.crm.lead.search.opportunity</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='lostreason']" position="after">
+                <filter string="Lost Category" name="lostcategory" context="{'group_by':'lost_reason_category'}"/>
+            </xpath>
+            <xpath expr="//filter[@name='lost']" position="attributes">
+                <attribute name="domain">[('is_lost', '=', True)]</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- hide the some menus, only visible in debug mode -->
+    <!-- Contacts > Configuration -->
+    <record id="contacts.res_partner_menu_config" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6, 0, [ref('base.group_no_one')])]"/>
+    </record>
+    <!-- CRM > Configuration -->
+    <record id="crm.crm_menu_config" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6, 0, [ref('base.group_no_one')])]"/>
+    </record>
+    <!-- CRM > Sales > Team Pipelines -->
+    <record id="crm.sales_team_menu_team_pipeline" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6, 0, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <record id="pivotino_crm_lead_view_form" model="ir.ui.view">
+        <field name="name">pivotino.crm.lead.form</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//h2[hasclass('no-gutters')]" position="before">
+                <h2 class="o_row row no-gutters d-flex">
+                    <div class="col" attrs="{'invisible': [('type', '=', 'lead')]}">
+                        <label for="planned_revenue_input" class="oe_edit_only" />
+                        <div class="o_row">
+                            <field name="planned_revenue_input" class="oe_inline"/>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <span class="oe_edit_only o_pls_probability">
+                            <label for="lead_currency"/>
+                        </span>
+                        <div id="currency" class="o_row d-flex">
+                            <field name="lead_currency"/>
+                        </div>
+                    </div>
+                </h2>
+            </xpath>
+            <xpath expr="//label[@for='planned_revenue']" position="replace">
+                <label for="planned_revenue" string="Amount (Base)" class="oe_edit_only"/>
+            </xpath>
+            <xpath expr="//field[@name='planned_revenue']" position="replace">
+                <field name="planned_revenue" class="oe_inline" widget='monetary' options="{'currency_field': 'company_currency'}"/>
+            </xpath>
+            <!-- hide Sales Team field -->
+            <xpath expr="//field[@name='team_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='user_id']" position="attributes">
+                <attribute name="options">{'no_create': True, 'no_open': True}</attribute>
+            </xpath>
+            <xpath expr="//page[@name='lead']//field[@name='lang_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='team_id']" position="after">
+                <field name="is_from_so" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="pivotino_quick_create_opportunity_form" model="ir.ui.view">
+        <field name="name">pivotino.crm.lead.form.quick_create</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.quick_create_opportunity_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='planned_revenue']" position="replace">
+                <field name="planned_revenue_input"/>
+                <field name="lead_currency"/>
+                <field name="planned_revenue" readonly="1" string="Amount (Base)"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_case_kanban_view_leads" model="ir.ui.view">
+        <field name="name">crm.lead.kanban.lead</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_kanban_view_leads"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='color']" position="after">
+                <field name="date_deadline"/>
+            </xpath>
+            <xpath expr="//templates/t[@t-name='kanban-box']//div[hasclass('o_kanban_record_subtitle')]" position="replace">
+                <div class="text-muted o_kanban_record_subtitle">
+                    <t t-if="record.planned_revenue_input.raw_value"><field name="planned_revenue_input"/></t>
+                </div>
+            </xpath>
+            <xpath expr="//templates/t[@t-name='kanban-box']//div[hasclass('o_kanban_record_subtitle')]" position="after">
+                <div>
+                    <strong class="o_kanban_record_currency"><field name="lead_currency"/></strong>
+                </div>
+                <div class="text-muted o_kanban_record_subtitle_base">
+                    <t t-if="record.planned_revenue.raw_value"><field name="planned_revenue" widget="monetary" options="{'currency_field': 'company_currency'}"/></t>
+                </div>
+                <div>
+                    <strong><field name="date_deadline"/></strong>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <menuitem id="crm.res_partner_menu_customer"
+              groups="pivotino_base.hide"
+              name="Customers"
+              parent="crm.crm_menu_sales"
+              action="base.action_partner_form"
+              sequence="5"/>
+
+    <menuitem id="crm.sales_team_menu_team_pipeline"
+            name="Team Pipelines"
+            parent="crm.crm_menu_sales"
+            action="sales_team.crm_team_salesteams_pipelines_act"
+            groups="pivotino_base.hide"
+            sequence="4"/>
+
+    <record model="ir.ui.menu" id="crm.sales_team_menu_team_pipeline">
+        <field name="groups_id" eval="[(6,0,[ref('pivotino_base.hide')])]"/>
+    </record>
+
+    <menuitem
+            id="crm.crm_menu_sales"
+            name="Pipeline"
+            parent="crm.crm_menu_root"
+            sequence="1"/>
+
+    <!-- Discuss only visible for Administration: Settings -->
+    <record id="utm.menu_link_tracker_root" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6,0, [ref('pivotino_base.hide')])]"/>
+    </record>
+
+</odoo>
+

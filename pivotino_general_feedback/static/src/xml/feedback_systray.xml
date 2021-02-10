@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+
+    <t t-name="pivotino_feedback.pivotino_feeedback_icon">
+        <li class="o_mail_systray_item">
+            <a class="btn-wizard pivotino-feedback-icon" title="Feedback">
+                <img src="/pivotino_general_feedback/static/src/img/customer-satisfaction.svg"
+                     class="h-50"
+                     aria-label="Feedback"/>
+            </a>
+        </li>
+    </t>
+
+</templates>

@@ -1,0 +1,217 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pivotino_mail
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-25 04:27+0000\n"
+"PO-Revision-Date: 2020-08-25 04:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pivotino_mail
+#: model_terms:ir.ui.view,arch_db:pivotino_mail.pivotino_activity_count_box
+msgid ""
+"<span style=\"font-size:40px;font-"
+"weight:bold;color:#274d5f;\">Activities</span>"
+msgstr ""
+
+#. module: pivotino_mail
+#: model:ir.ui.menu,name:pivotino_mail.pivotino_activity_menu
+msgid "Activities"
+msgstr ""
+
+#. module: pivotino_mail
+#: model:ir.model,name:pivotino_mail.model_mail_activity
+msgid "Activity"
+msgstr ""
+
+#. module: pivotino_mail
+#: model:ir.actions.act_window,name:pivotino_mail.mail_feedback_wizard_action
+#: model_terms:ir.ui.view,arch_db:pivotino_mail.mail_feedback_wizard_view_form
+msgid "Activity Feedback"
+msgstr ""
+
+#. module: pivotino_mail
+#: model:ir.actions.client,name:pivotino_mail.pivotino_action_activity_quick_access_menu
+#: model:ir.ui.menu,name:pivotino_mail.pivotino_menu_activity_quick_access_menu
+msgid "Activity Quick Access Menu"
+msgstr ""
+
+#. module: pivotino_mail
+#: model_terms:ir.ui.view,arch_db:pivotino_mail.pivotino_mail_activity_view_tree
+msgid "Activity Type"
+msgstr ""
+
+#. module: pivotino_mail
+#. openerp-web
+#: code:addons/pivotino_mail/static/src/js/activity_quick_access_menu.js:0
+#: model_terms:ir.ui.view,arch_db:pivotino_mail.pivotino_activity_count_box
+#, python-format
+msgid "All Activities"
+msgstr ""
+
+#. module: pivotino_mail
+#: model_terms:ir.ui.view,arch_db:pivotino_mail.pivotino_mail_activity_view_kanban
+msgid "Assignee:"
+msgstr ""
+
+#. module: pivotino_mail
+#: model_terms:ir.ui.view,arch_db:pivotino_mail.mail_feedback_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:pivotino_mail.pivotino_mail_activity_view_kanban
+#: model_terms:ir.ui.view,arch_db:pivotino_mail.pivotino_mail_activity_view_tree
+msgid "Cancel"
+msgstr ""
+
+#. module: pivotino_mail
+#: model:ir.model.fields,field_description:pivotino_mail.field_mail_feedback__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: pivotino_mail
+#: model:ir.model.fields,field_description:pivotino_mail.field_mail_feedback__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: pivotino_mail
+#: model:ir.model.fields,field_description:pivotino_mail.field_mail_feedback__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: pivotino_mail
+#: model_terms:ir.ui.view,arch_db:pivotino_mail.pivotino_mail_activity_view_tree
+msgid "Due Date"
+msgstr ""
+
+#. module: pivotino_mail
+#: model_terms:ir.ui.view,arch_db:pivotino_mail.pivotino_mail_activity_view_kanban
+msgid "Due Date:"
+msgstr ""
+
+#. module: pivotino_mail
+#: model:ir.model,name:pivotino_mail.model_mail_thread
+msgid "Email Thread"
+msgstr ""
+
+#. module: pivotino_mail
+#: model:ir.model,name:pivotino_mail.model_mail_compose_message
+msgid "Email composition wizard"
+msgstr ""
+
+#. module: pivotino_mail
+#: model:ir.model.fields,field_description:pivotino_mail.field_mail_feedback__feedback
+msgid "Feedback"
+msgstr ""
+
+#. module: pivotino_mail
+#. openerp-web
+#: code:addons/pivotino_mail/static/src/js/activity_quick_access_menu.js:0
+#: model_terms:ir.ui.view,arch_db:pivotino_mail.pivotino_activity_count_box
+#, python-format
+msgid "Future Due Activities"
+msgstr ""
+
+#. module: pivotino_mail
+#: model:ir.model,name:pivotino_mail.model_mail_feedback
+msgid "Get feedback for mail activity"
+msgstr ""
+
+#. module: pivotino_mail
+#: model:ir.model.fields,field_description:pivotino_mail.field_mail_feedback__id
+msgid "ID"
+msgstr ""
+
+#. module: pivotino_mail
+#: model:ir.model.fields,field_description:pivotino_mail.field_mail_feedback____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: pivotino_mail
+#: model:ir.model.fields,field_description:pivotino_mail.field_mail_feedback__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: pivotino_mail
+#: model:ir.model.fields,field_description:pivotino_mail.field_mail_feedback__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: pivotino_mail
+#: model_terms:ir.ui.view,arch_db:pivotino_mail.pivotino_mail_activity_view_kanban
+#: model_terms:ir.ui.view,arch_db:pivotino_mail.pivotino_mail_activity_view_tree
+msgid "Mark As Done"
+msgstr ""
+
+#. module: pivotino_mail
+#: model_terms:ir.ui.view,arch_db:pivotino_mail.pivotino_mail_activity_view_tree
+msgid "Model"
+msgstr ""
+
+#. module: pivotino_mail
+#: model_terms:ir.ui.view,arch_db:pivotino_mail.pivotino_mail_activity_view_search_inherit
+msgid "My Activities"
+msgstr ""
+
+#. module: pivotino_mail
+#: code:addons/pivotino_mail/models/mail_thread.py:0
+#, python-format
+msgid "Opportunity created"
+msgstr ""
+
+#. module: pivotino_mail
+#. openerp-web
+#: code:addons/pivotino_mail/static/src/js/activity_quick_access_menu.js:0
+#: model_terms:ir.ui.view,arch_db:pivotino_mail.pivotino_activity_count_box
+#, python-format
+msgid "Overdue Activities"
+msgstr ""
+
+#. module: pivotino_mail
+#: model_terms:ir.ui.view,arch_db:pivotino_mail.pivotino_mail_activity_view_tree
+msgid "Source Document"
+msgstr ""
+
+#. module: pivotino_mail
+#: model_terms:ir.ui.view,arch_db:pivotino_mail.mail_feedback_wizard_view_form
+msgid "Submit"
+msgstr ""
+
+#. module: pivotino_mail
+#: model_terms:ir.ui.view,arch_db:pivotino_mail.pivotino_mail_activity_view_tree
+msgid "Summary"
+msgstr ""
+
+#. module: pivotino_mail
+#: model_terms:ir.ui.view,arch_db:pivotino_mail.pivotino_mail_activity_view_kanban
+msgid "Summary:"
+msgstr ""
+
+#. module: pivotino_mail
+#. openerp-web
+#: code:addons/pivotino_mail/static/src/js/activity_quick_access_menu.js:0
+#: model_terms:ir.ui.view,arch_db:pivotino_mail.pivotino_activity_count_box
+#, python-format
+msgid "Today Activities"
+msgstr ""
+
+#. module: pivotino_mail
+#: model_terms:ir.ui.view,arch_db:pivotino_mail.pivotino_mail_activity_view_kanban
+msgid "Type:"
+msgstr ""
+
+#. module: pivotino_mail
+#: model:ir.model,name:pivotino_mail.model_res_users
+msgid "Users"
+msgstr ""
+
+#. module: pivotino_mail
+#: model_terms:ir.ui.view,arch_db:pivotino_mail.pivotino_mail_activity_view_kanban
+#: model_terms:ir.ui.view,arch_db:pivotino_mail.pivotino_mail_activity_view_tree
+msgid "View Document"
+msgstr ""

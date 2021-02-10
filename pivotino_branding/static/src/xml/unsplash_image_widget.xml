@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template xml:space="preserve">
+
+    <!-- This both template is to hide the search box in all three image,document ad pictogram tabs inside
+    reach text box image selection wizard-->
+    <t t-extend="web_unsplash.dialog.media.search_icon">
+        <t t-jquery="div[class='dropdown']" t-operation='replace'>
+
+        </t>
+    </t>
+
+    <t t-extend="wysiwyg.widgets.media.search">
+        <t t-jquery="div[class='input-group ml-auto']" t-operation='replace'>
+
+        </t>
+    </t>
+</template>

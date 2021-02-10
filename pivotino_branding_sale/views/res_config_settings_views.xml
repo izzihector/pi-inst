@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_config_settings_view_form_debrand" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.sale.debrand</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="sale.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <!-- Shipping -->
+                <!-- UPS Connector -->
+                <xpath expr="//field[@name='module_delivery_ups']/ancestor::div[hasclass('o_setting_box')]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <!-- DHL Connector -->
+                <xpath expr="//field[@name='module_delivery_dhl']/ancestor::div[hasclass('o_setting_box')]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <!--  FedEx Connector -->
+                <xpath expr="//field[@name='module_delivery_fedex']/ancestor::div[hasclass('o_setting_box')]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <!-- USPS Connector -->
+                <xpath expr="//field[@name='module_delivery_usps']/ancestor::div[hasclass('o_setting_box')]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <!-- bpost Connector -->
+                <xpath expr="//field[@name='module_delivery_bpost']/ancestor::div[hasclass('o_setting_box')]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <!-- Easypost Connector -->
+                <xpath expr="//field[@name='module_delivery_easypost']/ancestor::div[hasclass('o_setting_box')]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <!-- Connectors -->
+                <xpath expr="//h2[contains(text(),'Connectors')]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='module_sale_amazon']/ancestor::div[hasclass('o_settings_container')]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,13 @@
+.o_main_navbar {
+    .o_menu_systray {
+        font-size: 15px;
+    }
+}
+
+.nav-tabs {
+    @include media-breakpoint-down(md) {
+        .nav-link {
+            font-size: 16px;
+        }
+    }
+}

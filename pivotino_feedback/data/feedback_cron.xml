@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!--re-call api and send over feedback to portal-->
+        <record id="ir_cron_feedback_api" model="ir.cron">
+            <field name="name">SaaS: Send Feedback to Portal</field>
+            <field name="model_id" ref="model_pivotino_feedback"/>
+            <field name="state">code</field>
+            <field name="code">model._cron_api_feedback()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="active" eval="True"/>
+        </record>
+
+    </data>
+</odoo>

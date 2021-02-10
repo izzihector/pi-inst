@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template xml:space="preserve">
+    <!-- This both template is to replace the odoo name inside image selector of reach textbox (image and document tab)-->
+    <t t-extend="wysiwyg.widgets.image">
+        <t t-jquery="t[t-set='urlPlaceholder']" t-operation='replace'>
+            <t t-set="urlPlaceholder">https://www.pivotino.com/logo.png</t>
+        </t>
+    </t>
+    <t t-extend="wysiwyg.widgets.document">
+        <t t-jquery="t[t-set='urlPlaceholder']" t-operation='replace'>
+            <t t-set="urlPlaceholder">https://www.pivotino.com/mydocument</t>
+        </t>
+    </t>
+</template>

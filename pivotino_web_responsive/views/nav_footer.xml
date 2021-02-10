@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <!-- footer template for mobile -->
+    <div t-name="NavigationFooter" class="pivo_nav_footer">
+        <div class="nav_footer_tabs">
+            <div class="nav_footer_tab nav_button" id="dashboard" role="tab">
+                <span class="fa fa-newspaper-o"/>
+                <span class="nav_tab_title">Board</span>
+            </div>
+            <div class="nav_footer_tab nav_button" id="lead" role="tab">
+                <span class="fa fa-handshake-o"/>
+                <span class="nav_tab_title">Opportunity</span>
+            </div>
+            <div class="nav_footer_tab nav_button" id="contact" role="tab">
+                <span class="fa fa-users"/>
+                <span class="nav_tab_title">Contacts</span>
+            </div>
+<!--            <div class="nav_footer_tab nav_button" id="more" role="tab">-->
+<!--                <span class="fa fa-ellipsis-h"/>-->
+<!--                <span class="nav_tab_title">More</span>-->
+<!--            </div>-->
+        </div>
+    </div>
+</templates>

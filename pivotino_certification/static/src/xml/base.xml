@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates id="template" xml:space="preserve">
+    <!-- hide the footer for certification module -->
+    <t t-extend="NavigationFooter">
+        <t t-jquery="div.nav_footer_tabs" t-operation="attributes">
+            <attribute name="class" value="d-none"/>
+        </t>
+    </t>
+
+    <t t-extend="PivotView.buttons">
+        <t t-jquery="button.o_pivot_download" t-operation="attributes">
+            <attribute name="class" value="btn btn-secondary fa fa-download o_pivot_download d-none"/>
+        </t>
+    </t>
+
+    <t t-extend="mail.Attachment">
+        <t t-jquery="a.o_attachment_download" t-operation="attributes">
+            <attribute name="class" value="ml4 o_attachment_download float-right d-none"/>
+        </t>
+    </t>
+
+
+</templates>

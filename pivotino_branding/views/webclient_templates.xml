@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="assets_common" name="Pivotino Branding Common Assets" inherit_id="web.assets_common">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/pivotino_branding/static/src/js/dialog.js"></script>
+        </xpath>
+    </template>
+
+    <template id="login_layout" inherit_id="web.login_layout">
+        <xpath expr="//a[@target='_blank']" position="replace">
+            <a href="https://www.pivotino.com" target="_blank">Powered by <span>Pivotino</span></a>
+        </xpath>
+
+        <xpath expr="//t[@t-if='not disable_database_manager']" position="replace"/>
+    </template>
+
+    <template id="brand_promotion_message" inherit_id="web.brand_promotion_message">
+        <xpath expr="//a[@target='_blank']" position="replace">
+            <a target="_blank"
+                t-attf-href="http://pivotino.com"
+                class="badge badge-light">
+                Pivotino
+            </a>
+        </xpath>
+    </template>
+
+    <template id="layout" inherit_id="web.layout">
+        <xpath expr="//title" position="replace">
+            <title t-esc="title or 'Pivotino'"/>
+        </xpath>
+
+        <xpath expr="//link" position="replace">
+            <link type="image/x-icon" rel="shortcut icon" t-att-href="x_icon or '/pivotino_branding/static/src/img/favicon.ico'"/>
+        </xpath>
+    </template>
+
+    <!-- report template -->
+    <template id="report_layout" inherit_id="web.report_layout">
+        <xpath expr="//title" position="replace">
+            <title><t t-esc="title or 'Pivotino Report'"/></title>
+        </xpath>
+    </template>
+
+</odoo>

@@ -1,0 +1,31 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pivotino_branding_crm
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-25 03:58+0000\n"
+"PO-Revision-Date: 2020-08-25 03:58+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pivotino_branding_crm
+#: model_terms:ir.ui.view,arch_db:pivotino_branding_crm.crm_lead_view_form_debrand
+msgid "% (Estimated by Pivotino)"
+msgstr ""
+
+#. module: pivotino_branding_crm
+#: model:ir.model,name:pivotino_branding_crm.model_crm_team
+msgid "Sales Team"
+msgstr ""
+
+#. module: pivotino_branding_crm
+#: model_terms:ir.ui.view,arch_db:pivotino_branding_crm.crm_lead_view_form_debrand
+msgid "e.g. https://www.pivotino.com"
+msgstr ""

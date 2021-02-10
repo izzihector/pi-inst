@@ -1,0 +1,380 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pivotino_pre_config
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-25 04:29+0000\n"
+"PO-Revision-Date: 2020-08-25 04:29+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields.selection,name:pivotino_pre_config.selection__first_time_login__days_before_lead_lost__14
+#: model:ir.model.fields.selection,name:pivotino_pre_config.selection__first_time_login__leads_due_day__14
+msgid "14"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields.selection,name:pivotino_pre_config.selection__first_time_login__days_before_lead_lost__30
+msgid "30"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.first_time_login_wizard
+msgid ""
+"<br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\">** You may change this later under Configurations &gt; Companies &gt; SaaS Config **</span><br/>"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.first_time_login_wizard
+msgid ""
+"<br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\">** You may change this later under Sales &gt; Sales Target **</span><br/>"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_wizard_view
+msgid ""
+"<br/>\n"
+"                        <span style=\"font-size: 15px;\"><b>Actual vs Target</b></span><br/>\n"
+"                        <span style=\"font-size: 15px;\">Easily track actual sales vs Target sales.</span>"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_wizard_view
+msgid ""
+"<br/>\n"
+"                        <span style=\"font-size: 15px;\"><b>Current Year Revenue</b></span><br/>\n"
+"                        <span style=\"font-size: 15px;\">Know your current year revenue.</span>"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_wizard_view
+msgid ""
+"<br/>\n"
+"                        <span style=\"font-size: 15px;\"><b>Missed Sales</b></span><br/>\n"
+"                        <span style=\"font-size: 15px;\">Get to know when leads are being slipped away.</span>"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_wizard_view
+msgid ""
+"<br/>\n"
+"                        <span style=\"font-size: 15px;\"><b>Sales Cycle Length</b></span><br/>\n"
+"                        <span style=\"font-size: 15px;\">Know your sales cycle for each stage.</span>"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_wizard_view
+msgid ""
+"<br/>\n"
+"                        <span style=\"font-size: 15px;\"><b>Win Loss Ratio</b></span><br/>\n"
+"                        <span style=\"font-size: 15px;\">Know your win loss ratio.</span>"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.first_time_login_wizard
+msgid ""
+"<br/><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>WELCOME!</b></span><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>Let's get started by setting up your dashboard</b></span><br/>"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.first_time_login_wizard
+msgid ""
+"<br/><br/><br/><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>In which of the below industries do your company belong to?</b></span><br/><br/><br/>"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.first_time_login_wizard
+msgid ""
+"<br/><br/><br/><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>We can automatically set a due date</b></span><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>to your leads in each stage.</b></span><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>On average, how many DAYS would you estimate</b></span><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>for leads in each stage to be due?</b></span><br/><br/><br/>"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.first_time_login_wizard
+msgid ""
+"<br/><br/><br/><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>We can help you to move inactive leads to \"LOST\" state.</b></span><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>After how many DAYS of no action since lead is created </b></span><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>would you prefer it to be considered as a lost lead?</b></span><br/><br/><br/>"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.first_time_login_wizard
+msgid ""
+"<br/><br/><br/><br/><br/><br/><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>We can help set KPIs to reach your ultimate goal.</b></span><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>What is your target sales per month?</b></span><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\">i,e, RM 5000 / $1000 </span><br/><br/><br/>"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.first_time_login_wizard
+msgid ""
+"<span style=\"horizontal-align: middle; font-size: 15px;\"><b>Thank you !</b></span><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>That was a quick one !</b></span><br/><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\">Hang on while we are working on the final configuration.</span><br/><br/><br/>"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_video_1
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_video_2
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_video_3
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_video_4
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_video_5
+msgid "Back to Selection"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_res_users__clogin
+msgid "Clogin"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_wizard_view
+msgid "Close"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__create_uid
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_pivotino_preconfigured_data__create_uid
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_starter_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__create_date
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_pivotino_preconfigured_data__create_date
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_starter_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_video_1
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_video_2
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_video_3
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_video_4
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_video_5
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_wizard_view
+msgid "Dashboard Quick Review"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_starter_wizard__dashboard_url
+msgid "Dashboard Url"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_pivotino_preconfigured_data__days_before_lead_lost
+msgid "Day(s) Before Lead Lost"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__display_name
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_pivotino_preconfigured_data__display_name
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_starter_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.first_time_login_wizard
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.starter_wizard_view_video
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.starter_wizard_view_video_bo
+msgid "Done"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model,name:pivotino_pre_config.model_first_time_login
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.first_time_login_wizard
+msgid "First Time Login"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.actions.act_window,name:pivotino_pre_config.action_first_time_login_wizard
+msgid "First Time Login Wizard"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.first_time_login_wizard
+msgid "First slide"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__id
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_pivotino_preconfigured_data__id
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_starter_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__industry
+msgid "Industry"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_pivotino_preconfigured_data__industry
+msgid "Industry Name"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__is_other_industry
+msgid "Is Other Industry?"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login____last_update
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_pivotino_preconfigured_data____last_update
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_starter_wizard____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__write_uid
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_pivotino_preconfigured_data__write_uid
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_starter_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__write_date
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_pivotino_preconfigured_data__write_date
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_starter_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.first_time_login_wizard
+msgid "Last slide"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_res_users__login_date_1
+msgid "Latest authentication"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__leads_due_day
+msgid "Leads Due Day"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_pivotino_preconfigured_data__leads_due_day
+msgid "Leads Due Day(s)"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__days_before_lead_lost
+msgid "Lost Leads Due Day"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_pivotino_preconfigured_data__name
+msgid "Name"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__num_of_employees
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_pivotino_preconfigured_data__num_of_employees
+msgid "Number of Employee(s)"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.first_time_login_wizard
+msgid "Other Industries"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__days_before_lead_lost_others
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__due_day_others
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__industry_others
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__num_of_employees_other
+#: model:ir.model.fields.selection,name:pivotino_pre_config.selection__first_time_login__days_before_lead_lost__other
+#: model:ir.model.fields.selection,name:pivotino_pre_config.selection__first_time_login__leads_due_day__other
+#: model:ir.model.fields.selection,name:pivotino_pre_config.selection__first_time_login__num_of_employees__other
+msgid "Others"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model,name:pivotino_pre_config.model_pivotino_preconfigured_data
+msgid "Pre-Configured Data"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.first_time_login_wizard
+msgid "Proceed/Skip"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: code:addons/pivotino_pre_config/wizard/starter_wizard.py:0
+#, python-format
+msgid "Sorry, Video is not available!"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_res_users__starter_view_id
+msgid "Starter Kit ID"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__target_sales
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_pivotino_preconfigured_data__target_sales
+msgid "Target Sales"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_res_users__first_log_bool
+msgid "Test"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model,name:pivotino_pre_config.model_res_users
+msgid "Users"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.starter_wizard_view_video_bo
+msgid "View Salesperson Video"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.actions.act_window,name:pivotino_pre_config.action_starter_wizard_business
+#: model:ir.actions.act_window,name:pivotino_pre_config.action_starter_wizard_sales
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.starter_wizard_view_video
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.starter_wizard_view_video_bo
+msgid "Welcome To PIVOTINO"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model,name:pivotino_pre_config.model_starter_wizard
+msgid "Welcome to PIVOTINO"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_wizard_view
+msgid "missed_sales"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_wizard_view
+msgid "sales_target"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_wizard_view
+msgid "sales_velocity"
+msgstr ""

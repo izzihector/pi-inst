@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_backend" name="Pivotino Certification Assets" inherit_id="web.assets_backend">
+        <xpath expr=".">
+            <script type="text/javascript" src="/pivotino_certification/static/src/js/apps_menu.js"></script>
+            <script type="text/javascript" src="/pivotino_certification/static/src/js/web_client.js"></script>
+
+            <link rel="stylesheet" type="text/scss" href="/pivotino_certification/static/src/scss/control_panel_layout.scss"/>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,1322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--    Sequence of creating chart record-->
+    <!--    1. Create 2nd Layer Charts-->
+    <!--    2. Create 1st Layer Charts-->
+    <!--    3. Create grid stack template-->
+    <!--    4. Create dashboard-->
+    <!--    5. Create chart filters-->
+    <!--    6. Create chart groups-->
+
+    <data>
+        <!--    Missed Sales Chart Start Here    -->
+        <!--    Missed Sales By Stage Funnel Chart (2nd Layer)    -->
+        <record id="pivotino_missed_sales_by_stage_funnel" model="ks_dashboard_ninja.item">
+            <field name="name">Missed Sales By Stage (C.Mth)</field>
+            <field name="ks_dashboard_item_type">ks_funnel</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_chart_data_count_type">sum</field>
+            <field name="ks_chart_groupby_type">relational_type</field>
+            <field name="ks_chart_measure_field" eval="[(6, 0, [ref('crm.field_crm_lead__planned_revenue')])]"/>
+            <field name="ks_domain">[["is_lost","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('pivotino_crm.field_crm_lead__mark_lost_date')"/>
+            <field name="ks_date_filter_selection">t_month</field>
+            <field name="ks_chart_relation_groupby" eval="ref('pivotino_crm.field_crm_lead__stage_before_lost')"/>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_chart_shadow" eval="False"/>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="False"/>
+            <field name="ks_hide_legend" eval="True"/>
+            <field name="ks_sort_by_data_type" eval="True"/>
+            <field name="ks_data_type_record_limit">0</field>
+            <field name="ks_sort_by_data_type_order">DESC</field>
+            <field name="ks_other_record_limit">0</field>
+            <field name="ks_chart_selection_string">Stage</field>
+            <field name="ks_empty_chart_msg">You do not have any Missed Sales in this month!</field>
+            <field name="ks_chart_item_color">default</field>
+        </record>
+
+        <!--    Missed Sales By Reason Doughnut Chart (2nd Layer)    -->
+        <record id="pivotino_missed_sales_by_reason_pie" model="ks_dashboard_ninja.item">
+            <field name="name">Missed Sales By Reason (C.Mth)</field>
+            <field name="ks_dashboard_item_type">ks_doughnut_chart</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_chart_data_count_type">sum</field>
+            <field name="ks_chart_groupby_type">relational_type</field>
+            <field name="ks_chart_measure_field" eval="[(6, 0, [ref('crm.field_crm_lead__planned_revenue')])]"/>
+            <field name="ks_domain">[["is_lost","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('pivotino_crm.field_crm_lead__mark_lost_date')"/>
+            <field name="ks_date_filter_selection">t_month</field>
+            <field name="ks_chart_relation_groupby" eval="ref('pivotino_crm.field_crm_lead__lost_reason_category')"/>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_chart_shadow" eval="False"/>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="False"/>
+            <field name="ks_sort_by_data_type" eval="True"/>
+            <field name="ks_data_type_record_limit">0</field>
+            <field name="ks_sort_by_data_type_order">DESC</field>
+            <field name="ks_other_record_limit">5</field>
+            <field name="ks_chart_selection_string">Reason</field>
+            <field name="ks_empty_chart_msg">You do not have any Missed Sales in this month!</field>
+            <field name="ks_show_center_text" eval="True"/>
+            <field name="ks_chart_item_color">cool</field>
+        </record>
+
+        <!--    Missed Sales By Salesperson Doughnut Chart (2nd Layer)    -->
+        <record id="pivotino_missed_sales_by_salesperson_doughnut" model="ks_dashboard_ninja.item">
+            <field name="name">Missed Sales By Salesperson (C.Mth)</field>
+            <field name="ks_dashboard_item_type">ks_doughnut_chart</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_chart_data_count_type">sum</field>
+            <field name="ks_chart_groupby_type">relational_type</field>
+            <field name="ks_chart_measure_field" eval="[(6, 0, [ref('crm.field_crm_lead__planned_revenue')])]"/>
+            <field name="ks_domain">[["is_lost","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('pivotino_crm.field_crm_lead__mark_lost_date')"/>
+            <field name="ks_date_filter_selection">t_month</field>
+            <field name="ks_chart_relation_groupby" eval="ref('crm.field_crm_lead__user_id')"/>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_chart_shadow" eval="False"/>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="False"/>
+            <field name="ks_sort_by_data_type" eval="True"/>
+            <field name="ks_data_type_record_limit">0</field>
+            <field name="ks_sort_by_data_type_order">DESC</field>
+            <field name="ks_other_record_limit">5</field>
+            <field name="ks_chart_selection_string">Salesperson</field>
+            <field name="ks_empty_chart_msg">You do not have any Missed Sales in this month!</field>
+            <field name="ks_show_center_text" eval="True"/>
+            <field name="ks_chart_item_color">neon</field>
+        </record>
+
+        <!--    Missed Sales By Stage Funnel Quarterly Chart (2nd Layer)    -->
+        <record id="pivotino_missed_sales_by_stage_quarterly_funnel" model="ks_dashboard_ninja.item">
+            <field name="name">Missed Sales By Stage (C.Qtr)</field>
+            <field name="ks_dashboard_item_type">ks_funnel</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_chart_data_count_type">sum</field>
+            <field name="ks_chart_groupby_type">relational_type</field>
+            <field name="ks_chart_measure_field" eval="[(6, 0, [ref('crm.field_crm_lead__planned_revenue')])]"/>
+            <field name="ks_domain">[["is_lost","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('pivotino_crm.field_crm_lead__mark_lost_date')"/>
+            <field name="ks_date_filter_selection">t_quarter</field>
+            <field name="ks_chart_relation_groupby" eval="ref('pivotino_crm.field_crm_lead__stage_before_lost')"/>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_chart_shadow" eval="False"/>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="False"/>
+            <field name="ks_hide_legend" eval="True"/>
+            <field name="ks_sort_by_data_type" eval="True"/>
+            <field name="ks_data_type_record_limit">0</field>
+            <field name="ks_sort_by_data_type_order">DESC</field>
+            <field name="ks_other_record_limit">0</field>
+            <field name="ks_chart_selection_string">Stage</field>
+            <field name="ks_empty_chart_msg">You do not have any Missed Sales in this quarter!</field>
+            <field name="ks_chart_item_color">default</field>
+        </record>
+
+        <!--    Missed Sales By Reason Doughnut Quarterly Chart (2nd Layer)    -->
+        <record id="pivotino_missed_sales_by_reason_quarterly_pie" model="ks_dashboard_ninja.item">
+            <field name="name">Missed Sales By Reason (C.Qtr)</field>
+            <field name="ks_dashboard_item_type">ks_doughnut_chart</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_chart_data_count_type">sum</field>
+            <field name="ks_chart_groupby_type">relational_type</field>
+            <field name="ks_chart_measure_field" eval="[(6, 0, [ref('crm.field_crm_lead__planned_revenue')])]"/>
+            <field name="ks_domain">[["is_lost","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('pivotino_crm.field_crm_lead__mark_lost_date')"/>
+            <field name="ks_date_filter_selection">t_quarter</field>
+            <field name="ks_chart_relation_groupby" eval="ref('pivotino_crm.field_crm_lead__lost_reason_category')"/>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_chart_shadow" eval="False"/>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="False"/>
+            <field name="ks_sort_by_data_type" eval="True"/>
+            <field name="ks_data_type_record_limit">0</field>
+            <field name="ks_sort_by_data_type_order">DESC</field>
+            <field name="ks_other_record_limit">5</field>
+            <field name="ks_chart_selection_string">Reason</field>
+            <field name="ks_empty_chart_msg">You do not have any Missed Sales in this quarter!</field>
+            <field name="ks_show_center_text" eval="True"/>
+            <field name="ks_chart_item_color">cool</field>
+        </record>
+
+        <!--    Missed Sales By Salesperson Doughnut Quarterly Chart (2nd Layer)    -->
+        <record id="pivotino_missed_sales_by_salesperson_quarterly_doughnut" model="ks_dashboard_ninja.item">
+            <field name="name">Missed Sales By Salesperson (C.Qtr)</field>
+            <field name="ks_dashboard_item_type">ks_doughnut_chart</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_chart_data_count_type">sum</field>
+            <field name="ks_chart_groupby_type">relational_type</field>
+            <field name="ks_chart_measure_field" eval="[(6, 0, [ref('crm.field_crm_lead__planned_revenue')])]"/>
+            <field name="ks_domain">[["is_lost","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('pivotino_crm.field_crm_lead__mark_lost_date')"/>
+            <field name="ks_date_filter_selection">t_quarter</field>
+            <field name="ks_chart_relation_groupby" eval="ref('crm.field_crm_lead__user_id')"/>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_chart_shadow" eval="False"/>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="False"/>
+            <field name="ks_sort_by_data_type" eval="True"/>
+            <field name="ks_data_type_record_limit">0</field>
+            <field name="ks_sort_by_data_type_order">DESC</field>
+            <field name="ks_other_record_limit">5</field>
+            <field name="ks_chart_selection_string">Salesperson</field>
+            <field name="ks_empty_chart_msg">You do not have any Missed Sales in this quarter!</field>
+            <field name="ks_show_center_text" eval="True"/>
+            <field name="ks_chart_item_color">neon</field>
+        </record>
+
+        <!--    Missed Sales By Stage Funnel Yearly Chart (2nd Layer)    -->
+        <record id="pivotino_missed_sales_by_stage_yearly_funnel" model="ks_dashboard_ninja.item">
+            <field name="name">Missed Sales By Stage (C.Yr)</field>
+            <field name="ks_dashboard_item_type">ks_funnel</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_chart_data_count_type">sum</field>
+            <field name="ks_chart_groupby_type">relational_type</field>
+            <field name="ks_chart_measure_field" eval="[(6, 0, [ref('crm.field_crm_lead__planned_revenue')])]"/>
+            <field name="ks_domain">[["is_lost","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('pivotino_crm.field_crm_lead__mark_lost_date')"/>
+            <field name="ks_date_filter_selection">t_year</field>
+            <field name="ks_chart_relation_groupby" eval="ref('pivotino_crm.field_crm_lead__stage_before_lost')"/>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_chart_shadow" eval="False"/>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="False"/>
+            <field name="ks_hide_legend" eval="True"/>
+            <field name="ks_sort_by_data_type" eval="True"/>
+            <field name="ks_data_type_record_limit">0</field>
+            <field name="ks_sort_by_data_type_order">DESC</field>
+            <field name="ks_other_record_limit">0</field>
+            <field name="ks_chart_selection_string">Stage</field>
+            <field name="ks_empty_chart_msg">You do not have any Missed Sales in this year!</field>
+            <field name="ks_chart_item_color">default</field>
+        </record>
+
+        <!--    Missed Sales By Reason Doughnut Yearly Chart (2nd Layer)    -->
+        <record id="pivotino_missed_sales_by_reason_yearly_pie" model="ks_dashboard_ninja.item">
+            <field name="name">Missed Sales By Reason (C.Yr)</field>
+            <field name="ks_dashboard_item_type">ks_doughnut_chart</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_chart_data_count_type">sum</field>
+            <field name="ks_chart_groupby_type">relational_type</field>
+            <field name="ks_chart_measure_field" eval="[(6, 0, [ref('crm.field_crm_lead__planned_revenue')])]"/>
+            <field name="ks_domain">[["is_lost","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('pivotino_crm.field_crm_lead__mark_lost_date')"/>
+            <field name="ks_date_filter_selection">t_year</field>
+            <field name="ks_chart_relation_groupby" eval="ref('pivotino_crm.field_crm_lead__lost_reason_category')"/>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_chart_shadow" eval="False"/>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="False"/>
+            <field name="ks_sort_by_data_type" eval="True"/>
+            <field name="ks_data_type_record_limit">0</field>
+            <field name="ks_sort_by_data_type_order">DESC</field>
+            <field name="ks_other_record_limit">5</field>
+            <field name="ks_chart_selection_string">Reason</field>
+            <field name="ks_empty_chart_msg">You do not have any Missed Sales in this year!</field>
+            <field name="ks_show_center_text" eval="True"/>
+            <field name="ks_chart_item_color">cool</field>
+        </record>
+
+        <!--    Missed Sales By Salesperson Doughnut Yearly Chart (2nd Layer)    -->
+        <record id="pivotino_missed_sales_by_salesperson_yearly_doughnut" model="ks_dashboard_ninja.item">
+            <field name="name">Missed Sales By Salesperson (C.Yr)</field>
+            <field name="ks_dashboard_item_type">ks_doughnut_chart</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_chart_data_count_type">sum</field>
+            <field name="ks_chart_groupby_type">relational_type</field>
+            <field name="ks_chart_measure_field" eval="[(6, 0, [ref('crm.field_crm_lead__planned_revenue')])]"/>
+            <field name="ks_domain">[["is_lost","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('pivotino_crm.field_crm_lead__mark_lost_date')"/>
+            <field name="ks_date_filter_selection">t_year</field>
+            <field name="ks_chart_relation_groupby" eval="ref('crm.field_crm_lead__user_id')"/>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_chart_shadow" eval="False"/>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="False"/>
+            <field name="ks_sort_by_data_type" eval="True"/>
+            <field name="ks_data_type_record_limit">0</field>
+            <field name="ks_sort_by_data_type_order">DESC</field>
+            <field name="ks_other_record_limit">5</field>
+            <field name="ks_chart_selection_string">Salesperson</field>
+            <field name="ks_empty_chart_msg">You do not have any Missed Sales in this year!</field>
+            <field name="ks_show_center_text" eval="True"/>
+            <field name="ks_chart_item_color">neon</field>
+        </record>
+
+        <!--    Missed Sales Gauge Chart Monthly (1st Layer)   -->
+        <record id="pivotino_missed_sales_gauge" model="ks_dashboard_ninja.item">
+            <field name="name">Missed Sales (Current Mth)</field>
+            <field name="ks_dashboard_item_type">ks_tsgauge</field>
+            <field name="ks_record_count_type">sum</field>
+            <field name="ks_record_count_type_2">sum</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_model_id_2" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_record_field" eval="ref('crm.field_crm_lead__planned_revenue')"/>
+            <field name="ks_record_field_2" eval="ref('crm.field_crm_lead__planned_revenue')"/>
+            <field name="ks_domain">[["is_lost","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_domain_2">[["is_won","!=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('pivotino_crm.field_crm_lead__mark_lost_date')"/>
+            <field name="ks_date_filter_selection">t_month</field>
+            <field name="ks_date_filter_field_2" eval="ref('pivotino_crm.field_crm_lead__date_deadline')"/>
+            <field name="ks_date_filter_selection_2">t_month</field>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_gauge_colors">0|#FCACCC|20|#FA5899|40|#F92F7F|60|#F50866|80|#CD0656|100</field>
+            <field name="ks_gauge_layout">ks_gauge_layout_2</field>
+            <field name="ks_gauge_next_item" eval="ref('pivotino_crm_dashboard.pivotino_missed_sales_by_stage_funnel')"/>
+            <field name="ks_gauge_decimal_precision">4</field>
+            <field name="ks_gauge_data_presentation">value</field>
+            <field name="ks_gauge_arrow_color">black</field>
+            <field name="ks_show_in_dashboard" eval="True"/>
+            <field name="ks_is_first_layer" eval="True"/>
+            <field name="ks_chart_selection_string">Month</field>
+            <field name="ks_empty_chart_msg">You do not have any Lead in this month!</field>
+        </record>
+
+        <!--    Missed Sales Gauge Chart Quarterly (1st Layer)   -->
+        <record id="pivotino_missed_sales_gauge_quarterly" model="ks_dashboard_ninja.item">
+            <field name="name">Missed Sales (Current Qtr)</field>
+            <field name="ks_dashboard_item_type">ks_tsgauge</field>
+            <field name="ks_record_count_type">sum</field>
+            <field name="ks_record_count_type_2">sum</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_model_id_2" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_record_field" eval="ref('crm.field_crm_lead__planned_revenue')"/>
+            <field name="ks_record_field_2" eval="ref('crm.field_crm_lead__planned_revenue')"/>
+            <field name="ks_domain">[["is_lost","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_domain_2">[["is_won","!=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('pivotino_crm.field_crm_lead__mark_lost_date')"/>
+            <field name="ks_date_filter_selection">t_quarter</field>
+            <field name="ks_date_filter_field_2" eval="ref('pivotino_crm.field_crm_lead__date_deadline')"/>
+            <field name="ks_date_filter_selection_2">t_quarter</field>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_gauge_colors">0|#FCACCC|20|#FA5899|40|#F92F7F|60|#F50866|80|#CD0656|100</field>
+            <field name="ks_gauge_layout">ks_gauge_layout_2</field>
+            <field name="ks_gauge_next_item" eval="ref('pivotino_crm_dashboard.pivotino_missed_sales_by_stage_quarterly_funnel')"/>
+            <field name="ks_gauge_decimal_precision">4</field>
+            <field name="ks_gauge_data_presentation">value</field>
+            <field name="ks_gauge_arrow_color">black</field>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="True"/>
+            <field name="ks_chart_selection_string">Quarter</field>
+            <field name="ks_empty_chart_msg">You do not have any Lead in this quarter!</field>
+        </record>
+
+        <!--    Missed Sales Gauge Chart Yearly (1st Layer)   -->
+        <record id="pivotino_missed_sales_gauge_yearly" model="ks_dashboard_ninja.item">
+            <field name="name">Missed Sales (Current Yr)</field>
+            <field name="ks_dashboard_item_type">ks_tsgauge</field>
+            <field name="ks_record_count_type">sum</field>
+            <field name="ks_record_count_type_2">sum</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_model_id_2" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_record_field" eval="ref('crm.field_crm_lead__planned_revenue')"/>
+            <field name="ks_record_field_2" eval="ref('crm.field_crm_lead__planned_revenue')"/>
+            <field name="ks_domain">[["is_lost","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_domain_2">[["is_won","!=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('pivotino_crm.field_crm_lead__mark_lost_date')"/>
+            <field name="ks_date_filter_selection">t_year</field>
+            <field name="ks_date_filter_field_2" eval="ref('pivotino_crm.field_crm_lead__date_deadline')"/>
+            <field name="ks_date_filter_selection_2">t_year</field>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_gauge_colors">0|#FCACCC|20|#FA5899|40|#F92F7F|60|#F50866|80|#CD0656|100</field>
+            <field name="ks_gauge_layout">ks_gauge_layout_2</field>
+            <field name="ks_gauge_next_item" eval="ref('pivotino_crm_dashboard.pivotino_missed_sales_by_stage_yearly_funnel')"/>
+            <field name="ks_gauge_decimal_precision">4</field>
+            <field name="ks_gauge_data_presentation">value</field>
+            <field name="ks_gauge_arrow_color">black</field>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="True"/>
+            <field name="ks_chart_selection_string">Year</field>
+            <field name="ks_empty_chart_msg">You do not have any Lead in this year!</field>
+        </record>
+        <!--    Missed Sales Chart End Here    -->
+
+        <!--    Actual vs Target Chart Start Here    -->
+        <!--    Actual vs Target By Stage Doughnut Chart (2nd Layer)   -->
+        <record id="pivotino_actual_vs_target_by_stage_doughnut" model="ks_dashboard_ninja.item">
+            <field name="name">All Prospect By Stage</field>
+            <field name="ks_dashboard_item_type">ks_doughnut_chart</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_chart_data_count_type">sum</field>
+            <field name="ks_chart_groupby_type">relational_type</field>
+            <field name="ks_chart_measure_field" eval="[(6, 0, [ref('crm.field_crm_lead__planned_revenue')])]"/>
+            <field name="ks_chart_relation_groupby" eval="ref('crm.field_crm_lead__stage_id')"/>
+            <field name="ks_domain">[["is_won","!=",True],["is_lost","!=",True],["type","=","opportunity"]]</field>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_chart_shadow" eval="False"/>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="False"/>
+            <field name="ks_sort_by_data_type" eval="True"/>
+            <field name="ks_data_type_record_limit">0</field>
+            <field name="ks_sort_by_data_type_order">DESC</field>
+            <field name="ks_other_record_limit">0</field>
+            <field name="ks_chart_selection_string">Stage</field>
+            <field name="ks_empty_chart_msg">You do not have any active Leads!</field>
+            <field name="ks_show_center_text" eval="True"/>
+            <field name="ks_chart_item_color">default</field>
+        </record>
+
+        <!--    Actual vs Target By Salesperson Doughnut Chart (2nd Layer)   -->
+        <record id="pivotino_actual_vs_target_by_salesperson_pie" model="ks_dashboard_ninja.item">
+            <field name="name">All Prospect By Salesperson</field>
+            <field name="ks_dashboard_item_type">ks_doughnut_chart</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_chart_data_count_type">sum</field>
+            <field name="ks_chart_groupby_type">relational_type</field>
+            <field name="ks_chart_measure_field" eval="[(6, 0, [ref('crm.field_crm_lead__planned_revenue')])]"/>
+            <field name="ks_chart_relation_groupby" eval="ref('crm.field_crm_lead__user_id')"/>
+            <field name="ks_domain">[["is_won","!=",True],["is_lost","!=",True],["type","=","opportunity"]]</field>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_chart_shadow" eval="False"/>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="False"/>
+            <field name="ks_sort_by_data_type" eval="True"/>
+            <field name="ks_data_type_record_limit">0</field>
+            <field name="ks_sort_by_data_type_order">DESC</field>
+            <field name="ks_other_record_limit">5</field>
+            <field name="ks_chart_selection_string">Salesperson</field>
+            <field name="ks_empty_chart_msg">You do not have any active Leads!</field>
+            <field name="ks_show_center_text" eval="True"/>
+            <field name="ks_chart_item_color">scheme_five</field>
+        </record>
+
+        <!--    Actual vs Target Gauge Chart Monthly (1st Layer)   -->
+        <record id="pivotino_actual_vs_target_gauge" model="ks_dashboard_ninja.item">
+            <field name="name">Actual vs Target (Current Mth)</field>
+            <field name="ks_dashboard_item_type">ks_tsgauge</field>
+            <field name="ks_record_count_type">sum</field>
+            <field name="ks_record_count_type_2">sum</field>
+            <field name="ks_model_id" eval="ref('sale.model_sale_order')"/>
+            <field name="ks_model_id_2" eval="ref('pivotino_crm.model_sale_target_individual')"/>
+            <field name="ks_record_field" eval="ref('pivotino_crm.field_sale_order__amount_total_base')"/>
+            <field name="ks_record_field_2" eval="ref('pivotino_crm.field_sale_target_individual__target_sales')"/>
+            <field name="ks_domain">['|',['state','=','sale'],['state','=','done']]</field>
+            <field name="ks_date_filter_field" eval="ref('sale.field_sale_order__date_order')"/>
+            <field name="ks_date_filter_selection">t_month</field>
+            <field name="ks_date_filter_field_2" eval="ref('pivotino_crm.field_sale_target_individual__target_date')"/>
+            <field name="ks_date_filter_selection_2">t_month</field>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_gauge_colors">0|#E83F22|20|#F48019|40|#FFC010|60|#67C73F|80|#5EB539|100</field>
+            <field name="ks_gauge_layout">ks_gauge_layout_6</field>
+            <field name="ks_gauge_next_item" eval="ref('pivotino_crm_dashboard.pivotino_actual_vs_target_by_stage_doughnut')"/>
+            <field name="ks_gauge_decimal_precision">4</field>
+            <field name="ks_gauge_data_presentation">value</field>
+            <field name="ks_gauge_arrow_color">black</field>
+            <field name="ks_show_in_dashboard" eval="True"/>
+            <field name="ks_is_first_layer" eval="True"/>
+            <field name="ks_chart_selection_string">Month</field>
+            <field name="ks_empty_chart_msg">No Sale Target is defined!</field>
+        </record>
+
+        <!--    Actual vs Target Gauge Chart Quarterly (1st Layer)   -->
+        <record id="pivotino_actual_vs_target_gauge_quarterly" model="ks_dashboard_ninja.item">
+            <field name="name">Actual vs Target (Current Qtr)</field>
+            <field name="ks_dashboard_item_type">ks_tsgauge</field>
+            <field name="ks_record_count_type">sum</field>
+            <field name="ks_record_count_type_2">sum</field>
+            <field name="ks_model_id" eval="ref('sale.model_sale_order')"/>
+            <field name="ks_model_id_2" eval="ref('pivotino_crm.model_sale_target_individual')"/>
+            <field name="ks_record_field" eval="ref('pivotino_crm.field_sale_order__amount_total_base')"/>
+            <field name="ks_record_field_2" eval="ref('pivotino_crm.field_sale_target_individual__target_sales')"/>
+            <field name="ks_domain">['|',['state','=','sale'],['state','=','done']]</field>
+            <field name="ks_date_filter_field" eval="ref('sale.field_sale_order__date_order')"/>
+            <field name="ks_date_filter_selection">t_quarter</field>
+            <field name="ks_date_filter_field_2" eval="ref('pivotino_crm.field_sale_target_individual__target_date')"/>
+            <field name="ks_date_filter_selection_2">t_quarter</field>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_gauge_colors">0|#E83F22|20|#F48019|40|#FFC010|60|#67C73F|80|#5EB539|100</field>
+            <field name="ks_gauge_layout">ks_gauge_layout_6</field>
+            <field name="ks_gauge_next_item" eval="ref('pivotino_crm_dashboard.pivotino_actual_vs_target_by_stage_doughnut')"/>
+            <field name="ks_gauge_decimal_precision">4</field>
+            <field name="ks_gauge_data_presentation">value</field>
+            <field name="ks_gauge_arrow_color">black</field>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="True"/>
+            <field name="ks_chart_selection_string">Quarter</field>
+            <field name="ks_empty_chart_msg">No Sale Target is defined!</field>
+        </record>
+
+        <!--    Actual vs Target Gauge Chart Yearly (1st Layer)   -->
+        <record id="pivotino_actual_vs_target_gauge_yearly" model="ks_dashboard_ninja.item">
+            <field name="name">Actual vs Target (Current Yr)</field>
+            <field name="ks_dashboard_item_type">ks_tsgauge</field>
+            <field name="ks_record_count_type">sum</field>
+            <field name="ks_record_count_type_2">sum</field>
+            <field name="ks_model_id" eval="ref('sale.model_sale_order')"/>
+            <field name="ks_model_id_2" eval="ref('pivotino_crm.model_sale_target_individual')"/>
+            <field name="ks_record_field" eval="ref('pivotino_crm.field_sale_order__amount_total_base')"/>
+            <field name="ks_record_field_2" eval="ref('pivotino_crm.field_sale_target_individual__target_sales')"/>
+            <field name="ks_domain">['|',['state','=','sale'],['state','=','done']]</field>
+            <field name="ks_date_filter_field" eval="ref('sale.field_sale_order__date_order')"/>
+            <field name="ks_date_filter_selection">t_year</field>
+            <field name="ks_date_filter_field_2" eval="ref('pivotino_crm.field_sale_target_individual__target_date')"/>
+            <field name="ks_date_filter_selection_2">t_year</field>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_gauge_colors">0|#E83F22|20|#F48019|40|#FFC010|60|#67C73F|80|#5EB539|100</field>
+            <field name="ks_gauge_layout">ks_gauge_layout_6</field>
+            <field name="ks_gauge_next_item" eval="ref('pivotino_crm_dashboard.pivotino_actual_vs_target_by_stage_doughnut')"/>
+            <field name="ks_gauge_decimal_precision">4</field>
+            <field name="ks_gauge_data_presentation">value</field>
+            <field name="ks_gauge_arrow_color">black</field>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="True"/>
+            <field name="ks_chart_selection_string">Year</field>
+            <field name="ks_empty_chart_msg">No Sale Target is defined!</field>
+        </record>
+        <!--    Actual vs Target Chart End Here    -->
+
+        <!--    Sales Velocity Chart Start Here    -->
+        <!--    Sales Velocity By Deal Size Horizontal Bar Chart (2nd Layer)   -->
+        <record id="pivotino_sales_velocity_by_deal_size_horizontal_bar" model="ks_dashboard_ninja.item">
+            <field name="name">Salespsn Avg Sales Length (C.Mth)</field>
+            <field name="ks_dashboard_item_type">ks_horizontalBar_chart</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_chart_data_count_type">average</field>
+            <field name="ks_chart_groupby_type">relational_type</field>
+            <field name="ks_chart_measure_field" eval="[(6, 0, [ref('pivotino_crm.field_crm_lead__duration_to_won')])]"/>
+            <field name="ks_chart_relation_groupby" eval="ref('crm.field_crm_lead__user_id')"/>
+            <field name="ks_domain">[["is_won","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('crm.field_crm_lead__date_open')"/>
+            <field name="ks_date_filter_selection">t_month</field>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_chart_shadow" eval="False"/>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="False"/>
+            <field name="ks_sort_by_data_type" eval="True"/>
+            <field name="ks_data_type_record_limit">0</field>
+            <field name="ks_sort_by_data_type_order">DESC</field>
+            <field name="ks_other_record_limit">10</field>
+            <field name="ks_chart_selection_string">Len-CM</field>
+            <field name="ks_empty_chart_msg">You do not have any won Leads in this month!</field>
+            <field name="ks_chart_item_color">scheme_five</field>
+        </record>
+
+        <!--    Sales Velocity By Deal Size By Salesperson Horizontal Bar Chart (2nd Layer)   -->
+        <record id="pivotino_sales_velocity_by_deal_size_by_salesperson_horizontal_bar" model="ks_dashboard_ninja.item">
+            <field name="name">Salespsn Avg Deal Size (C.Mth)</field>
+            <field name="ks_dashboard_item_type">ks_horizontalBar_chart</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_chart_data_count_type">average</field>
+            <field name="ks_chart_groupby_type">relational_type</field>
+            <field name="ks_chart_measure_field" eval="[(6, 0, [ref('crm.field_crm_lead__planned_revenue')])]"/>
+            <field name="ks_chart_relation_groupby" eval="ref('crm.field_crm_lead__user_id')"/>
+            <field name="ks_domain">[["is_won","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('crm.field_crm_lead__date_open')"/>
+            <field name="ks_date_filter_selection">t_month</field>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_chart_shadow" eval="False"/>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="False"/>
+            <field name="ks_hide_legend" eval="False"/>
+            <field name="ks_sort_by_data_type" eval="True"/>
+            <field name="ks_data_type_record_limit">0</field>
+            <field name="ks_sort_by_data_type_order">DESC</field>
+            <field name="ks_other_record_limit">10</field>
+            <field name="ks_chart_selection_string">Size-CM</field>
+            <field name="ks_empty_chart_msg">You do not have any won Leads in this month!</field>
+            <field name="ks_chart_item_color">warm</field>
+        </record>
+
+        <!--    Sales Velocity By Deal Size Last Month Horizontal Bar Chart (2nd Layer)   -->
+        <record id="pivotino_sales_velocity_by_deal_size_last_month_horizontal_bar" model="ks_dashboard_ninja.item">
+            <field name="name">Salespsn Avg Sales Length (L.Mth)</field>
+            <field name="ks_dashboard_item_type">ks_horizontalBar_chart</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_chart_data_count_type">average</field>
+            <field name="ks_chart_groupby_type">relational_type</field>
+            <field name="ks_chart_measure_field" eval="[(6, 0, [ref('pivotino_crm.field_crm_lead__duration_to_won')])]"/>
+            <field name="ks_chart_relation_groupby" eval="ref('crm.field_crm_lead__user_id')"/>
+            <field name="ks_domain">[["is_won","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('crm.field_crm_lead__date_open')"/>
+            <field name="ks_date_filter_selection">ls_month</field>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_chart_shadow" eval="False"/>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="False"/>
+            <field name="ks_sort_by_data_type" eval="True"/>
+            <field name="ks_data_type_record_limit">0</field>
+            <field name="ks_sort_by_data_type_order">DESC</field>
+            <field name="ks_other_record_limit">10</field>
+            <field name="ks_chart_selection_string">Len-LM</field>
+            <field name="ks_empty_chart_msg">You do not have any won Leads in last month!</field>
+            <field name="ks_chart_item_color">scheme_five</field>
+        </record>
+
+        <!--    Sales Velocity By Deal Size By Salesperson Last Month Horizontal Bar Chart (2nd Layer)   -->
+        <record id="pivotino_sales_velocity_by_deal_size_by_salesperson_last_month_horizontal_bar" model="ks_dashboard_ninja.item">
+            <field name="name">Salespsn Avg Deal Size (L.Mth)</field>
+            <field name="ks_dashboard_item_type">ks_horizontalBar_chart</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_chart_data_count_type">average</field>
+            <field name="ks_chart_groupby_type">relational_type</field>
+            <field name="ks_chart_measure_field" eval="[(6, 0, [ref('crm.field_crm_lead__planned_revenue')])]"/>
+            <field name="ks_chart_relation_groupby" eval="ref('crm.field_crm_lead__user_id')"/>
+            <field name="ks_domain">[["is_won","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('crm.field_crm_lead__date_open')"/>
+            <field name="ks_date_filter_selection">ls_month</field>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_chart_shadow" eval="False"/>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="False"/>
+            <field name="ks_hide_legend" eval="False"/>
+            <field name="ks_sort_by_data_type" eval="True"/>
+            <field name="ks_data_type_record_limit">0</field>
+            <field name="ks_sort_by_data_type_order">DESC</field>
+            <field name="ks_other_record_limit">10</field>
+            <field name="ks_chart_selection_string">Size-LM</field>
+            <field name="ks_empty_chart_msg">You do not have any won Leads in last month!</field>
+            <field name="ks_chart_item_color">warm</field>
+        </record>
+
+        <!--    Sales Velocity By Deal Size Quarterly Horizontal Bar Chart (2nd Layer)   -->
+        <record id="pivotino_sales_velocity_by_deal_size_quarterly_horizontal_bar" model="ks_dashboard_ninja.item">
+            <field name="name">Salespsn Avg Sales Length (C.Qtr)</field>
+            <field name="ks_dashboard_item_type">ks_horizontalBar_chart</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_chart_data_count_type">average</field>
+            <field name="ks_chart_groupby_type">relational_type</field>
+            <field name="ks_chart_measure_field" eval="[(6, 0, [ref('pivotino_crm.field_crm_lead__duration_to_won')])]"/>
+            <field name="ks_chart_relation_groupby" eval="ref('crm.field_crm_lead__user_id')"/>
+            <field name="ks_domain">[["is_won","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('crm.field_crm_lead__date_open')"/>
+            <field name="ks_date_filter_selection">t_quarter</field>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_chart_shadow" eval="False"/>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="False"/>
+            <field name="ks_sort_by_data_type" eval="True"/>
+            <field name="ks_data_type_record_limit">0</field>
+            <field name="ks_sort_by_data_type_order">DESC</field>
+            <field name="ks_other_record_limit">10</field>
+            <field name="ks_chart_selection_string">Len-CQ</field>
+            <field name="ks_empty_chart_msg">You do not have any won Leads in this quarter!</field>
+            <field name="ks_chart_item_color">scheme_five</field>
+        </record>
+
+        <!--    Sales Velocity By Deal Size By Salesperson Quarterly Horizontal Bar Chart (2nd Layer)   -->
+        <record id="pivotino_sales_velocity_by_deal_size_by_salesperson_quarterly_horizontal_bar" model="ks_dashboard_ninja.item">
+            <field name="name">Salespsn Avg Deal Size (C.Qtr)</field>
+            <field name="ks_dashboard_item_type">ks_horizontalBar_chart</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_chart_data_count_type">average</field>
+            <field name="ks_chart_groupby_type">relational_type</field>
+            <field name="ks_chart_measure_field" eval="[(6, 0, [ref('crm.field_crm_lead__planned_revenue')])]"/>
+            <field name="ks_chart_relation_groupby" eval="ref('crm.field_crm_lead__user_id')"/>
+            <field name="ks_domain">[["is_won","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('crm.field_crm_lead__date_open')"/>
+            <field name="ks_date_filter_selection">t_quarter</field>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_chart_shadow" eval="False"/>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="False"/>
+            <field name="ks_hide_legend" eval="False"/>
+            <field name="ks_sort_by_data_type" eval="True"/>
+            <field name="ks_data_type_record_limit">0</field>
+            <field name="ks_sort_by_data_type_order">DESC</field>
+            <field name="ks_other_record_limit">10</field>
+            <field name="ks_chart_selection_string">Size-CQ</field>
+            <field name="ks_empty_chart_msg">You do not have any won Leads in this quarter!</field>
+            <field name="ks_chart_item_color">warm</field>
+        </record>
+
+        <!--    Sales Velocity By Deal Size Last Quarter Horizontal Bar Chart (2nd Layer)   -->
+        <record id="pivotino_sales_velocity_by_deal_size_last_quarter_horizontal_bar" model="ks_dashboard_ninja.item">
+            <field name="name">Salespsn Avg Sales Length (L.Qtr)</field>
+            <field name="ks_dashboard_item_type">ks_horizontalBar_chart</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_chart_data_count_type">average</field>
+            <field name="ks_chart_groupby_type">relational_type</field>
+            <field name="ks_chart_measure_field" eval="[(6, 0, [ref('pivotino_crm.field_crm_lead__duration_to_won')])]"/>
+            <field name="ks_chart_relation_groupby" eval="ref('crm.field_crm_lead__user_id')"/>
+            <field name="ks_domain">[["is_won","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('crm.field_crm_lead__date_open')"/>
+            <field name="ks_date_filter_selection">ls_quarter</field>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_chart_shadow" eval="False"/>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="False"/>
+            <field name="ks_sort_by_data_type" eval="True"/>
+            <field name="ks_data_type_record_limit">0</field>
+            <field name="ks_sort_by_data_type_order">DESC</field>
+            <field name="ks_other_record_limit">10</field>
+            <field name="ks_chart_selection_string">Len-LQ</field>
+            <field name="ks_empty_chart_msg">You do not have any won Leads in last quarter!</field>
+            <field name="ks_chart_item_color">scheme_five</field>
+        </record>
+
+        <!--    Sales Velocity By Deal Size By Salesperson Last Quarter Horizontal Bar Chart (2nd Layer)   -->
+        <record id="pivotino_sales_velocity_by_deal_size_by_salesperson_last_quarter_horizontal_bar" model="ks_dashboard_ninja.item">
+            <field name="name">Salespsn Avg Deal Size (L.Qtr)</field>
+            <field name="ks_dashboard_item_type">ks_horizontalBar_chart</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_chart_data_count_type">average</field>
+            <field name="ks_chart_groupby_type">relational_type</field>
+            <field name="ks_chart_measure_field" eval="[(6, 0, [ref('crm.field_crm_lead__planned_revenue')])]"/>
+            <field name="ks_chart_relation_groupby" eval="ref('crm.field_crm_lead__user_id')"/>
+            <field name="ks_domain">[["is_won","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('crm.field_crm_lead__date_open')"/>
+            <field name="ks_date_filter_selection">ls_quarter</field>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_chart_shadow" eval="False"/>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="False"/>
+            <field name="ks_hide_legend" eval="False"/>
+            <field name="ks_sort_by_data_type" eval="True"/>
+            <field name="ks_data_type_record_limit">0</field>
+            <field name="ks_sort_by_data_type_order">DESC</field>
+            <field name="ks_other_record_limit">10</field>
+            <field name="ks_chart_selection_string">Size-LQ</field>
+            <field name="ks_empty_chart_msg">You do not have any won Leads in last quarter!</field>
+            <field name="ks_chart_item_color">warm</field>
+        </record>
+
+        <!--    Sales Velocity By Deal Size Yearly Horizontal Bar Chart (2nd Layer)   -->
+        <record id="pivotino_sales_velocity_by_deal_size_yearly_horizontal_bar" model="ks_dashboard_ninja.item">
+            <field name="name">Salespsn Avg Sales Length (C.Yr)</field>
+            <field name="ks_dashboard_item_type">ks_horizontalBar_chart</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_chart_data_count_type">average</field>
+            <field name="ks_chart_groupby_type">relational_type</field>
+            <field name="ks_chart_measure_field" eval="[(6, 0, [ref('pivotino_crm.field_crm_lead__duration_to_won')])]"/>
+            <field name="ks_chart_relation_groupby" eval="ref('crm.field_crm_lead__user_id')"/>
+            <field name="ks_domain">[["is_won","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('crm.field_crm_lead__date_open')"/>
+            <field name="ks_date_filter_selection">t_year</field>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_chart_shadow" eval="False"/>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="False"/>
+            <field name="ks_sort_by_data_type" eval="True"/>
+            <field name="ks_data_type_record_limit">0</field>
+            <field name="ks_sort_by_data_type_order">DESC</field>
+            <field name="ks_other_record_limit">10</field>
+            <field name="ks_chart_selection_string">Len-CY</field>
+            <field name="ks_empty_chart_msg">You do not have any won Leads in this year!</field>
+            <field name="ks_chart_item_color">scheme_five</field>
+        </record>
+
+        <!--    Sales Velocity By Deal Size By Salesperson Yearly Horizontal Bar Chart (2nd Layer)   -->
+        <record id="pivotino_sales_velocity_by_deal_size_by_salesperson_yearly_horizontal_bar" model="ks_dashboard_ninja.item">
+            <field name="name">Salespsn Avg Deal Size (C.Yr)</field>
+            <field name="ks_dashboard_item_type">ks_horizontalBar_chart</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_chart_data_count_type">average</field>
+            <field name="ks_chart_groupby_type">relational_type</field>
+            <field name="ks_chart_measure_field" eval="[(6, 0, [ref('crm.field_crm_lead__planned_revenue')])]"/>
+            <field name="ks_chart_relation_groupby" eval="ref('crm.field_crm_lead__user_id')"/>
+            <field name="ks_domain">[["is_won","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('crm.field_crm_lead__date_open')"/>
+            <field name="ks_date_filter_selection">t_year</field>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_chart_shadow" eval="False"/>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="False"/>
+            <field name="ks_hide_legend" eval="False"/>
+            <field name="ks_sort_by_data_type" eval="True"/>
+            <field name="ks_data_type_record_limit">0</field>
+            <field name="ks_sort_by_data_type_order">DESC</field>
+            <field name="ks_other_record_limit">10</field>
+            <field name="ks_chart_selection_string">Size-CY</field>
+            <field name="ks_empty_chart_msg">You do not have any won Leads in this year!</field>
+            <field name="ks_chart_item_color">warm</field>
+        </record>
+
+        <!--    Sales Velocity By Deal Size Last Year Horizontal Bar Chart (2nd Layer)   -->
+        <record id="pivotino_sales_velocity_by_deal_size_last_year_horizontal_bar" model="ks_dashboard_ninja.item">
+            <field name="name">Salespsn Avg Sales Length (L.Yr)</field>
+            <field name="ks_dashboard_item_type">ks_horizontalBar_chart</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_chart_data_count_type">average</field>
+            <field name="ks_chart_groupby_type">relational_type</field>
+            <field name="ks_chart_measure_field" eval="[(6, 0, [ref('pivotino_crm.field_crm_lead__duration_to_won')])]"/>
+            <field name="ks_chart_relation_groupby" eval="ref('crm.field_crm_lead__user_id')"/>
+            <field name="ks_domain">[["is_won","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('crm.field_crm_lead__date_open')"/>
+            <field name="ks_date_filter_selection">ls_year</field>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_chart_shadow" eval="False"/>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="False"/>
+            <field name="ks_sort_by_data_type" eval="True"/>
+            <field name="ks_data_type_record_limit">0</field>
+            <field name="ks_sort_by_data_type_order">DESC</field>
+            <field name="ks_other_record_limit">10</field>
+            <field name="ks_chart_selection_string">Len-LY</field>
+            <field name="ks_empty_chart_msg">You do not have any won Leads in last year!</field>
+            <field name="ks_chart_item_color">scheme_five</field>
+        </record>
+
+        <!--    Sales Velocity By Deal Size By Salesperson Last Year Horizontal Bar Chart (2nd Layer)   -->
+        <record id="pivotino_sales_velocity_by_deal_size_by_salesperson_last_year_horizontal_bar" model="ks_dashboard_ninja.item">
+            <field name="name">Salespsn Avg Deal Size (L.Yr)</field>
+            <field name="ks_dashboard_item_type">ks_horizontalBar_chart</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_chart_data_count_type">average</field>
+            <field name="ks_chart_groupby_type">relational_type</field>
+            <field name="ks_chart_measure_field" eval="[(6, 0, [ref('crm.field_crm_lead__planned_revenue')])]"/>
+            <field name="ks_chart_relation_groupby" eval="ref('crm.field_crm_lead__user_id')"/>
+            <field name="ks_domain">[["is_won","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('crm.field_crm_lead__date_open')"/>
+            <field name="ks_date_filter_selection">ls_year</field>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_chart_shadow" eval="False"/>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="False"/>
+            <field name="ks_hide_legend" eval="False"/>
+            <field name="ks_sort_by_data_type" eval="True"/>
+            <field name="ks_data_type_record_limit">0</field>
+            <field name="ks_sort_by_data_type_order">DESC</field>
+            <field name="ks_other_record_limit">10</field>
+            <field name="ks_chart_selection_string">Size-LY</field>
+            <field name="ks_empty_chart_msg">You do not have any won Leads in last year!</field>
+            <field name="ks_chart_item_color">warm</field>
+        </record>
+
+        <!--    Sales Velocity Gauge Chart Monthly (1st Layer)   -->
+        <record id="pivotino_sales_velocity_gauge" model="ks_dashboard_ninja.item">
+            <field name="name">Avg Sales Cycle in Days (Current Mth)</field>
+            <field name="ks_dashboard_item_type">ks_tsgauge</field>
+            <field name="ks_record_count_type">average</field>
+            <field name="ks_record_count_type_2">max</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_model_id_2" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_record_field" eval="ref('pivotino_crm.field_crm_lead__duration_to_won')"/>
+            <field name="ks_record_field_2" eval="ref('pivotino_crm.field_crm_lead__duration_to_won')"/>
+            <field name="ks_domain">[["is_won","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_domain_2">[["is_won","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('crm.field_crm_lead__date_open')"/>
+            <field name="ks_date_filter_selection">t_month</field>
+            <field name="ks_date_filter_field_2" eval="ref('crm.field_crm_lead__date_open')"/>
+            <field name="ks_date_filter_selection_2">t_month</field>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_gauge_colors">0|#50B1bE|33|#F4b959|66|#E77E7E|100</field>
+            <field name="ks_gauge_layout">ks_gauge_layout_3</field>
+            <field name="ks_gauge_next_item" eval="ref('pivotino_crm_dashboard.pivotino_sales_velocity_by_deal_size_horizontal_bar')"/>
+            <field name="ks_gauge_decimal_precision">4</field>
+            <field name="ks_gauge_data_presentation">value</field>
+            <field name="ks_gauge_arrow_color">black</field>
+            <field name="ks_show_in_dashboard" eval="True"/>
+            <field name="ks_is_first_layer" eval="True"/>
+            <field name="ks_chart_selection_string">Month</field>
+            <field name="ks_empty_chart_msg">You do not have any won Leads in this month!</field>
+        </record>
+
+        <!--    Sales Velocity Gauge Chart Quarterly (1st Layer)   -->
+        <record id="pivotino_sales_velocity_gauge_quarterly" model="ks_dashboard_ninja.item">
+            <field name="name">Avg Sales Cycle in Days (Current Qtr)</field>
+            <field name="ks_dashboard_item_type">ks_tsgauge</field>
+            <field name="ks_record_count_type">average</field>
+            <field name="ks_record_count_type_2">max</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_model_id_2" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_record_field" eval="ref('pivotino_crm.field_crm_lead__duration_to_won')"/>
+            <field name="ks_record_field_2" eval="ref('pivotino_crm.field_crm_lead__duration_to_won')"/>
+            <field name="ks_domain">[["is_won","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_domain_2">[["is_won","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('crm.field_crm_lead__date_open')"/>
+            <field name="ks_date_filter_selection">t_quarter</field>
+            <field name="ks_date_filter_field_2" eval="ref('crm.field_crm_lead__date_open')"/>
+            <field name="ks_date_filter_selection_2">t_quarter</field>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_gauge_colors">0|#50B1bE|33|#F4b959|66|#E77E7E|100</field>
+            <field name="ks_gauge_layout">ks_gauge_layout_3</field>
+            <field name="ks_gauge_next_item" eval="ref('pivotino_crm_dashboard.pivotino_sales_velocity_by_deal_size_quarterly_horizontal_bar')"/>
+            <field name="ks_gauge_decimal_precision">4</field>
+            <field name="ks_gauge_data_presentation">value</field>
+            <field name="ks_gauge_arrow_color">black</field>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="True"/>
+            <field name="ks_chart_selection_string">Quarter</field>
+            <field name="ks_empty_chart_msg">You do not have any won Leads in this quarter!</field>
+        </record>
+
+        <!--    Sales Velocity Gauge Chart Yearly (1st Layer)   -->
+        <record id="pivotino_sales_velocity_gauge_yearly" model="ks_dashboard_ninja.item">
+            <field name="name">Avg Sales Cycle in Days (Current Yr)</field>
+            <field name="ks_dashboard_item_type">ks_tsgauge</field>
+            <field name="ks_record_count_type">average</field>
+            <field name="ks_record_count_type_2">max</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_model_id_2" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_record_field" eval="ref('pivotino_crm.field_crm_lead__duration_to_won')"/>
+            <field name="ks_record_field_2" eval="ref('pivotino_crm.field_crm_lead__duration_to_won')"/>
+            <field name="ks_domain">[["is_won","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_domain_2">[["is_won","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('crm.field_crm_lead__date_open')"/>
+            <field name="ks_date_filter_selection">t_year</field>
+            <field name="ks_date_filter_field_2" eval="ref('crm.field_crm_lead__date_open')"/>
+            <field name="ks_date_filter_selection_2">t_year</field>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_gauge_colors">0|#50B1bE|33|#F4b959|66|#E77E7E|100</field>
+            <field name="ks_gauge_layout">ks_gauge_layout_3</field>
+            <field name="ks_gauge_next_item" eval="ref('pivotino_crm_dashboard.pivotino_sales_velocity_by_deal_size_yearly_horizontal_bar')"/>
+            <field name="ks_gauge_decimal_precision">4</field>
+            <field name="ks_gauge_data_presentation">value</field>
+            <field name="ks_gauge_arrow_color">black</field>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="True"/>
+            <field name="ks_chart_selection_string">Year</field>
+            <field name="ks_empty_chart_msg">You do not have any won Leads in this year!</field>
+        </record>
+        <!--    Sales Velocity Chart End Here    -->
+
+        <!--    Win Loss Ratio Chart Start Here    -->
+        <!--    Win Loss Ratio By Count Horizontal Bar Chart (2nd Layer)   -->
+        <record id="pivotino_win_loss_ratio_by_count_horizontal_bar" model="ks_dashboard_ninja.item">
+            <field name="name">Win Loss By Count (C.Yr)</field>
+            <field name="ks_dashboard_item_type">ks_horizontalBar_chart</field>
+            <field name="ks_bar_chart_stacked" eval="True"/>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_chart_data_count_type">count</field>
+            <field name="ks_chart_groupby_type">relational_type</field>
+            <field name="ks_chart_sub_groupby_type">relational_type</field>
+            <field name="ks_chart_relation_groupby" eval="ref('crm.field_crm_lead__user_id')"/>
+            <field name="ks_chart_relation_sub_groupby" eval="ref('crm.field_crm_lead__stage_id')"/>
+            <field name="ks_domain">[["type","=","opportunity"],"|",["is_won","=",True],["is_lost","=",True]]</field>
+            <field name="ks_date_filter_field" eval="ref('crm.field_crm_lead__date_closed')"/>
+            <field name="ks_date_filter_selection">t_year</field>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="False"/>
+            <field name="ks_chart_shadow" eval="False"/>
+            <field name="ks_show_data_value" eval="False"/>
+            <field name="ks_sort_by_data_type" eval="True"/>
+            <field name="ks_data_type_record_limit">0</field>
+            <field name="ks_sort_by_data_type_order">DESC</field>
+            <field name="ks_other_record_limit">10</field>
+            <field name="ks_chart_selection_string">By Count</field>
+            <field name="ks_empty_chart_msg">You do not have any Won/Lost Leads in this year!</field>
+            <field name="ks_chart_item_color">neon</field>
+        </record>
+
+        <!--    Win Loss Ratio By Amount Horizontal Bar Chart (2nd Layer)   -->
+        <record id="pivotino_win_loss_ratio_by_amount_horizontal_bar" model="ks_dashboard_ninja.item">
+            <field name="name">Win Loss By Amount (C.Yr)</field>
+            <field name="ks_dashboard_item_type">ks_horizontalBar_chart</field>
+            <field name="ks_bar_chart_stacked" eval="True"/>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_chart_data_count_type">sum</field>
+            <field name="ks_chart_measure_field" eval="[(6, 0, [ref('pivotino_crm.field_crm_lead__final_revenue')])]"/>
+            <field name="ks_chart_groupby_type">relational_type</field>
+            <field name="ks_chart_sub_groupby_type">relational_type</field>
+            <field name="ks_chart_relation_groupby" eval="ref('crm.field_crm_lead__user_id')"/>
+            <field name="ks_chart_relation_sub_groupby" eval="ref('crm.field_crm_lead__stage_id')"/>
+            <field name="ks_domain">[["type","=","opportunity"],"|",["is_won","=",True],["is_lost","=",True]]</field>
+            <field name="ks_date_filter_field" eval="ref('crm.field_crm_lead__date_closed')"/>
+            <field name="ks_date_filter_selection">t_year</field>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="False"/>
+            <field name="ks_chart_shadow" eval="False"/>
+            <field name="ks_show_data_value" eval="False"/>
+            <field name="ks_sort_by_data_type" eval="True"/>
+            <field name="ks_data_type_record_limit">0</field>
+            <field name="ks_sort_by_data_type_order">DESC</field>
+            <field name="ks_other_record_limit">10</field>
+            <field name="ks_chart_selection_string">By Amount</field>
+            <field name="ks_empty_chart_msg">You do not have any Won/Lost Leads in this year!</field>
+            <field name="ks_chart_item_color">neon</field>
+        </record>
+
+        <!--    Win Loss Ratio Gauge Chart (1st Layer)   -->
+        <!--    The actual data retrieving is in Python code   -->
+        <record id="pivotino_win_loss_ratio_gauge" model="ks_dashboard_ninja.item">
+            <field name="name">Win Loss Ratio (Current Yr)</field>
+            <field name="ks_dashboard_item_type">ks_tsgauge</field>
+            <field name="ks_record_count_type">count</field>
+            <field name="ks_record_count_type_2">count</field>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_model_id_2" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_domain">[["is_won","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_domain_2">[["is_lost","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('crm.field_crm_lead__date_closed')"/>
+            <field name="ks_date_filter_selection">t_year</field>
+            <field name="ks_date_filter_field_2" eval="ref('pivotino_crm.field_crm_lead__mark_lost_date')"/>
+            <field name="ks_date_filter_selection_2">t_year</field>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_gauge_colors">#6dd47e|#ffd55a</field>
+            <field name="ks_gauge_layout">ks_gauge_layout_4</field>
+            <field name="ks_gauge_next_item" eval="ref('pivotino_crm_dashboard.pivotino_win_loss_ratio_by_count_horizontal_bar')"/>
+            <field name="ks_gauge_decimal_precision">4</field>
+            <field name="ks_gauge_data_presentation">value</field>
+            <field name="ks_gauge_arrow_color">black</field>
+            <field name="ks_show_in_dashboard" eval="True"/>
+            <field name="ks_is_first_layer" eval="True"/>
+            <field name="ks_empty_chart_msg">You do not have any Won/Lost Leads in this year!</field>
+        </record>
+        <!--    Win Loss Ratio Chart End Here    -->
+
+        <!--    Current Year Revenue Analysis Chart Start Here    -->
+        <!--    Current Year Revenue Analysis Top 10 Customer Horizontal Bar Chart (2nd Layer)   -->
+        <record id="pivotino_cy_revenue_analysis_top_ten_customer_horizontal_bar" model="ks_dashboard_ninja.item">
+            <field name="name">Top 10 Customers (C.Yr)</field>
+            <field name="ks_dashboard_item_type">ks_horizontalBar_chart</field>
+            <field name="ks_bar_chart_stacked" eval="False"/>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_chart_data_count_type">sum</field>
+            <field name="ks_chart_measure_field" eval="[(6, 0, [ref('pivotino_crm.field_crm_lead__final_revenue')])]"/>
+            <field name="ks_chart_groupby_type">relational_type</field>
+            <field name="ks_chart_relation_groupby" eval="ref('crm.field_crm_lead__partner_id')"/>
+            <field name="ks_domain">[["is_won","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('crm.field_crm_lead__date_closed')"/>
+            <field name="ks_date_filter_selection">t_year</field>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="False"/>
+            <field name="ks_chart_shadow" eval="False"/>
+            <field name="ks_show_data_value" eval="False"/>
+            <field name="ks_chart_selection_string">Customer</field>
+            <field name="ks_sort_by_data_type" eval="True"/>
+            <field name="ks_data_type_record_limit">10</field>
+            <field name="ks_sort_by_data_type_order">DESC</field>
+            <field name="ks_other_record_limit">0</field>
+            <field name="ks_empty_chart_msg">You do not have any Won Leads in this year!</field>
+            <field name="ks_chart_item_color">warm</field>
+        </record>
+
+        <!--    Current Year Revenue Analysis Top 5 Salesperson Horizontal Bar Chart (2nd Layer)   -->
+        <record id="pivotino_cy_revenue_analysis_top_five_salesperson_horizontal_bar" model="ks_dashboard_ninja.item">
+            <field name="name">Top 5 Salesperson (C.Yr)</field>
+            <field name="ks_dashboard_item_type">ks_horizontalBar_chart</field>
+            <field name="ks_bar_chart_stacked" eval="False"/>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_chart_data_count_type">sum</field>
+            <field name="ks_chart_measure_field" eval="[(6, 0, [ref('pivotino_crm.field_crm_lead__final_revenue')])]"/>
+            <field name="ks_chart_groupby_type">relational_type</field>
+            <field name="ks_chart_relation_groupby" eval="ref('crm.field_crm_lead__user_id')"/>
+            <field name="ks_domain">[["is_won","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('crm.field_crm_lead__date_closed')"/>
+            <field name="ks_date_filter_selection">t_year</field>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_show_in_dashboard" eval="False"/>
+            <field name="ks_is_first_layer" eval="False"/>
+            <field name="ks_chart_shadow" eval="False"/>
+            <field name="ks_show_data_value" eval="False"/>
+            <field name="ks_sort_by_data_type" eval="True"/>
+            <field name="ks_data_type_record_limit">5</field>
+            <field name="ks_sort_by_data_type_order">DESC</field>
+            <field name="ks_other_record_limit">0</field>
+            <field name="ks_chart_selection_string">Salesperson</field>
+            <field name="ks_empty_chart_msg">You do not have any Won Leads in this year!</field>
+            <field name="ks_chart_item_color">warm</field>
+        </record>
+
+        <!--    Current Year Revenue Analysis Horizontal Bar Chart (1st Layer)   -->
+        <record id="pivotino_cy_revenue_analysis_horizontal_bar" model="ks_dashboard_ninja.item">
+            <field name="name">Revenue Analysis (Current Yr)</field>
+            <field name="ks_dashboard_item_type">ks_horizontalBar_chart</field>
+            <field name="ks_bar_chart_stacked" eval="False"/>
+            <field name="ks_model_id" eval="ref('crm.model_crm_lead')"/>
+            <field name="ks_chart_data_count_type">sum</field>
+            <field name="ks_chart_measure_field" eval="[(6, 0, [ref('pivotino_crm.field_crm_lead__final_revenue')])]"/>
+            <field name="ks_chart_groupby_type">date_type</field>
+            <field name="ks_chart_relation_groupby" eval="ref('crm.field_crm_lead__date_closed')"/>
+            <field name="ks_chart_date_groupby">month</field>
+            <field name="ks_domain">[["is_won","=",True],["type","=","opportunity"]]</field>
+            <field name="ks_date_filter_field" eval="ref('crm.field_crm_lead__date_closed')"/>
+            <field name="ks_date_filter_selection">t_year</field>
+            <field name="ks_company_id" eval="0"/>
+            <field name="ks_show_in_dashboard" eval="True"/>
+            <field name="ks_is_first_layer" eval="True"/>
+            <field name="ks_chart_shadow" eval="False"/>
+            <field name="ks_show_data_value" eval="False"/>
+            <field name="ks_gauge_next_item" eval="ref('pivotino_crm_dashboard.pivotino_cy_revenue_analysis_top_ten_customer_horizontal_bar')"/>
+            <field name="ks_empty_chart_msg">You do not have any Won Leads in this year!</field>
+            <field name="ks_chart_item_color">cool</field>
+        </record>
+        <!--    Current Year Revenue Analysis Chart End Here    -->
+
+        <!--    CRM Overview Chart Template   -->
+        <record id="pivotino_crm_overview_template" model="ks_dashboard_ninja.board_template">
+            <field name="name">CRM Overview Template</field>
+            <field name="ks_gridstack_config">[
+                {"item_id":"pivotino_crm_dashboard.pivotino_missed_sales_by_stage_funnel", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_missed_sales_by_reason_pie", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_missed_sales_by_salesperson_doughnut", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_missed_sales_by_stage_quarterly_funnel", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_missed_sales_by_reason_quarterly_pie", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_missed_sales_by_salesperson_quarterly_doughnut", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_missed_sales_by_stage_yearly_funnel", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_missed_sales_by_reason_yearly_pie", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_missed_sales_by_salesperson_yearly_doughnut", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_missed_sales_gauge", "data": {"x": 0, "y": 0, "width": 18, "height": 5}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_missed_sales_gauge_quarterly", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_missed_sales_gauge_yearly", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_actual_vs_target_by_stage_doughnut", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_actual_vs_target_by_salesperson_pie", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_actual_vs_target_gauge", "data": {"x": 18, "y": 0, "width": 18, "height": 5}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_actual_vs_target_gauge_quarterly", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_actual_vs_target_gauge_yearly", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_sales_velocity_by_deal_size_horizontal_bar", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_sales_velocity_by_deal_size_by_salesperson_horizontal_bar", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_sales_velocity_by_deal_size_last_month_horizontal_bar", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_sales_velocity_by_deal_size_by_salesperson_last_month_horizontal_bar", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_sales_velocity_by_deal_size_quarterly_horizontal_bar", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_sales_velocity_by_deal_size_by_salesperson_quarterly_horizontal_bar", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_sales_velocity_by_deal_size_last_quarter_horizontal_bar", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_sales_velocity_by_deal_size_by_salesperson_last_quarter_horizontal_bar", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_sales_velocity_by_deal_size_yearly_horizontal_bar", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_sales_velocity_by_deal_size_by_salesperson_yearly_horizontal_bar", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_sales_velocity_by_deal_size_last_year_horizontal_bar", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_sales_velocity_by_deal_size_by_salesperson_last_year_horizontal_bar", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_sales_velocity_gauge", "data": {"x": 0, "y": 5, "width": 18, "height": 5}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_sales_velocity_gauge_quarterly", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_sales_velocity_gauge_yearly", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_win_loss_ratio_by_count_horizontal_bar", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_win_loss_ratio_by_amount_horizontal_bar", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_win_loss_ratio_gauge", "data": {"x": 18, "y": 5, "width": 18, "height": 5}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_cy_revenue_analysis_top_ten_customer_horizontal_bar", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_cy_revenue_analysis_top_five_salesperson_horizontal_bar", "data": {"x": 0, "y": 0, "width": 0, "height": 0}},
+                {"item_id":"pivotino_crm_dashboard.pivotino_cy_revenue_analysis_horizontal_bar", "data": {"x": 0, "y": 10, "width": 36, "height": 5}}
+                ]
+            </field>
+            <field name="ks_item_count">38</field>
+        </record>
+
+        <!--   CRM Overview Dashboard   -->
+        <record id="pivotino_crm_overview_dashboard" model="ks_dashboard_ninja.board">
+            <field name="name">CRM Dashboard</field>
+            <field name="ks_dashboard_menu_name">Overview</field>
+            <field name="ks_dashboard_top_menu_id" eval="ref('crm.crm_menu_root')"/>
+            <field name="ks_dashboard_default_template" eval="ref('pivotino_crm_overview_template')"/>
+            <field name="ks_dashboard_active">1</field>
+            <field name="ks_dashboard_group_access" eval="False"/>
+            <field name="ks_dashboard_menu_sequence">0</field>
+        </record>
+
+        <!--    Actual vs Target By Stage Doughnut Charts Filters Start   -->]
+<!--        <record id="pivotino_actual_vs_target_by_stage_doughnut_filter_overdue" model="ks_dashboard_ninja.item_filter">-->
+<!--            <field name="filter_group_name">Overdue</field>-->
+<!--            <field name="filter_name">Overdue</field>-->
+<!--            <field name="filter_domain">DATE_FILTER:activity_due_date,ls_pastwithout_now</field>-->
+<!--            <field name="default_filter" eval="False"/>-->
+<!--            <field name="mobile_visible" eval="True"/>-->
+<!--            <field name="ks_dashboard_board_id" eval="ref('pivotino_crm_dashboard.pivotino_crm_overview_dashboard')"/>-->
+<!--            <field name="ks_dashboard_item_id" eval="ref('pivotino_crm_dashboard.pivotino_actual_vs_target_by_stage_doughnut')"/>-->
+<!--        </record>-->
+
+<!--        <record id="pivotino_actual_vs_target_by_stage_doughnut_filter_this_week" model="ks_dashboard_ninja.item_filter">-->
+<!--            <field name="filter_group_name">Overdue</field>-->
+<!--            <field name="filter_name">This Wk</field>-->
+<!--            <field name="filter_domain">DATE_FILTER:activity_due_date,t_week</field>-->
+<!--            <field name="default_filter" eval="False"/>-->
+<!--            <field name="mobile_visible" eval="True"/>-->
+<!--            <field name="ks_dashboard_board_id" eval="ref('pivotino_crm_dashboard.pivotino_crm_overview_dashboard')"/>-->
+<!--            <field name="ks_dashboard_item_id" eval="ref('pivotino_crm_dashboard.pivotino_actual_vs_target_by_stage_doughnut')"/>-->
+<!--        </record>-->
+
+<!--        <record id="pivotino_actual_vs_target_by_stage_doughnut_filter_next_week" model="ks_dashboard_ninja.item_filter">-->
+<!--            <field name="filter_group_name">Overdue</field>-->
+<!--            <field name="filter_name">Next Wk</field>-->
+<!--            <field name="filter_domain">DATE_FILTER:activity_due_date,n_week</field>-->
+<!--            <field name="default_filter" eval="False"/>-->
+<!--            <field name="mobile_visible" eval="True"/>-->
+<!--            <field name="ks_dashboard_board_id" eval="ref('pivotino_crm_dashboard.pivotino_crm_overview_dashboard')"/>-->
+<!--            <field name="ks_dashboard_item_id" eval="ref('pivotino_crm_dashboard.pivotino_actual_vs_target_by_stage_doughnut')"/>-->
+<!--        </record>-->
+
+<!--        <record id="pivotino_actual_vs_target_by_stage_doughnut_filter_this_month" model="ks_dashboard_ninja.item_filter">-->
+<!--            <field name="filter_group_name">Overdue</field>-->
+<!--            <field name="filter_name">This Mth</field>-->
+<!--            <field name="filter_domain">DATE_FILTER:activity_due_date,t_month</field>-->
+<!--            <field name="default_filter" eval="True"/>-->
+<!--            <field name="mobile_visible" eval="True"/>-->
+<!--            <field name="ks_dashboard_board_id" eval="ref('pivotino_crm_dashboard.pivotino_crm_overview_dashboard')"/>-->
+<!--            <field name="ks_dashboard_item_id" eval="ref('pivotino_crm_dashboard.pivotino_actual_vs_target_by_stage_doughnut')"/>-->
+<!--        </record>-->
+        <!--    Actual vs Target By Stage Doughnut Charts Filters End   -->
+
+        <!--    Actual vs Target By Salesperson Pie Charts Filters Start   -->
+<!--        <record id="pivotino_actual_vs_target_by_salesperson_pie_filter_overdue" model="ks_dashboard_ninja.item_filter">-->
+<!--            <field name="filter_group_name">Overdue</field>-->
+<!--            <field name="filter_name">Overdue</field>-->
+<!--            <field name="filter_domain">DATE_FILTER:activity_due_date,ls_pastwithout_now</field>-->
+<!--            <field name="default_filter" eval="False"/>-->
+<!--            <field name="mobile_visible" eval="True"/>-->
+<!--            <field name="ks_dashboard_board_id" eval="ref('pivotino_crm_dashboard.pivotino_crm_overview_dashboard')"/>-->
+<!--            <field name="ks_dashboard_item_id" eval="ref('pivotino_crm_dashboard.pivotino_actual_vs_target_by_salesperson_pie')"/>-->
+<!--        </record>-->
+
+<!--        <record id="pivotino_actual_vs_target_by_salesperson_pie_filter_this_week" model="ks_dashboard_ninja.item_filter">-->
+<!--            <field name="filter_group_name">Overdue</field>-->
+<!--            <field name="filter_name">This Wk</field>-->
+<!--            <field name="filter_domain">DATE_FILTER:activity_due_date,t_week</field>-->
+<!--            <field name="default_filter" eval="False"/>-->
+<!--            <field name="mobile_visible" eval="True"/>-->
+<!--            <field name="ks_dashboard_board_id" eval="ref('pivotino_crm_dashboard.pivotino_crm_overview_dashboard')"/>-->
+<!--            <field name="ks_dashboard_item_id" eval="ref('pivotino_crm_dashboard.pivotino_actual_vs_target_by_salesperson_pie')"/>-->
+<!--        </record>-->
+
+<!--        <record id="pivotino_actual_vs_target_by_salesperson_pie_filter_next_week" model="ks_dashboard_ninja.item_filter">-->
+<!--            <field name="filter_group_name">Overdue</field>-->
+<!--            <field name="filter_name">Next Wk</field>-->
+<!--            <field name="filter_domain">DATE_FILTER:activity_due_date,n_week</field>-->
+<!--            <field name="default_filter" eval="False"/>-->
+<!--            <field name="mobile_visible" eval="True"/>-->
+<!--            <field name="ks_dashboard_board_id" eval="ref('pivotino_crm_dashboard.pivotino_crm_overview_dashboard')"/>-->
+<!--            <field name="ks_dashboard_item_id" eval="ref('pivotino_crm_dashboard.pivotino_actual_vs_target_by_salesperson_pie')"/>-->
+<!--        </record>-->
+
+<!--        <record id="pivotino_actual_vs_target_by_salesperson_pie_filter_this_month" model="ks_dashboard_ninja.item_filter">-->
+<!--            <field name="filter_group_name">Overdue</field>-->
+<!--            <field name="filter_name">This Mth</field>-->
+<!--            <field name="filter_domain">DATE_FILTER:activity_due_date,t_month</field>-->
+<!--            <field name="default_filter" eval="True"/>-->
+<!--            <field name="mobile_visible" eval="True"/>-->
+<!--            <field name="ks_dashboard_board_id" eval="ref('pivotino_crm_dashboard.pivotino_crm_overview_dashboard')"/>-->
+<!--            <field name="ks_dashboard_item_id" eval="ref('pivotino_crm_dashboard.pivotino_actual_vs_target_by_salesperson_pie')"/>-->
+<!--        </record>-->
+        <!--    Actual vs Target By Salesperson Pie Charts Filters End   -->
+
+        <!--    Missed Sales Chart Group   -->
+        <record id="pivotino_missed_sales_group" model="ks_dashboard_ninja.group">
+            <field name="name">Missed Sales Group</field>
+            <field name="ks_dashboard_board_id" eval="ref('pivotino_crm_dashboard.pivotino_crm_overview_dashboard')"/>
+            <field name="ks_dashboard_items_ids"
+                   eval="[(6, 0, [ref('pivotino_crm_dashboard.pivotino_missed_sales_by_stage_funnel'),
+                   ref('pivotino_crm_dashboard.pivotino_missed_sales_by_reason_pie'),
+                   ref('pivotino_crm_dashboard.pivotino_missed_sales_by_salesperson_doughnut')])]"/>
+        </record>
+
+        <!--    Missed Sales Quarterly Chart Group   -->
+        <record id="pivotino_missed_sales_quarterly_group" model="ks_dashboard_ninja.group">
+            <field name="name">Missed Sales Quarterly Group</field>
+            <field name="ks_dashboard_board_id" eval="ref('pivotino_crm_dashboard.pivotino_crm_overview_dashboard')"/>
+            <field name="ks_dashboard_items_ids"
+                   eval="[(6, 0, [ref('pivotino_crm_dashboard.pivotino_missed_sales_by_stage_quarterly_funnel'),
+                   ref('pivotino_crm_dashboard.pivotino_missed_sales_by_reason_quarterly_pie'),
+                   ref('pivotino_crm_dashboard.pivotino_missed_sales_by_salesperson_quarterly_doughnut')])]"/>
+        </record>
+
+        <!--    Missed Sales Yearly Chart Group   -->
+        <record id="pivotino_missed_sales_yearly_group" model="ks_dashboard_ninja.group">
+            <field name="name">Missed Sales Yearly Group</field>
+            <field name="ks_dashboard_board_id" eval="ref('pivotino_crm_dashboard.pivotino_crm_overview_dashboard')"/>
+            <field name="ks_dashboard_items_ids"
+                   eval="[(6, 0, [ref('pivotino_crm_dashboard.pivotino_missed_sales_by_stage_yearly_funnel'),
+                   ref('pivotino_crm_dashboard.pivotino_missed_sales_by_reason_yearly_pie'),
+                   ref('pivotino_crm_dashboard.pivotino_missed_sales_by_salesperson_yearly_doughnut')])]"/>
+        </record>
+
+        <!--    Missed Sales First Layer Chart Group   -->
+        <record id="pivotino_missed_sales_first_group" model="ks_dashboard_ninja.group">
+            <field name="name">Missed Sales First Group</field>
+            <field name="ks_dashboard_board_id" eval="ref('pivotino_crm_dashboard.pivotino_crm_overview_dashboard')"/>
+            <field name="ks_dashboard_items_ids"
+                   eval="[(6, 0, [ref('pivotino_crm_dashboard.pivotino_missed_sales_gauge'),
+                   ref('pivotino_crm_dashboard.pivotino_missed_sales_gauge_quarterly'),
+                   ref('pivotino_crm_dashboard.pivotino_missed_sales_gauge_yearly')])]"/>
+        </record>
+
+        <!--    Actual vs Target Chart Group   -->
+        <record id="pivotino_actual_vs_target_group" model="ks_dashboard_ninja.group">
+            <field name="name">Actual vs Target Group</field>
+            <field name="ks_dashboard_board_id" eval="ref('pivotino_crm_dashboard.pivotino_crm_overview_dashboard')"/>
+            <field name="ks_dashboard_items_ids"
+                   eval="[(6, 0, [ref('pivotino_crm_dashboard.pivotino_actual_vs_target_by_stage_doughnut'),
+                   ref('pivotino_crm_dashboard.pivotino_actual_vs_target_by_salesperson_pie')])]"/>
+        </record>
+
+        <!--    Actual vs Target First Layer Chart Group   -->
+        <record id="pivotino_actual_vs_target_first_group" model="ks_dashboard_ninja.group">
+            <field name="name">Actual vs Target First Group</field>
+            <field name="ks_dashboard_board_id" eval="ref('pivotino_crm_dashboard.pivotino_crm_overview_dashboard')"/>
+            <field name="ks_dashboard_items_ids"
+                   eval="[(6, 0, [ref('pivotino_crm_dashboard.pivotino_actual_vs_target_gauge'),
+                   ref('pivotino_crm_dashboard.pivotino_actual_vs_target_gauge_quarterly'),
+                   ref('pivotino_crm_dashboard.pivotino_actual_vs_target_gauge_yearly')])]"/>
+        </record>
+
+        <!--    Sales Velocity Chart Group   -->
+        <record id="pivotino_sales_velocity_group" model="ks_dashboard_ninja.group">
+            <field name="name">Sales Velocity Group</field>
+            <field name="ks_dashboard_board_id" eval="ref('pivotino_crm_dashboard.pivotino_crm_overview_dashboard')"/>
+            <field name="ks_dashboard_items_ids"
+                   eval="[(6, 0, [ref('pivotino_crm_dashboard.pivotino_sales_velocity_by_deal_size_horizontal_bar'),
+                   ref('pivotino_crm_dashboard.pivotino_sales_velocity_by_deal_size_by_salesperson_horizontal_bar'),
+                   ref('pivotino_crm_dashboard.pivotino_sales_velocity_by_deal_size_last_month_horizontal_bar'),
+                   ref('pivotino_crm_dashboard.pivotino_sales_velocity_by_deal_size_by_salesperson_last_month_horizontal_bar')])]"/>
+        </record>
+
+        <!--    Sales Velocity Quarterly Chart Group   -->
+        <record id="pivotino_sales_velocity_quarterly_group" model="ks_dashboard_ninja.group">
+            <field name="name">Sales Velocity Quarterly Group</field>
+            <field name="ks_dashboard_board_id" eval="ref('pivotino_crm_dashboard.pivotino_crm_overview_dashboard')"/>
+            <field name="ks_dashboard_items_ids"
+                   eval="[(6, 0, [ref('pivotino_crm_dashboard.pivotino_sales_velocity_by_deal_size_quarterly_horizontal_bar'),
+                   ref('pivotino_crm_dashboard.pivotino_sales_velocity_by_deal_size_by_salesperson_quarterly_horizontal_bar'),
+                   ref('pivotino_crm_dashboard.pivotino_sales_velocity_by_deal_size_last_quarter_horizontal_bar'),
+                   ref('pivotino_crm_dashboard.pivotino_sales_velocity_by_deal_size_by_salesperson_last_quarter_horizontal_bar')])]"/>
+        </record>
+
+        <!--    Sales Velocity Yearly Chart Group   -->
+        <record id="pivotino_sales_velocity_yearly_group" model="ks_dashboard_ninja.group">
+            <field name="name">Sales Velocity Yearly Group</field>
+            <field name="ks_dashboard_board_id" eval="ref('pivotino_crm_dashboard.pivotino_crm_overview_dashboard')"/>
+            <field name="ks_dashboard_items_ids"
+                   eval="[(6, 0, [ref('pivotino_crm_dashboard.pivotino_sales_velocity_by_deal_size_yearly_horizontal_bar'),
+                   ref('pivotino_crm_dashboard.pivotino_sales_velocity_by_deal_size_by_salesperson_yearly_horizontal_bar'),
+                   ref('pivotino_crm_dashboard.pivotino_sales_velocity_by_deal_size_last_year_horizontal_bar'),
+                   ref('pivotino_crm_dashboard.pivotino_sales_velocity_by_deal_size_by_salesperson_last_year_horizontal_bar')])]"/>
+        </record>
+
+        <!--    Sales Velocity First Layer Chart Group   -->
+        <record id="pivotino_sales_velocity_first_group" model="ks_dashboard_ninja.group">
+            <field name="name">Sales Velocity First Group</field>
+            <field name="ks_dashboard_board_id" eval="ref('pivotino_crm_dashboard.pivotino_crm_overview_dashboard')"/>
+            <field name="ks_dashboard_items_ids"
+                   eval="[(6, 0, [ref('pivotino_crm_dashboard.pivotino_sales_velocity_gauge'),
+                   ref('pivotino_crm_dashboard.pivotino_sales_velocity_gauge_quarterly'),
+                   ref('pivotino_crm_dashboard.pivotino_sales_velocity_gauge_yearly')])]"/>
+        </record>
+
+        <!--    Win Loss Ratio Chart Group   -->
+        <record id="pivotino_win_loss_ratio_group" model="ks_dashboard_ninja.group">
+            <field name="name">Win Loss Ratio Group</field>
+            <field name="ks_dashboard_board_id" eval="ref('pivotino_crm_dashboard.pivotino_crm_overview_dashboard')"/>
+            <field name="ks_dashboard_items_ids"
+                   eval="[(6, 0, [ref('pivotino_crm_dashboard.pivotino_win_loss_ratio_by_count_horizontal_bar'),
+                   ref('pivotino_crm_dashboard.pivotino_win_loss_ratio_by_amount_horizontal_bar')])]"/>
+        </record>
+
+        <!--    Current Year Revenue Analysis Chart Group   -->
+        <record id="pivotino_cy_revenue_analysis_group" model="ks_dashboard_ninja.group">
+            <field name="name">Current Year Revenue Analysis Group</field>
+            <field name="ks_dashboard_board_id" eval="ref('pivotino_crm_dashboard.pivotino_crm_overview_dashboard')"/>
+            <field name="ks_dashboard_items_ids"
+                   eval="[(6, 0, [ref('pivotino_crm_dashboard.pivotino_cy_revenue_analysis_top_ten_customer_horizontal_bar'),
+                   ref('pivotino_crm_dashboard.pivotino_cy_revenue_analysis_top_five_salesperson_horizontal_bar')])]"/>
+        </record>
+
+        <!--    CRM Overview Client Action   -->
+        <record id="action_pivotino_crm_overview" model="ir.actions.client">
+            <field name="name">CRM Overview Action</field>
+            <field name="res_model">ks_dashboard_ninja.board</field>
+            <field name="tag">ks_dashboard_ninja</field>
+            <field name="params" eval="{'ks_dashboard_id': ref('pivotino_crm_dashboard.pivotino_crm_overview_dashboard')}"/>
+        </record>
+
+        <!--    CRM Overview Menu Item   -->
+        <menuitem id="pivotino_crm_overview_menu"
+                  name="Overview"
+                  sequence="0"
+                  parent="crm.crm_menu_root"
+                  action="action_pivotino_crm_overview"/>
+
+        <!--    CRM Menu Item   -->
+        <menuitem
+            id="crm.crm_menu_root"
+            name="CRM"
+            action="action_pivotino_crm_overview"/>
+
+    </data>
+    <data noupdate="1">
+
+        <function model="res.users"
+                  name="change_home_action"/>
+
+    </data>
+
+</odoo>

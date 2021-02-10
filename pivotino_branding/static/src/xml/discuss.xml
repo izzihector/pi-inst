@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template xml:space="preserve">
+    <!-- This template is to rename odoo of preference wizard worning box for notification-->
+    <t t-extend="mail.NotificationAlert">
+        <t t-jquery="center[class='o_notification_alert alert alert-primary']" t-operation='inner'>
+            Pivotino Push notifications have been blocked. Go to your browser settings to allow them.
+        </t>
+    </t>
+
+</template>

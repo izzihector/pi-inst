@@ -1,0 +1,174 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pivotino_general_feedback
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-25 04:24+0000\n"
+"PO-Revision-Date: 2020-08-25 04:24+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pivotino_general_feedback
+#. openerp-web
+#: code:addons/pivotino_general_feedback/static/src/xml/feedback_popup.xml:0
+#, python-format
+msgid "(NEGATIVE)"
+msgstr "（负）"
+
+#. module: pivotino_general_feedback
+#. openerp-web
+#: code:addons/pivotino_general_feedback/static/src/xml/feedback_popup.xml:0
+#, python-format
+msgid "(POSITIVE)"
+msgstr "（正）"
+
+#. module: pivotino_general_feedback
+#. openerp-web
+#: code:addons/pivotino_general_feedback/static/src/xml/feedback_popup.xml:0
+#: code:addons/pivotino_general_feedback/static/src/xml/feedback_popup.xml:0
+#, python-format
+msgid "Additional feedback (optional)"
+msgstr "其他反馈"
+
+#. module: pivotino_general_feedback
+#. openerp-web
+#: code:addons/pivotino_general_feedback/static/src/xml/feedback_popup.xml:0
+#: code:addons/pivotino_general_feedback/static/src/xml/feedback_popup.xml:0
+#: code:addons/pivotino_general_feedback/static/src/xml/feedback_popup.xml:0
+#, python-format
+msgid "Cancel"
+msgstr "取消"
+
+#. module: pivotino_general_feedback
+#: model:ir.model.fields,field_description:pivotino_general_feedback.field_general_feedback_tags__code
+msgid "Code"
+msgstr ""
+
+#. module: pivotino_general_feedback
+#: model:ir.model.fields,field_description:pivotino_general_feedback.field_general_feedback_tags__create_uid
+msgid "Created by"
+msgstr "创建者"
+
+#. module: pivotino_general_feedback
+#: model:ir.model.fields,field_description:pivotino_general_feedback.field_general_feedback_tags__create_date
+msgid "Created on"
+msgstr "创造于"
+
+#. module: pivotino_general_feedback
+#: model:ir.model.fields,field_description:pivotino_general_feedback.field_general_feedback_tags__assigned
+msgid "Currently in Used"
+msgstr "目前正在使用"
+
+#. module: pivotino_general_feedback
+#: model:ir.model.fields,field_description:pivotino_general_feedback.field_general_feedback_tags__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: pivotino_general_feedback
+#. openerp-web
+#: code:addons/pivotino_general_feedback/static/src/xml/feedback_popup.xml:0
+#: code:addons/pivotino_general_feedback/static/src/xml/feedback_popup.xml:0
+#, python-format
+msgid "Enter up to 4, 000 characters..."
+msgstr "输入最多4000字"
+
+#. module: pivotino_general_feedback
+#. openerp-web
+#: code:addons/pivotino_general_feedback/static/src/xml/feedback_systray.xml:0
+#: code:addons/pivotino_general_feedback/static/src/xml/feedback_systray.xml:0
+#, python-format
+msgid "Feedback"
+msgstr "反馈"
+
+#. module: pivotino_general_feedback
+#: model:ir.model,name:pivotino_general_feedback.model_general_feedback_tags
+msgid "General Feedbacks Tags"
+msgstr "普遍反馈标签"
+
+#. module: pivotino_general_feedback
+#: model:ir.model.fields,field_description:pivotino_general_feedback.field_general_feedback_tags__id
+msgid "ID"
+msgstr ""
+
+#. module: pivotino_general_feedback
+#: model:ir.model.fields,field_description:pivotino_general_feedback.field_general_feedback_tags__type
+msgid "Kanban State"
+msgstr "看板阶段"
+
+#. module: pivotino_general_feedback
+#: model:ir.model.fields,field_description:pivotino_general_feedback.field_general_feedback_tags____last_update
+msgid "Last Modified on"
+msgstr "最后修改于"
+
+#. module: pivotino_general_feedback
+#: model:ir.model.fields,field_description:pivotino_general_feedback.field_general_feedback_tags__write_uid
+msgid "Last Updated by"
+msgstr "最后更新者"
+
+#. module: pivotino_general_feedback
+#: model:ir.model.fields,field_description:pivotino_general_feedback.field_general_feedback_tags__write_date
+msgid "Last Updated on"
+msgstr "最后更新于"
+
+#. module: pivotino_general_feedback
+#: model:ir.model.fields.selection,name:pivotino_general_feedback.selection__general_feedback_tags__type__negative
+msgid "Negative"
+msgstr "负"
+
+#. module: pivotino_general_feedback
+#: model:ir.model.fields.selection,name:pivotino_general_feedback.selection__general_feedback_tags__type__positive
+msgid "Positive"
+msgstr "正"
+
+#. module: pivotino_general_feedback
+#. openerp-web
+#: code:addons/pivotino_general_feedback/static/src/xml/feedback_popup.xml:0
+#: code:addons/pivotino_general_feedback/static/src/xml/feedback_popup.xml:0
+#, python-format
+msgid "Submit"
+msgstr "提交"
+
+#. module: pivotino_general_feedback
+#: model:ir.model.fields,field_description:pivotino_general_feedback.field_general_feedback_tags__value
+msgid "Tag Value"
+msgstr "标签值"
+
+#. module: pivotino_general_feedback
+#: model:ir.model,name:pivotino_general_feedback.model_res_users
+msgid "Users"
+msgstr "用户"
+
+#. module: pivotino_general_feedback
+#. openerp-web
+#: code:addons/pivotino_general_feedback/static/src/xml/feedback_popup.xml:0
+#, python-format
+msgid "We Value Your Feedback!"
+msgstr "我们重视您的反馈！"
+
+#. module: pivotino_general_feedback
+#: code:addons/pivotino_general_feedback/models/general_feedback_tags.py:0
+#, python-format
+msgid "You can't have more than six assigned negative tags."
+msgstr "您分配的负标签不能超过六个"
+
+#. module: pivotino_general_feedback
+#: code:addons/pivotino_general_feedback/models/general_feedback_tags.py:0
+#, python-format
+msgid "You can't have more than six assigned positive tags."
+msgstr "您分配的正标签不能超过六个"
+
+#. module: pivotino_general_feedback
+#. openerp-web
+#: code:addons/pivotino_general_feedback/static/src/xml/feedback_popup.xml:0
+#: code:addons/pivotino_general_feedback/static/src/xml/feedback_popup.xml:0
+#: code:addons/pivotino_general_feedback/static/src/xml/feedback_popup.xml:0
+#, python-format
+msgid "Your Feedback Matters !"
+msgstr "您的反馈非常重要！"

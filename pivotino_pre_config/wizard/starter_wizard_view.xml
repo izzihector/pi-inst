@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--        <record id="starter_wizard_view" model="ir.ui.view">-->
+    <!--            <field name="name">starter.wizard.form</field>-->
+    <!--            <field name="model">starter.wizard</field>-->
+    <!--            <field name="arch" type="xml">-->
+    <!--                <form string='Welcome To PIVOTINO' class="p-1">-->
+    <!--                    <div class="text-center">-->
+    <!--                        <h1 >I am a ...</h1>-->
+    <!--                        <br/>-->
+    <!--                        <h1>-->
+    <!--                            <button string="Business Owner"-->
+    <!--                            name="button_next" style="width:200px;" type="object" class="btn btn-primary btn-lg"/>-->
+    <!--                        </h1><br/>-->
+    <!--                        <h1>-->
+    <!--                            <button type="object" style="width:200px;" name="button_so_video" string="Sales Person" class="btn btn-primary btn-lg"/>-->
+    <!--                        </h1>-->
+    <!--                    </div>-->
+    <!--                    <footer invisible="1" />-->
+    <!--                 </form>-->
+    <!--            </field>-->
+    <!--        </record>-->
+
+    <record id="starter_wizard_view_video_bo" model="ir.ui.view">
+        <field name="name">starter.wizard.form</field>
+        <field name="model">starter.wizard</field>
+        <field name="arch" type="xml">
+            <form string='Welcome To PIVOTINO' class="p-1">
+                <div class="media_iframe_video">
+                    <div class="media_iframe_video_size"/>
+                    <iframe class="o_video_dialog_iframe"
+                            allowfullscreen="allowfullscreen"
+                            frameborder="0"
+                            src="https://www.youtube.com/embed/LXrAu8GcRNI?rel=0"/>
+                </div>
+                <footer>
+                    <button string="Done" name="button_done" class="btn-primary" type="object"/>
+                    <button string="View Salesperson Video" name="button_so_video" type="object" class="btn-primary pull-right"/>
+                </footer>
+                <sheet>
+                    <script>
+                        $(document).ready(function(){
+                            $('.close').hide();
+                            $('.modal-header').css({"justify-content": "center",});
+                        });
+                    </script>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="starter_wizard_view_video" model="ir.ui.view">
+        <field name="name">starter.wizard.form</field>
+        <field name="model">starter.wizard</field>
+        <field name="arch" type="xml">
+            <form string='Welcome To PIVOTINO' class="p-1">
+                <div class="media_iframe_video">
+                    <div class="media_iframe_video_size"/>
+                    <iframe class="o_video_dialog_iframe"
+                            allowfullscreen="allowfullscreen"
+                            frameborder="0"
+                            src="https://www.youtube.com/embed/YmPHqkIZLT8?rel=0"/>
+                </div>
+                <footer>
+                    <!-- <button string="Dashboard" name="button_skip" type="object" class="btn-primary"/> -->
+                    <button string="Done" name="button_done" class="btn-primary" type="object"/>
+                </footer>
+                <sheet>
+                    <script>
+                        $(document).ready(function(){
+                            $('.close').hide();
+                            $('.modal-header').css({"justify-content": "center",});
+                        });
+                    </script>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="dashboard_wizard_view" model="ir.ui.view">
+        <field name="name">starter.wizard.form</field>
+        <field name="model">starter.wizard</field>
+        <field name="arch" type="xml">
+            <form string='Dashboard Quick Review' class="p-1">
+                <div class="col-12 row">
+                    <div class="col-sm-6 col-xs-12 col-md-4 text-center">
+                        <button class="d-md-inline" name="show_video" context="{'video': 1}" type="object">
+                            <img style="height:200px;width:200px;" src="pivotino_pre_config/static/src/img/dashboard.png" alt="missed_sales"/><br/></button><br/>
+                        <span style="font-size: 15px;"><b>Missed Sales</b></span><br/>
+                        <span style="font-size: 15px;">Get to know when leads are being slipped away.</span>
+                    </div>
+                    <div class="col-sm-6 col-xs-12 col-md-4 text-center">
+                        <button class="d-md-inline" name="show_video" context="{'video': 2}" type="object">
+                            <img style="height:200px;width:200px;" src="pivotino_pre_config/static/src/img/dashboard.png" alt="sales_target"/><br/></button><br/>
+                        <span style="font-size: 15px;"><b>Actual vs Target</b></span><br/>
+                        <span style="font-size: 15px;">Easily track actual sales vs Target sales.</span>
+                    </div>
+                    <div class="col-sm-6 col-xs-12 col-md-4 text-center">
+                        <button class="d-md-inline" name="show_video" context="{'video': 3}" type="object">
+                            <img style="height:200px;width:200px;" src="pivotino_pre_config/static/src/img/dashboard.png" alt="sales_velocity"/><br/></button><br/>
+                        <span style="font-size: 15px;"><b>Sales Cycle Length</b></span><br/>
+                        <span style="font-size: 15px;">Know your sales cycle for each stage.</span>
+                    </div>
+                    <div class="col-sm-6 col-xs-12 col-md-4 text-center">
+                        <button class="d-md-inline" name="show_video" context="{'video': 4}" type="object">
+                            <img style="height:200px;width:200px;" src="pivotino_pre_config/static/src/img/dashboard.png" alt="sales_velocity"/><br/></button><br/>
+                        <span style="font-size: 15px;"><b>Win Loss Ratio</b></span><br/>
+                        <span style="font-size: 15px;">Know your win loss ratio.</span>
+                    </div>
+                    <div class="col-sm-6 col-xs-12 col-md-4 text-center">
+                        <button class="d-md-inline" name="show_video" context="{'video': 5}" type="object">
+                            <img style="height:200px;width:200px;" src="pivotino_pre_config/static/src/img/dashboard.png" alt="sales_velocity"/><br/></button><br/>
+                        <span style="font-size: 15px;"><b>Current Year Revenue</b></span><br/>
+                        <span style="font-size: 15px;">Know your current year revenue.</span>
+                    </div>
+                </div>
+                <footer>
+                    <button string="Close" class="btn btn-secondary" special="cancel"/>
+                </footer>
+                <sheet>
+                    <script>
+                        $(document).ready(function(){
+                            $('.close').hide();
+                            $('.modal-header').css({"justify-content": "center",});
+                        });
+                    </script>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="dashboard_video_1" model="ir.ui.view">
+        <field name="name">starter.wizard.form.1</field>
+        <field name="model">starter.wizard</field>
+        <field name="arch" type="xml">
+            <form string='Dashboard Quick Review' class="p-1">
+                <div class="media_iframe_video">
+                    <div class="media_iframe_video_size"/>
+                    <iframe class="o_video_dialog_iframe"
+                            allowfullscreen="allowfullscreen"
+                            frameborder="0"
+                            src="https://www.youtube.com/embed/RW2CmIwVgPg?rel=0"/>
+                </div>
+                <footer>
+                    <button string="Back to Selection" name="button_done" type="object" class="btn-primary"/>
+                    <!-- <button string="Done" name="button_done" class="btn-primary" type="object"/> -->
+                </footer>
+                <sheet>
+                    <script>
+                        $(document).ready(function(){
+                            $('.close').hide();
+                            $('.modal-header').css({"justify-content": "center",});
+                        });
+                    </script>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="dashboard_video_2" model="ir.ui.view">
+        <field name="name">starter.wizard.form.2</field>
+        <field name="model">starter.wizard</field>
+        <field name="arch" type="xml">
+            <form string='Dashboard Quick Review' class="p-1">
+                <div class="media_iframe_video">
+                    <div class="media_iframe_video_size"/>
+                    <iframe class="o_video_dialog_iframe"
+                            allowfullscreen="allowfullscreen"
+                            frameborder="0"
+                            src="https://www.youtube.com/embed/Tosa9ndExn8?rel=0"/>
+                </div>
+                <footer>
+                    <button string="Back to Selection" name="button_done" type="object" class="btn-primary"/>
+                    <!-- <button string="Done" name="button_done" class="btn-primary" type="object"/> -->
+                </footer>
+                <sheet>
+                    <script>
+                        $(document).ready(function(){
+                            $('.close').hide();
+                            $('.modal-header').css({"justify-content": "center",});
+                        });
+                    </script>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="dashboard_video_3" model="ir.ui.view">
+        <field name="name">starter.wizard.form.3</field>
+        <field name="model">starter.wizard</field>
+        <field name="arch" type="xml">
+            <form string='Dashboard Quick Review' class="p-1">
+                <div class="media_iframe_video">
+                    <div class="media_iframe_video_size"/>
+                    <iframe class="o_video_dialog_iframe"
+                            allowfullscreen="allowfullscreen"
+                            frameborder="0"
+                            src="https://www.youtube.com/embed/g2KYEugyKjE?rel=0"/>
+                </div>
+                <footer>
+                    <button string="Back to Selection" name="button_done" type="object" class="btn-primary"/>
+                    <!-- <button string="Done" name="button_done" class="btn-primary" type="object"/> -->
+                </footer>
+                <sheet>
+                    <script>
+                        $(document).ready(function(){
+                            $('.close').hide();
+                            $('.modal-header').css({"justify-content": "center",});
+                        });
+                    </script>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="dashboard_video_4" model="ir.ui.view">
+        <field name="name">starter.wizard.form.4</field>
+        <field name="model">starter.wizard</field>
+        <field name="arch" type="xml">
+            <form string='Dashboard Quick Review' class="p-1">
+                <div class="media_iframe_video">
+                    <div class="media_iframe_video_size"/>
+                    <iframe class="o_video_dialog_iframe"
+                            allowfullscreen="allowfullscreen"
+                            frameborder="0"
+                            src="https://www.youtube.com/embed/tfUiIZR_y6Q?rel=0"/>
+                </div>
+                <footer>
+                    <button string="Back to Selection" name="button_done" type="object" class="btn-primary"/>
+                    <!-- <button string="Done" name="button_done" class="btn-primary" type="object"/> -->
+                </footer>
+                <sheet>
+                    <script>
+                        $(document).ready(function(){
+                            $('.close').hide();
+                            $('.modal-header').css({"justify-content": "center",});
+                        });
+                    </script>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="dashboard_video_5" model="ir.ui.view">
+        <field name="name">starter.wizard.form.5</field>
+        <field name="model">starter.wizard</field>
+        <field name="arch" type="xml">
+            <form string='Dashboard Quick Review' class="p-1">
+                <div class="media_iframe_video">
+                    <div class="media_iframe_video_size"/>
+                    <iframe class="o_video_dialog_iframe"
+                            allowfullscreen="allowfullscreen"
+                            frameborder="0"
+                            src="https://www.youtube.com/embed/LTPj3Qh5ZSY?rel=0"/>
+                </div>
+                <footer>
+                    <button string="Back to Selection" name="button_done" type="object" class="btn-primary"/>
+                    <!-- <button string="Done" name="button_done" class="btn-primary" type="object"/> -->
+                </footer>
+                <sheet>
+                    <script>
+                        $(document).ready(function(){
+                            $('.close').hide();
+                            $('.modal-header').css({"justify-content": "center",});
+                        });
+                    </script>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_starter_wizard_business" model="ir.actions.act_window">
+        <field name="name">Welcome To PIVOTINO</field>
+        <field name="res_model">starter.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="pivotino_pre_config.starter_wizard_view_video_bo"/>
+        <field name="target">new</field>
+    </record>
+
+    <record id="action_starter_wizard_sales" model="ir.actions.act_window">
+        <field name="name">Welcome To PIVOTINO</field>
+        <field name="res_model">starter.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="pivotino_pre_config.starter_wizard_view_video"/>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

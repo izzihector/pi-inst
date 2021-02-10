@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="base.partner_root" model="res.partner">
+            <field name="name">PivotinoBot</field>
+            <field name="email">pivotinobot@example.com</field>
+        </record>
+    </data>
+</odoo>

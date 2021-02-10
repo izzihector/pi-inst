@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="payment.action_payment_acquirer" model="ir.actions.act_window">
+            <field name="name">Payment Acquirers</field>
+            <field name="res_model">payment.acquirer</field>
+            <field name='view_mode'>kanban,tree,form</field>
+            <field name="domain">[('module_to_buy','=',False)]</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new payment acquirer
+                </p>
+            </field>
+        </record>
+
+        <record id="pivotino_acquirer_form_paypal" model="ir.ui.view">
+            <field name="name">pivotino.acquirer.form.paypal</field>
+            <field name="model">payment.acquirer</field>
+            <field name="inherit_id" ref="payment_paypal.acquirer_form_paypal"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group/a" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

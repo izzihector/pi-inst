@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- res partner form de-branding -->
+        <record id="res_partner_view_form_debrand" model="ir.ui.view">
+            <field name="name">res.partner.form.debrand</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='website']" position="attributes">
+                    <attribute name="placeholder">e.g. https://www.pivotino.com</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

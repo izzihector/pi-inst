@@ -1,0 +1,118 @@
+$pivotino-primary: #274D5F;
+$pivotino-primary-dark: #002434;
+$pivotino-secondary: #F08013;
+$pivotino-secondary-light: #FFB04A;
+
+.fa-th-large::before {
+    content: "\f00a";
+}
+
+// application dashboard
+.o_menu_apps .full {
+    width: 46px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.dropdown-item.o_app {
+    background: transparent;
+}
+
+.dropdown-menu {
+    border-radius: 0px;
+}
+
+// Buttons
+
+.btn {
+    border-radius: 0px;
+}
+
+.btn-secondary {
+    color: $pivotino-secondary;
+}
+
+.o_form_view {
+    .o_form_statusbar {
+        .dropdown {
+            .o_statusbar_buttons {
+                padding-left: 1rem;
+
+                .btn-primary {
+                    background-color: white;
+                    color: black;
+                    text-align: left;
+                }
+
+                .btn-secondary {
+                    color: black;
+                    text-align: left;
+                }
+            }
+        }
+
+        > .o_statusbar_status {
+            > .dropdown-menu {
+                .dropdown-item.btn {
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+.o_content, .modal-content {
+    .o_form_view {
+        // Sticky statusbar
+        .o_form_statusbar {
+            z-index: 20;
+        }
+    }
+}
+
+// status dropdown
+.dropdown-item.disabled, .dropdown-item:disabled {
+    opacity: 1;
+}
+
+.o_external_button {
+    color: $pivotino-secondary !important;
+}
+
+.o_button_icon {
+    color: $pivotino-secondary !important;
+}
+
+// Badges
+.badge {
+    border: 1px solid $pivotino-secondary;
+}
+
+.o_mail_systray_item .o_notification_counter {
+    background: $pivotino-secondary;
+}
+
+.o_searchview {
+    .fa-filter {
+        display: none;
+    }
+}
+
+.o_required_modifier {
+    &.o_input, .o_input {
+        background-color: lighten($pivotino-secondary-light, 20%) ! important;
+    }
+}
+
+.o-app-name {
+	color: white;
+}
+
+// ribbon
+.ribbon {
+    @include media-breakpoint-down(sm) {
+        &-top-right {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+$lightgrey: #D3D3D3;
+
+.o_calendar_view {
+    .o_calendar_widget {
+        .fc-month-view {
+            padding: 1px;
+
+            .fc-widget-header {
+                background-color: $lightgrey;
+                padding: 2px 1px;
+                border-bottom-color: $lightgrey;
+            }
+
+            td:last-child {
+                border-right-color: $lightgrey;
+            }
+
+            .fc-bg {
+                .fc-today {
+                    border-color: $lightgrey;
+                }
+            }
+
+            .fc-week-number {
+                background-color: $lightgrey;
+            }
+        }
+
+        .fc-widget-content {
+            border-color: $lightgrey;
+        }
+
+        .fc-widget-header {
+            background-color: $lightgrey;
+            padding: 3px 0;
+        }
+
+        .fc-agendaWeek-view {
+            table td {
+                border-right-color: $lightgrey;
+            }
+
+            .fc-axis {
+                padding-left: 0;
+            }
+        }
+
+        .fc-agenda-view {
+            .fc-day-grid {
+                .fc-row {
+                    .fc-content-skeleton {
+                        padding: 8px 0;
+                    }
+                }
+            }
+        }
+    }
+}

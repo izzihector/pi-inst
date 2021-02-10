@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- ir module tree view -->
+        <record id="module_tree_debrand" model="ir.ui.view">
+            <field name="name">ir.module.module.tree.debrand</field>
+            <field name="model">ir.module.module</field>
+            <field name="inherit_id" ref="base.module_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='author']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='website']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- ir module form view -->
+        <record id="module_form_debrand" model="ir.ui.view">
+            <field name="name">ir.module.module.form.debrand</field>
+            <field name="model">ir.module.module</field>
+            <field name="inherit_id" ref="base.module_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//h3[hasclass('oe_fade')]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='website']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- ir module kanban view -->
+        <record id="module_kanban_debrand" model="ir.ui.view">
+            <field name="name">ir.module.module.kanban.debrand</field>
+            <field name="model">ir.module.module</field>
+            <field name="inherit_id" ref="base.module_view_kanban"/>
+            <field name="arch" type="xml">
+                <!-- dropdown menu -->
+                <xpath expr="//a[@t-if='record.website.raw_value']" position="replace"/>
+
+                <!-- floating button -->
+                <xpath expr="//a[@t-att-href='record.website.raw_value']" position="replace"/>
+            </field>
+        </record>
+
+        <!-- Remove App Store Menu | Theme Store | 3rd Party  -->
+        <delete model="ir.ui.menu" id="base.module_mi"/>
+        <delete model="ir.ui.menu" id="base.menu_theme_store"/>
+        <delete model="ir.ui.menu" id="base.menu_third_party"/>
+    </data>
+</odoo>

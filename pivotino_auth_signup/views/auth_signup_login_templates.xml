@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="pivotino_auth_signup.login" inherit_id="auth_signup.login" name="Hide Sign up">
+        <xpath expr="//a[@t-if='signup_enabled']" position="replace">
+            <a t-if="signup_enabled" class="invisible" t-attf-href="/web/signup?{{ keep_query() }}">
+                Don't have an account?
+            </a>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- res partner form de-branding -->
+        <record id="res_partner_view_form_inherit" model="ir.ui.view">
+            <field name="name">res.partner.view.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='sale']/field[@name='user_id']" position="attributes">
+                    <attribute name="options">{'no_create': True, 'no_open': True}</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

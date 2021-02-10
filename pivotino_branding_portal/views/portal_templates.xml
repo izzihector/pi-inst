@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="portal_record_sidebar" inherit_id="portal.portal_record_sidebar">
+        <xpath expr="//div[hasclass('card-footer')]" position="replace">
+            <div class="card-footer small text-center text-muted border-top-0 pt-1 pb-1 d-none d-lg-block">
+                Powered by <a target="_blank" href="http://www.pivotino.com" title="pivotino">Pivotino</a>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

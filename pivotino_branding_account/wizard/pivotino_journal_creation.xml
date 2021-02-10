@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<odoo>
+
+    <record id="pivotino_account_bank_statement_import_journal_creation_view" model="ir.ui.view">
+        <field name="name">Pivotino Journal Creation</field>
+        <field name="model">account.bank.statement.import.journal.creation</field>
+        <field name="inherit_id" ref="account_bank_statement_import.account_bank_statement_import_journal_creation_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//p[1]" position="replace">
+                <p>The account of the statement you are uploading is not yet recorded in Pivotino. In order to proceed with the upload, you need to create a bank journal for this account.</p>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="pivotino_payment_acquirer_onboarding_wizard_form">
+        <field name="name">pivotino.payment.acquirer.onboarding.wizard.form</field>
+        <field name="model">payment.acquirer.onboarding.wizard</field>
+        <field name="inherit_id" ref="payment.payment_acquirer_onboarding_wizard_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='right-column']//p[2]" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

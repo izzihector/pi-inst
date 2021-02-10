@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <function name="write" model="ir.model.data">
+            <function name="search" model="ir.model.data">
+                <value eval="[('module', '=', 'base'), ('name', '=', 'user_root')]"/>
+            </function>
+            <value eval="{'noupdate': False}"/>
+        </function>
+
+        <function name="write" model="ir.model.data">
+            <function name="search" model="ir.model.data">
+                <value eval="[('module', '=', 'base'), ('name', '=', 'user_admin')]"/>
+            </function>
+            <value eval="{'noupdate': False}"/>
+        </function>
+
+        <record model="res.users" id="base.user_admin">
+            <field name="image_1920" type="base64" file="pivotino_branding/static/src/img/admin.png"/>
+        </record>
+
+        <record model="res.users" id="base.user_root">
+            <field name="image_1920" type="base64" file="pivotino_branding/static/src/img/bot.png"/>
+        </record>
+
+    </data>
+</odoo>

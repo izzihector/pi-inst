@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="digest_digest_view_form_debrand" model="ir.ui.view">
+            <field name="name">digest.digest.view.form.debrand</field>
+            <field name="model">digest.digest</field>
+            <field name="inherit_id" ref="digest.digest_digest_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[@name='how_to']"
+                       position="replace">
+                    <page name="how_to" string="How to customize your digest?"
+                          groups="base.group_no_one">
+                        <div class="alert alert-info" role="alert">
+                            In order to build your customized digest, follow
+                            these steps:
+                            <ol>
+                                <li>
+                                    You may want to add new computed fields
+                                    with Pivotino Studio:
+                                    <ul>
+                                        <li>
+                                            you must create 2 fields on the
+                                            <code>digest</code>
+                                            object:
+                                        </li>
+                                        <li>
+                                            first create a boolean field called
+                                            <code>kpi_myfield</code>
+                                            and display it in the KPI's tab;
+                                        </li>
+                                        <li>
+                                            then create a computed field called
+                                            <code>kpi_myfield_value</code>
+                                            that will compute your customized
+                                            KPI.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Select your KPIs in the KPI's tab.</li>
+                                <li>
+                                    Create or edit the mail template: you may
+                                    get computed KPI's value using these
+                                    fields:
+                                    <code>
+                                        <field name="available_fields"
+                                               class="oe_inline"/>
+                                    </code>
+                                </li>
+                            </ol>
+                        </div>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

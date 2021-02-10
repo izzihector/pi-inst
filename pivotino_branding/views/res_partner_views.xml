@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="base.action_partner_form" model="ir.actions.act_window">
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new customer in your address book
+            </p><p>
+                Pivotino helps you easily track all activities related to a customer.
+            </p>
+        </field>
+    </record>
+
+    <record id="pivotino_view_partner_form" model="ir.ui.view">
+        <field name="name">pivotino.res.partner.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('o_kanban_image')]//t[@t-if='!record.image_128.raw_value']/img[1]" position="replace">
+                <img alt="Delivery" t-if="record.type.raw_value === 'delivery'" t-att-src='_s + "/pivotino_branding/static/img/truck.png"'/>
+            </xpath>
+            <xpath expr="//div[hasclass('o_kanban_image')]//t[@t-if='!record.image_128.raw_value']/img[2]" position="replace">
+                <img alt="Invoice" t-if="record.type.raw_value === 'invoice'" t-att-src='_s + "/pivotino_branding/static/img/money.png"'/>
+            </xpath>
+            <xpath expr="//div[hasclass('o_kanban_image')]//t[@t-if='!record.image_128.raw_value']//t/img[2]" position="replace">
+                <img alt="Avatar" t-if="record.is_company.raw_value === false" t-att-src='_s + "/pivotino_branding/static/img/avatar_grey.png"'/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="pivotino_res_partner_kanban_view">
+        <field name="name">pivotino.res.partner.kanban</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.res_partner_kanban_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//t[@t-name='kanban-box']//t[@t-if='!record.is_company.raw_value']/t[1]" position="replace">
+                <t t-if="record.type.raw_value === 'delivery'" t-set="placeholder" t-value="'/pivotino_branding/static/img/truck.png'"/>
+            </xpath>
+            <xpath expr="//t[@t-name='kanban-box']//t[@t-if='!record.is_company.raw_value']/t[2]" position="replace">
+                <t t-elif="record.type.raw_value === 'invoice'" t-set="placeholder" t-value="'/pivotino_branding/static/img/money.png'"/>
+            </xpath>
+            <xpath expr="//t[@t-name='kanban-box']//t[@t-if='!record.is_company.raw_value']/t[@t-else='']" position="replace">
+                <t t-else="" t-set="placeholder" t-value="'/pivotino_branding/static/img/avatar_grey.png'"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

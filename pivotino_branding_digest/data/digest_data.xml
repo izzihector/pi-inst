@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <function name="write" model="ir.model.data">
+            <function name="search" model="ir.model.data">
+                <value eval="[('module', '=', 'digest'), ('name', '=', 'digest_digest_default')]"/>
+            </function>
+            <value eval="{'noupdate': False}"/>
+        </function>
+
+        <record id="digest.digest_tip_mail_2" model="digest.tip">
+            <field name="tip_description" type="html">
+                <div style="font-size: 14px;">
+                    To reach your full potential with Pivotino, have a look at our <a href="https://www.pivotino.com">apps videos</a>and discover new tools to work better and faster.
+                </div>
+            </field>
+        </record>
+    </data>
+
+    <data noupdate="1">
+        <record id="digest.digest_digest_default" model="digest.digest">
+            <field name="name">Weekly Stats in Pivotino</field>
+        </record>
+    </data>
+</odoo>

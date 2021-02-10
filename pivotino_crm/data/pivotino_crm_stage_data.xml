@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record model="crm.stage" id="crm.stage_lead1">
+            <field name="name">New</field>
+            <field name="sequence">1</field>
+            <field name="stage_sequence">1</field>
+        </record>
+        <record model="crm.stage" id="crm.stage_lead2">
+            <field name="name">First Activity</field>
+            <field name="sequence">2</field>
+            <field name="stage_sequence">2</field>
+        </record>
+        <record model="crm.stage" id="crm.stage_lead3">
+            <field name="name">Follow Up</field>
+            <field name="sequence">3</field>
+            <field name="stage_sequence">3</field>
+        </record>
+        <record model="crm.stage" id="crm.stage_lead4">
+            <field name="name">Quotation</field>
+            <field name="is_quotation">True</field>
+            <field name="is_won">False</field>
+            <field name="sequence">4</field>
+            <field name="stage_sequence">4</field>
+        </record>
+        <record model="crm.stage" id="stage_lead5">
+            <field name="name">Won</field>
+            <field name="fold" eval="True"/>
+            <field name="is_won">True</field>
+            <field name="sequence">5</field>
+            <field name="stage_sequence">5</field>
+        </record>
+        <record model="crm.stage" id="stage_lead6">
+            <field name="name">Lost</field>
+            <field name="is_lost">True</field>
+            <field name="fold" eval="True"/>
+            <field name="sequence">6</field>
+            <field name="stage_sequence">6</field>
+        </record>
+        
+    </data>
+</odoo>

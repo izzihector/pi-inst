@@ -1,0 +1,895 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pivotino_crm
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-25 04:01+0000\n"
+"PO-Revision-Date: 2020-08-25 04:01+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pivotino_crm
+#: code:addons/pivotino_crm/models/pivotino_crm_sale.py:0
+#, python-format
+msgid ""
+"\n"
+"                <p class='o_view_nocontent_smiling_face'>\n"
+"                    Add new opportunities, see your business grow!\n"
+"                </p>\n"
+"                <p>\n"
+"                    Get started by clicking on the \"Create\" button above\n"
+"                    to add new opportunities.\n"
+"                </p>\n"
+"                <p>\n"
+"                    You will be able to keep track of your pipeline and\n"
+"                    convert them to sales.\n"
+"                </p>\n"
+"            "
+msgstr ""
+"\n"
+"                <p class='o_view_nocontent_smiling_face'>\n"
+"                    添加新的商机，看到您的业务增长！\n"
+"                </p>\n"
+"                <p>\n"
+"                    单击上方的\“创建\”按钮以开始使\n以添加新商机。\n"
+"                </p>\n"
+"                <p>\n"
+"                    您将能够跟踪自己的渠道并将其转化为销售。\n"
+"                </p>\n"
+"            "
+
+#. module: pivotino_crm
+#: code:addons/pivotino_crm/models/pivotino_crm_lost_reason_category.py:0
+#, python-format
+msgid "<b>%s</b> has <b>%s</b> Quotations.<br/>"
+msgstr "<b>%s</b> 有 <b>%s</b> 报价单。<br/>"
+
+#. module: pivotino_crm
+#: code:addons/pivotino_crm/models/pivotino_crm_lost_reason_category.py:0
+#, python-format
+msgid ""
+"<br/>Marking this lead as lost will cancel the quotations. Do you want to "
+"proceed?<br>If yes, kindly select a lost reason for the Leads."
+msgstr ""
+"<br/>将此线索标记为丢失将取消报价单。 您要继续吗？<br>如果是，请选择潜在顾客的丢失原因。"
+
+#. module: pivotino_crm
+#: model_terms:ir.ui.view,arch_db:pivotino_crm.crm_lead_lost_quotation_form
+msgid ""
+"<span>You have to provide a Lost Reason for the Lead which is related to "
+"this Quotation.</span>"
+msgstr ""
+"<span>您必须提供与该报价单有关的线索丢失原因。</span>"
+
+#. module: pivotino_crm
+#: model_terms:ir.ui.view,arch_db:pivotino_crm.sale_target_view_kanban
+msgid ""
+"<strong>\n"
+"                                        <span>Actual:</span>\n"
+"                                    </strong>"
+msgstr ""
+
+#. module: pivotino_crm
+#: model_terms:ir.ui.view,arch_db:pivotino_crm.sale_target_view_kanban
+msgid ""
+"<strong>\n"
+"                                        <span>Target:</span>\n"
+"                                    </strong>"
+msgstr ""
+"<strong>\n"
+"                                        <span>目标： </span>\n"
+"                                    </strong>"
+
+#. module: pivotino_crm
+#: model:ir.model,name:pivotino_crm.model_mail_activity
+msgid "Activity"
+msgstr "活动"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead__activity_due_date
+msgid "Activity Due Date"
+msgstr "活动截止日期"
+
+#. module: pivotino_crm
+#: model:ir.model,name:pivotino_crm.model_mail_activity_type
+msgid "Activity Type"
+msgstr "活动类型"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target_individual__actual_sales
+msgid "Actual"
+msgstr "实际"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target__actual_amount
+msgid "Actual Amount"
+msgstr "实际金额"
+
+#. module: pivotino_crm
+#: model_terms:ir.ui.view,arch_db:pivotino_crm.sale_target_view_form
+msgid "Actual:"
+msgstr "实际："
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead__final_revenue
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead__planned_revenue
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead__planned_revenue_input
+msgid "Amount"
+msgstr "金额"
+
+#. module: pivotino_crm
+#: model_terms:ir.ui.view,arch_db:pivotino_crm.pivotino_crm_lead_view_form
+#: model_terms:ir.ui.view,arch_db:pivotino_crm.pivotino_quick_create_opportunity_form
+msgid "Amount (Base)"
+msgstr "金额（系统）"
+
+#. module: pivotino_crm
+#: model:ir.model.fields.selection,name:pivotino_crm.selection__sale_target__target_month__4
+msgid "April"
+msgstr "4月"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead_sequence__asc_desc
+msgid "Ascending / Descending"
+msgstr "顺序/逆序"
+
+#. module: pivotino_crm
+#: model:ir.model.fields.selection,name:pivotino_crm.selection__sale_target__target_month__8
+msgid "August"
+msgstr "8月"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_res_company__auto_lead
+msgid "Auto Create Lead From SO"
+msgstr "从销售订单自动创建线索"
+
+#. module: pivotino_crm
+#: model:ir.actions.server,name:pivotino_crm.ir_cron_auto_create_sale_target_ir_actions_server
+#: model:ir.cron,cron_name:pivotino_crm.ir_cron_auto_create_sale_target
+#: model:ir.cron,name:pivotino_crm.ir_cron_auto_create_sale_target
+msgid "Auto Create Sale Target"
+msgstr "自动创建销售目标"
+
+#. module: pivotino_crm
+#: model:ir.actions.server,name:pivotino_crm.ir_cron_auto_lead_mark_lost_ir_actions_server
+#: model:ir.cron,cron_name:pivotino_crm.ir_cron_auto_lead_mark_lost
+#: model:ir.cron,name:pivotino_crm.ir_cron_auto_lead_mark_lost
+msgid "Auto Mark Lead As Lost"
+msgstr "自动把线索标为丢失"
+
+#. module: pivotino_crm
+#: model_terms:ir.ui.view,arch_db:pivotino_crm.pivotino_crm_view_company_form
+msgid "CRM"
+msgstr ""
+
+#. module: pivotino_crm
+#: model:ir.model,name:pivotino_crm.model_crm_stage
+msgid "CRM Stages"
+msgstr "CRM阶段"
+
+#. module: pivotino_crm
+#: model_terms:ir.ui.view,arch_db:pivotino_crm.crm_lead_lost_quotation_form
+msgid "Cancel"
+msgstr "取消"
+
+#. module: pivotino_crm
+#: model_terms:ir.ui.view,arch_db:pivotino_crm.crm_lost_reason_category_view_form
+msgid "Category"
+msgstr "类别"
+
+#. module: pivotino_crm
+#: model_terms:ir.actions.act_window,help:pivotino_crm.action_lead_sequence
+msgid "Click to create a new Crm Lead Sequence."
+msgstr "点击此处创建CRM线索序列"
+
+#. module: pivotino_crm
+#: model:ir.model,name:pivotino_crm.model_res_company
+msgid "Companies"
+msgstr "公司"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_stage_duration__company_id
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target__company_id
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target_individual__company_id
+msgid "Company"
+msgstr "公司"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_order__company_currency_id
+msgid "Company Currency"
+msgstr "公司货币"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_order__auto_lead
+msgid "Create Lead?"
+msgstr "创建线索？"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead_lost_quotation__create_uid
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead_sequence__create_uid
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lost_reason_category__create_uid
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_stage_duration__create_uid
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target__create_uid
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target_individual__create_uid
+msgid "Created by"
+msgstr "创建者"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead_lost_quotation__create_date
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead_sequence__create_date
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lost_reason_category__create_date
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_stage_duration__create_date
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target__create_date
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target_individual__create_date
+msgid "Created on"
+msgstr "创建于"
+
+#. module: pivotino_crm
+#: model:ir.actions.act_window,name:pivotino_crm.action_lead_sequence
+#: model_terms:ir.ui.view,arch_db:pivotino_crm.crm_lead_sequence_config_form
+#: model_terms:ir.ui.view,arch_db:pivotino_crm.crm_lead_sequence_config_tree
+msgid "Crm Lead Sequence"
+msgstr "CRM线索序列"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead__lead_currency
+msgid "Currency"
+msgstr "货币"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_res_company__day_set_due
+msgid "Day(s) to set DUE for each activity"
+msgstr "活动到期天数"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_res_company__day_set_lost
+msgid "Day(s) to set to LOST"
+msgstr "丢失天数"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead__duration_to_won
+msgid "Days To Win"
+msgstr "赢得天数"
+
+#. module: pivotino_crm
+#: model:ir.model.fields.selection,name:pivotino_crm.selection__sale_target__target_month__12
+msgid "December"
+msgstr "12月"
+
+#. module: pivotino_crm
+#. openerp-web
+#: code:addons/pivotino_crm/static/src/js/basic_controller.js:0
+#, python-format
+msgid ""
+"Deleting sales target record(s) will affect the dashboard summary. Click "
+"'Ok' if you wish to proceed with deleting the sales target record(s)."
+msgstr "删除销售目标记录将会影响仪表板的总结。若您确定要删除销售目标记录请点击‘OK’。"
+
+#. module: pivotino_crm
+#: model:ir.model,name:pivotino_crm.model_crm_lead_sequence
+msgid "Determine the sequence of lead"
+msgstr "确定线索序列"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead_lost__display_message
+msgid "Display Message"
+msgstr "显示讯息"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead_lost_quotation__display_name
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead_sequence__display_name
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lost_reason_category__display_name
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_stage_duration__display_name
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target__display_name
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target_individual__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: pivotino_crm
+#: model:ir.model,name:pivotino_crm.model_crm_stage_duration
+msgid "Duration in CRM Stage"
+msgstr "CRM阶段的持续时间"
+
+#. module: pivotino_crm
+#. openerp-web
+#: code:addons/pivotino_crm/static/src/js/form_controller.js:0
+#, python-format
+msgid ""
+"Editing PAST sales target record(s) will affect the dashboard summary. Click"
+" 'Ok' if you wish to proceed with editing the PAST sales target record(s)."
+msgstr "编辑过去的销售目标记录将影响仪表板的总结。若您确定要编辑过去的销售目标记录请点击‘OK’。"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,help:pivotino_crm.field_crm_lead__date_deadline
+msgid "Estimate of the date on which the opportunity will be won."
+msgstr "预测赢得商机的日期。"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead__date_deadline
+msgid "Expected Closing"
+msgstr "预测结束日期"
+
+#. module: pivotino_crm
+#: model:ir.model.fields.selection,name:pivotino_crm.selection__sale_target__target_month__2
+msgid "February"
+msgstr "2月"
+
+#. module: pivotino_crm
+#: model:mail.activity.type,name:pivotino_crm.mail_activity_first_activity
+msgid "First Activity"
+msgstr "第一次活动"
+
+#. module: pivotino_crm
+#: model:ir.model,name:pivotino_crm.model_crm_lead_lost
+msgid "Get Lost Reason"
+msgstr "获得丢失原因"
+
+#. module: pivotino_crm
+#: model:ir.model,name:pivotino_crm.model_crm_lead_lost_quotation
+msgid "Get Lost Reason of Lead from Quotations"
+msgstr "获得从线索到报价单的丢失原因"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead_lost_quotation__id
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead_sequence__id
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lost_reason_category__id
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_stage_duration__id
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target__id
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target_individual__id
+msgid "ID"
+msgstr ""
+
+#. module: pivotino_crm
+#: code:addons/pivotino_crm/models/pivotino_crm_lead.py:0
+#, python-format
+msgid "Import Template for Leads & Opportunities"
+msgstr "线索和商机的导入模板"
+
+#. module: pivotino_crm
+#: code:addons/pivotino_crm/models/pivotino_crm_lead.py:0
+#, python-format
+msgid ""
+"In order to move the opportunity from LOST, please amend the Expected "
+"Closing date to a future date before proceeding. "
+msgstr ""
+"为了将机会从“丢失”转移出去，请在继续操作之前将“预计结束日期”修改为将来的日期。 "
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead_sequence__include_sequence
+msgid "Include in lead sequence?"
+msgstr "包括在线索序列中？"
+
+#. module: pivotino_crm
+#: code:addons/pivotino_crm/models/pivotino_sale_target.py:0
+#, python-format
+msgid "Invalid Year!"
+msgstr "无效的年份！"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead__is_lost
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_stage__is_lost
+msgid "Is Lost Stage?"
+msgstr "是丢失阶段？"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_stage__is_quotation
+msgid "Is Quotation Stage?"
+msgstr "是报价阶段？"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead__is_won
+msgid "Is Won Stage?"
+msgstr "是赢得阶段？"
+
+#. module: pivotino_crm
+#: model:ir.model.fields.selection,name:pivotino_crm.selection__sale_target__target_month__1
+msgid "January"
+msgstr "1月"
+
+#. module: pivotino_crm
+#: model:ir.model.fields.selection,name:pivotino_crm.selection__sale_target__target_month__7
+msgid "July"
+msgstr "7月"
+
+#. module: pivotino_crm
+#: model:ir.model.fields.selection,name:pivotino_crm.selection__sale_target__target_month__6
+msgid "June"
+msgstr "6月"
+
+#. module: pivotino_crm
+#: code:addons/pivotino_crm/models/pivotino_crm_lost_reason_category.py:0
+#, python-format
+msgid "Kindly select a lost reason for the Leads."
+msgstr "请选择线索丢失原因。"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead_lost_quotation____last_update
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead_sequence____last_update
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lost_reason_category____last_update
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_stage_duration____last_update
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target____last_update
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target_individual____last_update
+msgid "Last Modified on"
+msgstr "最后更改于"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead_lost_quotation__write_uid
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead_sequence__write_uid
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lost_reason_category__write_uid
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_stage_duration__write_uid
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target__write_uid
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target_individual__write_uid
+msgid "Last Updated by"
+msgstr "最后更新者"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead_lost_quotation__write_date
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead_sequence__write_date
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lost_reason_category__write_date
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_stage_duration__write_date
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target__write_date
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target_individual__write_date
+msgid "Last Updated on"
+msgstr "最后更新于"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_stage_duration__lead_id
+msgid "Lead"
+msgstr "线索"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead_sequence__field_id
+msgid "Lead Fields"
+msgstr "线索字段"
+
+#. module: pivotino_crm
+#: code:addons/pivotino_crm/models/pivotino_sale_order.py:0
+#, python-format
+msgid "Lead Lost Reason"
+msgstr "线索丢失原因"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead_sequence__lead_sequence
+#: model:ir.ui.menu,name:pivotino_crm.pivotino_crm_lead_sequence
+msgid "Lead Sequence"
+msgstr "线索序列"
+
+#. module: pivotino_crm
+#: model:crm.stage,name:pivotino_crm.stage_lead6
+msgid "Lost"
+msgstr "丢失"
+
+#. module: pivotino_crm
+#: model_terms:ir.ui.view,arch_db:pivotino_crm.pivotino_view_crm_case_opportunities_filter
+msgid "Lost Category"
+msgstr "丢失类别"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead__mark_lost_date
+msgid "Lost Date"
+msgstr "丢失日期"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead__lost_reason
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead_lost_quotation__lost_reason_id
+#: model_terms:ir.ui.view,arch_db:pivotino_crm.crm_lead_lost_quotation_form
+msgid "Lost Reason"
+msgstr "丢失原因"
+
+#. module: pivotino_crm
+#: model:ir.actions.act_window,name:pivotino_crm.crm_lost_reason_category_action
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead__lost_reason_category
+#: model:ir.ui.menu,name:pivotino_crm.menu_crm_lost_reason_category
+#: model_terms:ir.ui.view,arch_db:pivotino_crm.crm_lost_reason_category_view_tree
+msgid "Lost Reason Category"
+msgstr "丢失原因类别"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lost_reason_category__lost_reason_ids
+#: model:ir.ui.menu,name:pivotino_crm.menu_crm_lost_reason_business_owner
+msgid "Lost Reasons"
+msgstr "丢失原因"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead__date_manual_deadline
+msgid "Manual Expected Closing"
+msgstr "手动预计结束日期"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,help:pivotino_crm.field_crm_lead__date_manual_deadline
+msgid "Manually input estimate date won"
+msgstr "手动输入预测赢得日期"
+
+#. module: pivotino_crm
+#: model:ir.model.fields.selection,name:pivotino_crm.selection__sale_target__target_month__3
+msgid "March"
+msgstr "3月"
+
+#. module: pivotino_crm
+#: model:ir.model.fields.selection,name:pivotino_crm.selection__sale_target__target_month__5
+msgid "May"
+msgstr "5月"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target__target_month
+#: model_terms:ir.ui.view,arch_db:pivotino_crm.sale_target_view_form
+msgid "Month"
+msgstr "月份"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead_sequence__name
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lost_reason_category__name
+msgid "Name"
+msgstr "名称"
+
+#. module: pivotino_crm
+#: code:addons/pivotino_crm/models/pivotino_sale_target.py:0
+#, python-format
+msgid "New"
+msgstr "新"
+
+#. module: pivotino_crm
+#: model:crm.lost.reason,name:pivotino_crm.lost_reason_6
+msgid "No interest"
+msgstr "不感兴趣"
+
+#. module: pivotino_crm
+#: model:ir.model.fields.selection,name:pivotino_crm.selection__sale_target__target_month__11
+msgid "November"
+msgstr "11月"
+
+#. module: pivotino_crm
+#: model:ir.model.fields.selection,name:pivotino_crm.selection__sale_target__target_month__10
+msgid "October"
+msgstr "10月"
+
+#. module: pivotino_crm
+#: model:ir.model,name:pivotino_crm.model_crm_lost_reason
+msgid "Opp. Lost Reason"
+msgstr "商机丢失原因"
+
+#. module: pivotino_crm
+#: model:ir.model,name:pivotino_crm.model_crm_lost_reason_category
+msgid "Opp. Lost Reason Category"
+msgstr "商机丢失原因类别"
+
+#. module: pivotino_crm
+#: model:ir.model,name:pivotino_crm.model_crm_lead
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_order__opportunity_id
+msgid "Opportunity"
+msgstr "商机"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target_individual__target_id
+msgid "Parent Target"
+msgstr ""
+
+#. module: pivotino_crm
+#: model:crm.lost.reason,name:pivotino_crm.lost_reason_7
+msgid "Poor contract terms"
+msgstr "合同条款不佳"
+
+#. module: pivotino_crm
+#: model:crm.lost.reason,name:pivotino_crm.lost_reason_8
+msgid "Poor follow-up time"
+msgstr "不良跟进时间"
+
+#. module: pivotino_crm
+#: model:crm.lost.reason,name:pivotino_crm.lost_reason_9
+msgid "Product Quality"
+msgstr "产品品质"
+
+#. module: pivotino_crm
+#: model:crm.lost.reason,name:pivotino_crm.lost_reason_4
+msgid "Product pricing"
+msgstr "产品价格"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lost_reason__reason_category_id
+msgid "Reason Category"
+msgstr "原因分类"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,help:pivotino_crm.field_sale_order__origin
+msgid "Reference of the document that generated this sales order request."
+msgstr "生成此销售订单请求的参考文件"
+
+#. module: pivotino_crm
+#: model:ir.ui.menu,name:pivotino_crm.pivotino_saas_crm_menu
+msgid "Saas"
+msgstr ""
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_res_users__sale_ids
+msgid "Sale"
+msgstr "销售"
+
+#. module: pivotino_crm
+#: model:ir.actions.act_window,name:pivotino_crm.sale_target_action
+#: model:ir.ui.menu,name:pivotino_crm.menu_sale_target_sales
+#: model_terms:ir.ui.view,arch_db:pivotino_crm.sale_target_view_form
+#: model_terms:ir.ui.view,arch_db:pivotino_crm.sale_target_view_tree
+msgid "Sale Target"
+msgstr "销售目标"
+
+#. module: pivotino_crm
+#: model:ir.model,name:pivotino_crm.model_sale_target
+msgid "Sale Target of Company"
+msgstr "公司销售目标"
+
+#. module: pivotino_crm
+#: model:ir.model,name:pivotino_crm.model_sale_target_individual
+msgid "Sale Target of Individual"
+msgstr "个人销售目标"
+
+#. module: pivotino_crm
+#: model:ir.model,name:pivotino_crm.model_sale_order
+msgid "Sales Order"
+msgstr "销售订单"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target_individual__user_id
+msgid "Sales Person"
+msgstr "销售订单"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_team__sales_target
+msgid "Sales Target"
+msgstr "销售目标"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_res_company__default_sale_target
+msgid "Sales Target for Company"
+msgstr "公司销售目标"
+
+#. module: pivotino_crm
+#: model:ir.model,name:pivotino_crm.model_crm_team
+msgid "Sales Team"
+msgstr "销售团队"
+
+#. module: pivotino_crm
+#: model:ir.model.constraint,message:pivotino_crm.constraint_sale_target_target_month_year_uniq
+msgid "Sales target of this month is already set in this company."
+msgstr "已设置本月公司销售目标"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_stage_duration__user_id
+msgid "Salesperson"
+msgstr "业务员"
+
+#. module: pivotino_crm
+#: model:ir.model.fields.selection,name:pivotino_crm.selection__sale_target__target_month__9
+msgid "September"
+msgstr "9月"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_order__origin
+msgid "Source Document"
+msgstr "源文件"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_stage_duration__stage_id
+msgid "Stage"
+msgstr "阶段"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead__stage_before_lost
+msgid "Stage Before Lost"
+msgstr "丢失前的阶段"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_stage_duration__duration
+msgid "Stage Duration"
+msgstr "阶段持续时间"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_lead__stage_duration_ids
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_stage__stage_duration_ids
+msgid "Stage Durations"
+msgstr "阶段持续时间"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_stage_duration__stage_end_date
+msgid "Stage End Date"
+msgstr "阶段结束日期"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_stage__stage_sequence
+msgid "Stage Sequence"
+msgstr "阶段序列"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_crm_stage_duration__stage_start_date
+msgid "Stage Start Date"
+msgstr "阶段开始日期"
+
+#. module: pivotino_crm
+#: model_terms:ir.ui.view,arch_db:pivotino_crm.crm_lead_lost_quotation_form
+msgid "Submit"
+msgstr "提交"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target_individual__target_sales
+msgid "Target"
+msgstr "目标"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target__target_amount
+msgid "Target Amount"
+msgstr "目标金额"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target__target_date
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target_individual__target_date
+msgid "Target Date"
+msgstr "目标日期"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target_individual__target_month
+msgid "Target Month"
+msgstr "目标月份"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target__name
+msgid "Target Reference"
+msgstr "目标参考"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target_individual__target_year
+msgid "Target Year"
+msgstr "目标年份"
+
+#. module: pivotino_crm
+#: model_terms:ir.ui.view,arch_db:pivotino_crm.sale_target_view_form
+msgid "Target and Actual"
+msgstr "目标和实际"
+
+#. module: pivotino_crm
+#: model_terms:ir.ui.view,arch_db:pivotino_crm.sale_target_view_form
+msgid "Target:"
+msgstr "目标："
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target__individual_ids
+msgid "Targets and Actual"
+msgstr "目标和实际"
+
+#. module: pivotino_crm
+#: code:addons/pivotino_crm/models/pivotino_crm_lead.py:0
+#, python-format
+msgid ""
+"There are still activities pending for this opportunity. Please mark them as"
+" done / cancel them before closing this opportunity."
+msgstr "此商机尚有未完成活动，请将他们标为完成/取消以便关闭此商机。"
+
+#. module: pivotino_crm
+#: code:addons/pivotino_crm/models/pivotino_crm_stage.py:0
+#, python-format
+msgid "There can only be 1 quotation stage!"
+msgstr "只能有1个报价阶段！"
+
+#. module: pivotino_crm
+#: code:addons/pivotino_crm/models/pivotino_crm_lead.py:0
+#, python-format
+msgid "This sequence is selected in another Lead Sequence Configuration!"
+msgstr ""
+
+#. module: pivotino_crm
+#: code:addons/pivotino_crm/models/pivotino_crm_stage.py:0
+#, python-format
+msgid "This sequence is selected in another stage!"
+msgstr ""
+
+#. module: pivotino_crm
+#: model:crm.lost.reason,name:pivotino_crm.lost_reason_5
+msgid "Timing"
+msgstr "时机"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_order__amount_total_base
+msgid "Total"
+msgstr "总数"
+
+#. module: pivotino_crm
+#: model_terms:ir.ui.view,arch_db:pivotino_crm.pivotino_view_order_form_inherit
+msgid "Total (Base Currency)"
+msgstr "总数（系统汇率）"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,help:pivotino_crm.field_crm_stage__stage_sequence
+msgid "Used to order stages. Lower is better."
+msgstr ""
+
+#. module: pivotino_crm
+#: model:ir.model,name:pivotino_crm.model_res_users
+msgid "Users"
+msgstr "用户"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target_individual__variance
+msgid "Variance"
+msgstr "方差"
+
+#. module: pivotino_crm
+#: model:crm.stage,name:pivotino_crm.stage_lead5
+msgid "Won"
+msgstr "赢得"
+
+#. module: pivotino_crm
+#: model:ir.model.fields,field_description:pivotino_crm.field_sale_target__target_year
+msgid "Year"
+msgstr "年份"
+
+#. module: pivotino_crm
+#: model_terms:ir.ui.view,arch_db:pivotino_crm.sale_target_view_form
+msgid "Year. e.g. 2020"
+msgstr "年份。例：2020"
+
+#. module: pivotino_crm
+#: code:addons/pivotino_crm/models/pivotino_crm_lost_reason_category.py:0
+#, python-format
+msgid ""
+"You are not allowed to mark Lost Lead to lost:\n"
+"%s"
+msgstr ""
+
+#. module: pivotino_crm
+#: code:addons/pivotino_crm/models/pivotino_crm_stage.py:0
+#, python-format
+msgid "You can only have 1 stage for Lost"
+msgstr "您只可以有一个丢失阶段"
+
+#. module: pivotino_crm
+#: code:addons/pivotino_crm/models/pivotino_crm_stage.py:0
+#, python-format
+msgid "You can only have 1 stage for Won"
+msgstr "您只可以有一个赢得阶段"
+
+#. module: pivotino_crm
+#: code:addons/pivotino_crm/models/pivotino_sale_order.py:0
+#, python-format
+msgid ""
+"You cannot have different Customer in Lead and SO. \n"
+"Kindly change the Customer in Lead."
+msgstr ""
+"线索和销售订单不能有不同的客户。 \n"
+"请在线索更改客户。"
+
+#. module: pivotino_crm
+#: code:addons/pivotino_crm/models/pivotino_sale_order.py:0
+#, python-format
+msgid ""
+"You cannot have different Sales Person in Lead and SO. \n"
+"Kindly change the Sales Person in Lead."
+msgstr ""
+"线索和销售订单不能有不同的业务员。 \n"
+"请在线索更改业务员。"
+
+#. module: pivotino_crm
+#: code:addons/pivotino_crm/models/pivotino_crm_stage.py:0
+#, python-format
+msgid "You cannot select both Won and Lost"
+msgstr "您不能同时选择赢得和丢失"
+
+#. module: pivotino_crm
+#: code:addons/pivotino_crm/models/pivotino_crm_lead.py:0
+#, python-format
+msgid "You don't have the access needed to run this cron."
+msgstr "您没有运行此cron所需的访问权限。"
+
+#. module: pivotino_crm
+#: model:ir.model.fields.selection,name:pivotino_crm.selection__crm_lead_sequence__asc_desc__asc
+msgid "asc"
+msgstr "顺序"
+
+#. module: pivotino_crm
+#: model:ir.model.fields.selection,name:pivotino_crm.selection__crm_lead_sequence__asc_desc__desc
+msgid "desc"
+msgstr "逆序"

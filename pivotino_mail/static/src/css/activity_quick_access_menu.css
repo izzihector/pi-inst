@@ -1,0 +1,56 @@
+section{padding: 20px 0px;}
+.card-header{
+display: block;
+text-align: center;
+}
+.counter-area .custom-card {
+margin-bottom: 20px;
+border: 0;
+background: transparent;}
+.counter-area .sh-card-body{
+flex: 1 1 auto;
+padding: 30px 20px;
+box-shadow: 0 3px 8px 0 rgba(162, 169, 204,.24), 0 3px 16px 0 rgba(162, 169, 204,.24);
+border-radius: 15px;
+}
+.counter-area .sh-card-body .media i{font-size: 70px;}
+.counter-area .sh-card-body .media .media-body{
+margin-top: 10px;
+margin-left: 10px;
+font-size: 20px;
+font-weight: bold;
+text-align: left;
+}
+.card_action_all_activity .sh-card-body{
+background-color: #005aa3;
+}
+.card_action_today_activity .sh-card-body{
+background-color: #3b9c07;
+}
+.card_action_future_due_activity .sh-card-body{
+background-color: #ff9633;
+}
+.card_action_overdue_activity .sh-card-body{
+background-color: #dd0e03;
+}
+.counter-area .custom-card:hover{
+cursor: pointer;
+}
+.btn-mark-done{
+color: #FFF;
+background-color: #F08239;
+border-color: #FFF;
+border-radius: 15px;
+}
+.btn-mark-cancel{
+color: #FFF;
+background-color: #274D5F;
+border-color: #FFF;
+border-radius: 15px;
+}
+.btn-view-document{
+color: #FFF;
+background-color: #F08239;
+border-color: #FFF;
+border-radius: 15px;
+}

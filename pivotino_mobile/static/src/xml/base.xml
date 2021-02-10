@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-extend="UserMenu.Actions">
+        <t t-jquery="a[data-menu='logout']">
+            this.attr('class', 'dropdown-item logout-pivotino-web');
+        </t>
+        <t t-jquery="a[data-menu='logout']" t-operation="after">
+            <a role="menuitem" href="/nativeAppLogout"
+               data-app-menu="logout" class="dropdown-item logout-pivotino-app">Log out</a>
+        </t>
+    </t>
+
+</templates>

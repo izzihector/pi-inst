@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="sh_action_activity_dashboard" model="ir.actions.client">
+            <field name="name">Activity Dashboard</field>
+            <field name="tag">activity_dashboard.dashboard</field>
+        </record>
+
+        <menuitem id="sh_menu_activity_dashboard"
+                  name="Dashboard"
+                  action="sh_action_activity_dashboard"
+                  parent="sh_activity_dashboard"
+                  sequence="1"/>
+
+        <template id="assets_backend" name="CRM assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/sh_activities_management/static/src/js/activity_dashboard.js"/>
+                <link rel="stylesheet" href="/sh_activities_management/static/src/css/crm_dashboard.css"/>
+            </xpath>
+        </template>
+	
+	<template id="sh_crm_db_activity_count_box" name="SH Activity To Do">
+				<div id="js_id_sh_crm_activity_all_count_tbl_div">
+						<div class="row row-sm">
+							<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col">
+								<div class="card card_1 custom-card" href="#">
+									<div class="sh-card-body dash1 badge-info">
+										<div class="media">
+			  								<i class="fa fa-clock-o fs-20 text-white align-self-center mr-3"></i>
+			  								<div class="media-body text-white">
+			    								<h3 class="mt-0"><t t-esc="all_activities_count"/></h3>
+			    								<p>All Activities</p>
+			  								</div>
+			  								<t t-foreach="all_activities" t-as="activity">
+                    							<input type="checkbox" id="all_activity" t-att-name="activity" checked="True" t-att-value="activity" style="display:none;"/>
+                    						</t>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col">
+								<div class="card card_2 custom-card" href="#">
+									<div class="sh-card-body dash1 badge-warning">
+										<div class="media">
+			  								<i class="fa fa-clock-o fs-20 text-white align-self-center mr-3"></i>
+			  								<div class="media-body text-white">
+			    								<h3 class="mt-0"><t t-esc="planned_acitvities_count"/></h3>
+			    								<p>Planned Activities</p>
+			  								</div>
+			  								<t t-foreach="planned_activities" t-as="activity">
+                    							<input type="checkbox" id="planned_activity" t-att-name="activity" checked="True" t-att-value="activity" style="display:none;"/>
+                    						</t>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col">
+								<div class="card card_3 custom-card" href="#">
+									<div class="sh-card-body dash1 badge-success">
+										<div class="media">
+			  								<i class="fa fa-clock-o fs-20 text-white align-self-center mr-3"></i>
+			  								<div class="media-body text-white">
+			    								<h3 class="mt-0"><t t-esc="completed_activities_count"/></h3>
+			    								<p>Completed Activities</p>
+			  								</div>
+			  								<t t-foreach="completed_activities" t-as="activity">
+                    							<input type="checkbox" id="completed_activity" t-att-name="activity" checked="True" t-att-value="activity" style="display:none;"/>
+                    						</t>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col">
+								<div class="card card_4 custom-card" href="#">
+									<div class="sh-card-body dash1 badge-danger">
+										<div class="media">
+			  								<i class="fa fa-clock-o fs-20 text-white align-self-center mr-3"></i>
+			  								<div class="media-body text-white">
+			    								<h3 class="mt-0"><t t-esc="overdue_activities_count"/></h3>
+			    								<p>Overdue Activities</p>
+			  								</div>
+			  								<t t-foreach="overdue_activities" t-as="activity">
+                    							<input type="checkbox" id="overdue_activity" t-att-name="activity" checked="True" t-att-value="activity" style="display:none;"/>
+                    						</t>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+    </template>   
+	
+    <template id="sh_crm_db_activity_todo_tbl" name="SH Activity To Do">
+			<div>
+				<div id="js_id_sh_crm_activity_todo_tbl_div">
+					<t t-if="not activities">
+						<table class="table table-bordered">
+							<tr style="font-size: 15px;">
+								
+				        		<th colspan="7" class="text-left">Planned Activities</th>
+				      		</tr>
+					      	<tr style="font-size: 15px;">
+					        	<td colspan="7" class="text-left">No Any Data Available</td>
+					      	</tr>
+					     </table>
+				    </t>
+					<t t-if="activities">
+						<table class="table table-bordered">
+							<thead>
+								<tr style="font-size: 15px;">
+									<th colspan="7" class="text-left">Planned Activities</th>
+								</tr>
+								<tr class="active">
+									<th>Name</th>
+							        <th>Activity</th>
+							        <th>Assigned To</th>
+							        <th>Supervisor</th>
+							        <th>Deadline Date</th>
+							        <th>Action</th>
+							        <th style="display:none;"><strong style="color:white">.</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<t t-foreach="activities" t-as="activity">
+								<tr>
+									<tr>
+										<td><span t-field="activity.res_name"/></td>
+				                        <td class="text-success mr-0"><span t-field="activity.activity_type_id.name"/></td>
+				                        <td><span t-field="activity.user_id.name"/></td>
+				                        <td><span t-field="activity.supervisor_id.name"/></td>
+				                        <td><span t-field="activity.date_deadline"/></td>
+				                        <t t-if="activity.state in ['overdue','planned','today']">
+				                        	<td><button style="cursor: pointer;" class="btn-success mark-done">Mark As Done</button>&amp;nbsp;<button style="cursor: pointer;" class="btn-success mark-view">View</button></td>
+				                        </t>
+				                        <t t-if="activity.state in ['done']">
+				                        	<td><button style="cursor: pointer;" class="btn-success mark-view">View</button></td>
+				                        </t>
+				                        <td style="display:none;"><input type="hidden" id="h_v" name="h_v" t-att-value="activity.id" t-att-activity_id="activity.id"/></td>
+									</tr>	
+								</tr>
+								</t>
+							</tbody>
+						</table>
+					</t>
+				</div>
+			</div>
+    </template>   
+    
+    
+    <template id="sh_crm_db_activity_all_tbl" name="SH Activity All">
+			<div>
+				<div id="js_id_sh_crm_activity_all_tbl_div">
+					<t t-if="not activities">
+						<table class="table table-bordered">
+							<tr style="font-size: 15px;">
+								
+				        		<th colspan="8" class="text-left">All Activities</th>
+				      		</tr>
+					      	<tr style="font-size: 15px;">
+					        	<td colspan="8" class="text-left">No Any Data Available</td>
+					      	</tr>
+					     </table>
+				    </t>
+					<t t-if="activities">
+						<table class="table table-bordered">
+							<thead>
+								<tr style="font-size: 15px;">
+									<th colspan="8" class="text-left">All Activities</th>
+								</tr>
+								<tr class="active">
+									<th>Name</th>
+							        <th>Activity</th>
+							        <th>Assigned To</th>
+							        <th>Supervisor</th>
+							        <th>Deadline Date</th>
+							        <th>Action</th>
+							        <th>Status</th>
+							        <th style="display:none;"><strong style="color:white">.</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<t t-foreach="activities" t-as="activity">
+								<tr>
+									<tr>
+										<td><span t-field="activity.res_name"/></td>
+				                        <td class="text-success mr-0"><span t-field="activity.activity_type_id.name"/></td>
+				                        <td><span t-field="activity.user_id.name"/></td>
+				                        <td><span t-field="activity.supervisor_id.name"/></td>
+				                        <td><span t-field="activity.date_deadline"/></td>
+				                        <t t-if="activity.state in ['overdue','planned','today']">
+				                        	<td><button style="cursor: pointer;" class="btn-success mark-done">Mark As Done</button>&amp;nbsp;<button style="cursor: pointer;" class="btn-success mark-view">View</button></td>
+				                        </t>
+				                        <t t-if="activity.state in ['done']">
+                        					<td><button style="cursor: pointer;" class="btn-success mark-view">View</button></td>
+                        				</t>
+				                        <t t-if="activity.state in ['done']">
+				                        	<td><span class="badge badge-success" t-field="activity.state"/></td>
+				                        </t>
+				                        <t t-if="activity.state in ['overdue']">
+				                        	<td><span class="badge badge-danger" t-field="activity.state"/></td>
+				                        </t>
+				                        <t t-if="activity.state in ['today']">
+				                        	<td><span class="badge badge-warning" t-field="activity.state"/></td>
+				                        </t>
+				                        <t t-if="activity.state in ['planned']">
+				                        	<td><span class="badge badge-info" t-field="activity.state"/></td>
+				                        </t>
+				                        <td style="display:none;"><input type="hidden" id="h_v" name="h_v" t-att-value="activity.id" t-att-activity_id="activity.id"/></td>
+									</tr>	
+								</tr>
+								</t>
+							</tbody>
+						</table>
+					</t>
+				</div>
+			</div>
+    </template>   
+    
+    <template id="sh_crm_db_activity_completed_tbl" name="SH Activity Done">
+			<div>
+				<div id="js_id_sh_crm_activity_completed_tbl_div">
+					<t t-if="not activities">
+						<table class="table table-bordered">
+							<tr style="font-size: 15px;">
+								
+				        		<th colspan="7" class="text-left">Completed Activities</th>
+				      		</tr>
+					      	<tr style="font-size: 15px;">
+					        	<td colspan="7" class="text-left">No Any Data Available</td>
+					      	</tr>
+					     </table>
+				    </t>
+					<t t-if="activities">
+						<table class="table table-bordered">
+							<thead>
+								<tr style="font-size: 15px;">
+									<th colspan="7" class="text-left">Completed Activities</th>
+								</tr>
+								<tr class="active">
+									<th>Name</th>
+							        <th>Activity</th>
+							        <th>Assigned To</th>
+							        <th>Supervisor</th>
+							        <th>Deadline Date</th>
+							        <th>Action</th>
+							        <th style="display:none;"><strong style="color:white">.</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<t t-foreach="activities" t-as="activity">
+								<tr>
+									<tr>
+										<td><span t-field="activity.res_name"/></td>
+				                        <td class="text-success mr-0"><span t-field="activity.activity_type_id.name"/></td>
+				                        <td><span t-field="activity.user_id.name"/></td>
+				                        <td><span t-field="activity.supervisor_id.name"/></td>
+				                        <td><span t-field="activity.date_deadline"/></td>
+				                        <t t-if="activity.state in ['overdue','planned','today']">
+				                        	<td><button style="cursor: pointer;" class="btn-success mark-done">Mark As Done</button>&amp;nbsp;<button style="cursor: pointer;" class="btn-success mark-view">View</button></td>
+				                        </t>
+				                        <t t-if="activity.state in ['done']">
+                        					<td><button style="cursor: pointer;" class="btn-success mark-view">View</button></td>
+                        				</t>
+				                        <td style="display:none;"><input type="hidden" id="h_v" name="h_v" t-att-value="activity.id" t-att-activity_id="activity.id"/></td>
+									</tr>	
+								</tr>
+								</t>
+							</tbody>
+						</table>
+					</t>
+				</div>
+			</div>
+    </template>
+
+	<template id="sh_crm_db_activity_overdue_tbl" name="SH Activity overdue">
+			<div>
+				<div id="js_id_sh_crm_activity_overdue_tbl_div"> 
+           			<t t-if="not activities">
+						<table class="table table-bordered">
+							<tr style="font-size: 15px;">
+								
+				        		<th colspan="7" class="text-left">Overdue Activities</th>
+				      		</tr>
+					      	<tr style="font-size: 15px;">
+					        	<td colspan="7" class="text-left">No Any Data Available</td>
+					      	</tr>
+					     </table>
+				    </t>
+					<t t-if="activities">
+						<table class="table table-bordered">
+							<thead>
+								<tr style="font-size: 15px;">
+									<th colspan="7" class="text-left">Overdue Activities</th>
+								</tr>
+								<tr class="active">
+									<th>Name</th>
+							        <th>Activity</th>
+							        <th>Assigned To</th>
+							        <th>Supervisor</th>
+							        <th>Deadline Date</th>
+							        <th>Action</th>
+							        <th style="display:none;"><strong style="color:white">.</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<t t-foreach="activities" t-as="activity">
+								<tr>
+									<tr>
+										<td><span t-field="activity.res_name"/></td>
+				                        <td class="text-success mr-0"><span t-field="activity.activity_type_id.name"/></td>
+				                        <td><span t-field="activity.user_id.name"/></td>
+				                        <td><span t-field="activity.supervisor_id.name"/></td>
+				                        <td><span t-field="activity.date_deadline"/></td>
+				                        <t t-if="activity.state in ['overdue','planned','today']">
+				                        	<td><button style="cursor: pointer;" class="btn-success mark-done">Mark As Done</button>&amp;nbsp;<button style="cursor: pointer;" class="btn-success mark-view">View</button></td>
+				                        </t>
+				                        <t t-if="activity.state in ['done']">
+                        					<td><button style="cursor: pointer;" class="btn-success mark-view">View</button></td>
+                        				</t>
+                        				<td><button style="cursor: pointer;" class="btn-success mark-view">View</button></td>
+				                        <td style="display:none;"><input type="hidden" id="h_v" name="h_v" t-att-value="activity.id" t-att-activity_id="activity.id"/></td>
+									</tr>	
+								</tr>
+								</t>
+							</tbody>
+						</table>
+					</t>
+				</div>
+			</div>
+										     
+    </template>
+
+
+    </data>
+</odoo>

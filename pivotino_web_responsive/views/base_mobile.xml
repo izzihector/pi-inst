@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+    <!-- search view -->
+    <t t-extend="SearchView">
+        <t t-jquery="button.o_enable_searchview" t-operation="replace">
+            <button class="o_toggle_searchview_full btn fa fa-search"/>
+        </t>
+    </t>
+
+    <!-- status view -->
+    <t t-name="StatusView.Mobile">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            <t t-if="status" t-esc="status.display_name"/>
+        </button>
+        <div class="dropdown-menu" role="menu">
+            <t t-foreach="states" t-as="i">
+                <t t-call="FieldStatus.content.button">
+                    <t t-set="is_dropdown" t-value="true"/>
+                </t>
+            </t>
+        </div>
+    </t>
+
+    <t t-extend="ControlPanel">
+        <!-- put sidebar in the middle -->
+        <t t-jquery=".o_cp_sidebar" t-operation="replace"/>
+        <t t-jquery=".o_cp_left" t-operation="after">
+            <div class="o_cp_middle">
+                <aside class="o_cp_sidebar"/>
+            </div>
+        </t>
+    </t>
+
+
+    <!-- override and remove all icon and allow display label for size < SM -->
+    <t t-name="ow_web_responsive.icon_button">
+<!--        <i t-attf-class="fa fa-#{icon}"-->
+<!--           t-att-title="label"/>-->
+<!--        <span class="d-none d-sm-inline" t-esc="label"/>-->
+        <i t-att-title="label"/>
+        <span class="d-none d-inline" t-esc="label"/>
+    </t>
+
+    <!-- form button view -->
+    <t t-extend="FormView.buttons">
+        <!-- customize responsive icon  -->
+        <!-- all label in capital letter -->
+        <t t-jquery=".o_form_button_edit" t-operation="inner">
+            <t t-call="ow_web_responsive.icon_button">
+                <t t-set="icon" t-value="'pencil'"/>
+                <t t-set="label">EDIT</t>
+            </t>
+        </t>
+
+        <t t-jquery=".o_form_button_create" t-operation="inner">
+            <t t-call="ow_web_responsive.icon_button">
+                <t t-set="icon" t-value="'plus'"/>
+                <t t-set="label">CREATE</t>
+            </t>
+        </t>
+
+        <t t-jquery=".o_form_button_save" t-operation="inner">
+            <t t-call="ow_web_responsive.icon_button">
+                <t t-set="icon" t-value="'check'"/>
+                <t t-set="label">SAVE</t>
+            </t>
+        </t>
+
+        <t t-jquery=".o_form_button_cancel" t-operation="inner">
+            <t t-call="ow_web_responsive.icon_button">
+                <t t-set="icon" t-value="'times'"/>
+                <t t-set="label">DISCARD</t>
+            </t>
+        </t>
+    </t>
+
+    <t t-extend="ow_web_responsive.MenuStatusbarButtons">
+        <t t-jquery="button.o_statusbar_buttons_dropdown" t-operation="replace">
+            <button class="o_statusbar_buttons_dropdown btn btn-primary dropdown-toggle"
+                    type="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false">
+                <t t-call="ow_web_responsive.icon_button">
+                    <t t-set="icon" t-value="'cogs'"/>
+                    <t t-set="label">ACTION</t>
+                </t>
+            </button>
+        </t>
+    </t>
+
+    <!-- dropdown menu right -->
+    <t t-extend="UserMenu.Actions">
+        <t t-jquery="a[data-menu='documentation']" t-operation="attributes">
+            <attribute name="class" value="dropdown-item d-none"/>
+        </t>
+        <t t-jquery="a[data-menu='support']" t-operation="attributes">
+            <attribute name="class" value="dropdown-item d-none"/>
+        </t>
+        <t t-jquery="a[data-menu='shortcuts']" t-operation="attributes">
+            <attribute name="class" value="dropdown-item d-none"/>
+        </t>
+        <t t-jquery="div.dropdown-divider" t-operation="attributes">
+            <attribute name="class" value="dropdown-divider d-none"/>
+        </t>
+        <t t-jquery="a[data-menu='account']" t-operation="attributes">
+            <attribute name="class" value="dropdown-item d-none" />
+        </t>
+        <!-- no need hide logout button anymore, logout issue taken care -->
+<!--        <t t-jquery="a[data-menu='logout']" t-operation="attributes">-->
+<!--            <attribute name="class" value="dropdown-item d-none d-md-inline-block" />-->
+<!--        </t>-->
+    </t>
+
+    <!-- hide gift icon -->
+    <t t-extend="systray_odoo_referral.gift_icon">
+        <t t-jquery="li.gift_icon" t-operation="attributes">
+            <attribute name="class" value="gift_icon o_mail_systray_item d-none"/>
+        </t>
+    </t>
+
+    <!-- pivot view download button -->
+    <t t-extend="PivotView.buttons">
+        <t t-jquery="button.o_pivot_download" t-operation="attributes">
+            <attribute name="class" value="btn btn-secondary fa fa-download o_pivot_download d-none d-lg-block"/>
+        </t>
+    </t>
+</templates>

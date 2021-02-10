@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="pivotino_view_order_form" model="ir.ui.view">
+        <field name="name">pivotino.sale.order.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='payment_term_id']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='require_signature']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='require_payment']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='fiscal_position_id']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='currency_id']" position="attributes">
+                <attribute name="invisible">False</attribute>
+            </xpath>
+            <xpath expr="//field[@name='pricelist_id']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='team_id']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//page[@name='customer_signature']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//page//field[@name='client_order_ref']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//group[@name='sale_shipping']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//group[@name='sale_info']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='date_order']" position="after">
+                <label for="commitment_date" string="Delivery Date"/>
+                <div class="o_row">
+                    <field name="commitment_date"/> <span class="text-muted">Expected: <field name="expected_date" widget="date"/></span>
+                </div>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="pivotino_sale_order_form_quote" model="ir.ui.view">
+        <field name="name">pivotino.sale.order.form.payment</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale_management.sale_order_form_quote"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='sale_order_template_id']" position="after">
+                <field name="client_order_ref"/>
+            </xpath>
+
+            <xpath expr="//button[@name='preview_sale_order']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//page[@name='optional_products']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//button[@name='%(sale.action_view_sale_advance_payment_inv)d'][1]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//button[@name='%(sale.action_view_sale_advance_payment_inv)d'][2]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='sale_order_template_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Hide Sale Onboarding Panel -->
+    <record id="view_quotation_tree_hide_onboarding" model="ir.ui.view">
+        <field name="name">sale.order.tree.hide.onboarding</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_quotation_tree_with_onboarding"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="attributes">
+                <attribute name="banner_route" value="False"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="pivotino_product_template_form_view_invoice_policy">
+        <field name="name">pivotino.product.template.invoice.policy</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="sale.product_template_form_view_invoice_policy"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='invoice_policy']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Hide Sales/To Invoice -->
+    <record id="sale.menu_sale_invoicing" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6, 0, [ref('base.group_system')])]"/>
+    </record>
+
+    <!-- Hide Sales/Products/Pricelists -->
+    <record id="sale.menu_product_pricelist_main" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6, 0, [ref('base.group_system')])]"/>
+    </record>
+
+    <!-- Add Product Categories -->
+    <menuitem id="menu_sales_product_categories"
+              name="Product Categories"
+              action="product.product_category_action_form"
+              parent="sale.product_menu_catalog"
+              sequence="7"/>
+
+    <!-- Move UoM related menu to Product -->
+    <menuitem id="menu_uom_root"
+              name="UOM"
+              parent="sale.product_menu_catalog"
+              sequence="10"/>
+    <record id="sale.menu_product_uom_form_action" model="ir.ui.menu">
+        <field name="parent_id" ref="pivotino_sale.menu_uom_root"/>
+    </record>
+    <record id="sale.menu_product_uom_categ_form_action" model="ir.ui.menu">
+        <field name="parent_id" ref="pivotino_sale.menu_uom_root"/>
+    </record>
+
+    <!-- Add Currencies menu -->
+    <menuitem id="menu_sale_currency_menu"
+              name="Currencies"
+              parent="sale.sale_menu_root"
+              sequence="5"
+              action="base.action_currency_form"
+              groups="base.group_multi_currency"/>
+
+    <!-- hide Generate a Payment Link action -->
+    <record id="sale.action_sale_order_generate_link" model="ir.actions.act_window">
+        <field name="groups_id" eval="[(6, 0, [ref('pivotino_base.hide')])]"/>
+    </record>
+</odoo>

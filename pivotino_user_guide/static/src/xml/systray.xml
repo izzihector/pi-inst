@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+
+    <t t-name="pivotino_user_guide.Topic">
+        <div class="o_mail_preview o_preview_unread topic_help"
+             t-att-data-topic-name="topic_value.name"
+             t-att-data-topic-display-name="topic_value.display_name"
+             t-att-data-topic-url="topic_value.url"
+             t-att-data-tour-type="topic_value.tour_type">
+            <div class="o_mail_preview_image o_mail_preview_app">
+                <t t-if="topic_value.tour_type == 'onScreen0' || topic_value.tour_type == 'onScreen1'">
+                    <span t-attf-class="fa fa-check-circle fa-2x ml8 #{topic_value.tour_taken=='1' ? 'text-success' : ''}"/>
+                </t>
+                <t t-if="topic_value.tour_type == 'onScreen2'">
+                    <span t-attf-class="fa fa-book fa-2x ml8"/>
+                </t>
+                <t t-if="topic_value.tour_type == 'onScreen3'">
+                    <span t-attf-class="fa fa-play-circle-o fa-2x ml8"/>
+                </t>
+            </div>
+            <div class="o_preview_info">
+                <div class="o_preview_title" style="margin-top: 10px;">
+                    <span class="o_preview_name">
+                        <t t-esc="topic_value.display_name"/>
+                    </span>
+                </div>
+<!--                <div class="o_last_message_preview">-->
+<!--                    <t t-esc="topic_value.tour_summary"/>-->
+<!--                </div>-->
+            </div>
+        </div>
+    </t>
+
+    <!--
+        @param {Object} previews valid list of objects for help rendering
+    -->
+    <t t-name="pivotino_user_guide.pivotino_help_icon.Topics">
+         <t t-if="_.isEmpty(topics)">
+            <li class="text-center o_no_activity mt16">
+                <span>Sorry, PivotinoBot can not help you at this moment.</span>
+            </li>
+        </t>
+        <t t-foreach="topics" t-as="topic">
+            <t t-call="pivotino_user_guide.Topic"/>
+        </t>
+    </t>
+
+    <t t-name="pivotino_user_guide.pivotino_help_icon">
+        <li class="o_mail_systray_item">
+            <a class="dropdown-toggle o-no-caret pivotino-user-guide-icon" data-toggle="dropdown" data-display="static" aria-expanded="false" title="Help" href="#" role="button">
+                <i class="o_mail_messaging_menu_icon fa fa-question-circle" role="img" aria-label="Help"/>
+            </a>
+            <div class="o_mail_systray_dropdown dropdown-menu dropdown-menu-right" role="menu">
+                <div class="text-center pt8 pb8">
+                    <span>Welcome to the <strong>Pivotino User Guide</strong></span>
+                </div>
+                <div t-if="!widget.isMobile()" class="o_mail_systray_dropdown_top">
+                    <div>
+                        <button type="button" class="btn btn-link o_filter_button active" role="tab"> Get Started </button>
+                        <button type="button" class="btn btn-link o_filter_button" data-filter="onScreen1" role="tab"> OnScreen Guide </button>
+                        <button type="button" class="btn btn-link o_filter_button" data-filter="onScreen2" role="tab"> User Guide </button>
+                        <button type="button" class="btn btn-link o_filter_button" data-filter="onScreen3" role="tab"> Videos </button>
+                    </div>
+                </div>
+                <div class="o_mail_systray_dropdown_items"/>
+                <t t-if="widget.isMobile()">
+                    <div class="o_mail_mobile_tabs">
+                        <div class="d-none o_mail_mobile_tab o_filter_button" role="tab">
+                            <span class="o_tab_title">Get Started</span>
+                        </div>
+                        <div class="d-none o_mail_mobile_tab o_filter_button" data-filter="onScreen1" role="tab">
+                            <span class="o_tab_title">OnScreen Guide</span>
+                        </div>
+                        <div class="o_mail_mobile_tab o_filter_button active" data-filter="onScreen2" role="tab">
+                            <span class="fa fa-book"/>
+                            <span class="o_tab_title">User Guide</span>
+                        </div>
+                        <div class="o_mail_mobile_tab o_filter_button" data-filter="onScreen3" role="tab">
+                            <span class="fa fa-play-circle-o"/>
+                            <span class="o_tab_title">Videos</span>
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </li>
+    </t>
+
+    <!-- Common dialog content for each Pivotino Video Tour -->
+    <div t-name="pivotino_user_guide.TopicsVideo" id="TopicsVideoModal">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div id="video-preview" class="p-1">
+                        <div class="media_iframe_video">
+                            <div class="media_iframe_video_size"/>
+                            <iframe class="o_video_dialog_iframe"
+                                allowfullscreen="allowfullscreen"
+                                frameborder="0"
+                                src=""/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</templates>

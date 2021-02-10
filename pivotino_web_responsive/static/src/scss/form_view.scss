@@ -1,0 +1,15 @@
+.o_form_view {
+    @include media-breakpoint-down(md) {
+        &.o_xxs_form_view {
+            .o_group.o_inner_group {
+                width: 100%;
+                font-size: 16px;
+            }
+        }
+
+        // Labels
+        .o_form_label {
+            font-size: 16px;
+        }
+    }
+}

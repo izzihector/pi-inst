@@ -1,0 +1,415 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pivotino_pre_config
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-25 04:29+0000\n"
+"PO-Revision-Date: 2020-08-25 04:29+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields.selection,name:pivotino_pre_config.selection__first_time_login__days_before_lead_lost__14
+#: model:ir.model.fields.selection,name:pivotino_pre_config.selection__first_time_login__leads_due_day__14
+msgid "14"
+msgstr "14"
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields.selection,name:pivotino_pre_config.selection__first_time_login__days_before_lead_lost__30
+msgid "30"
+msgstr "30"
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.first_time_login_wizard
+msgid ""
+"<br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\">** You may change this later under Configurations &gt; Companies &gt; SaaS Config **</span><br/>"
+msgstr "<br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\">** 您可以稍后在"配置" &gt; "公司" &gt; SaaS配置 下进行更改。  **</span><br/>"
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.first_time_login_wizard
+msgid ""
+"<br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\">** You may change this later under Sales &gt; Sales Target **</span><br/>"
+msgstr ""<br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\">**您可以稍后在“销售 &gt; 销售目标”下更改此设置**</span><br/>"
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_wizard_view
+msgid ""
+"<br/>\n"
+"                        <span style=\"font-size: 15px;\"><b>Actual vs Target</b></span><br/>\n"
+"                        <span style=\"font-size: 15px;\">Easily track actual sales vs Target sales.</span>"
+msgstr ""
+"<br/>\n"
+"                        <span style=\"font-size: 15px;\"><b>实际与目标</b></span><br/>\n"
+"                        <span style=\"font-size: 15px;\">轻松跟踪实际销售与目标销售。</span>"
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_wizard_view
+msgid ""
+"<br/>\n"
+"                        <span style=\"font-size: 15px;\"><b>Current Year Revenue</b></span><br/>\n"
+"                        <span style=\"font-size: 15px;\">Know your current year revenue.</span>"
+msgstr ""<br/>\n"
+"                        <span style=\"font-size: 15px;\"><b>本年度收益</b></span><br/>\n"
+"                        <span style=\"font-size: 15px;\">了解您本年的收入。</span>"
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_wizard_view
+msgid ""
+"<br/>\n"
+"                        <span style=\"font-size: 15px;\"><b>Missed Sales</b></span><br/>\n"
+"                        <span style=\"font-size: 15px;\">Get to know when leads are being slipped away.</span>"
+msgstr ""
+"<br/>\n"
+"                        <span style=\"font-size: 15px;\"><b>错过的销售</b></span><br/>\n"
+"                        <span style=\"font-size: 15px;\">了解线索丢失的时候</span>"
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_wizard_view
+msgid ""
+"<br/>\n"
+"                        <span style=\"font-size: 15px;\"><b>Sales Cycle Length</b></span><br/>\n"
+"                        <span style=\"font-size: 15px;\">Know your sales cycle for each stage.</span>"
+msgstr ""
+"<br/>\n"
+"                        <span style=\"font-size: 15px;\"><b>销售周期长度</b></span><br/>\n"
+"                        <span style=\"font-size: 15px;\">了解每个阶段的销售周期。</span>"
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_wizard_view
+msgid ""
+"<br/>\n"
+"                        <span style=\"font-size: 15px;\"><b>Win Loss Ratio</b></span><br/>\n"
+"                        <span style=\"font-size: 15px;\">Know your win loss ratio.</span>"
+msgstr ""
+"<br/>\n"
+"                        <span style=\"font-size: 15px;\"><b>输赢比</b></span><br/>\n"
+"                        <span style=\"font-size: 15px;\">了解您的输赢率。</span>"
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.first_time_login_wizard
+msgid ""
+"<br/><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>WELCOME!</b></span><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>Let's get started by setting up your dashboard</b></span><br/>"
+msgstr ""
+"<br/><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>欢迎！</b></span><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>让我们从设置仪表盘开始</b></span><br/>"
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.first_time_login_wizard
+msgid ""
+"<br/><br/><br/><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>In which of the below industries do your company belong to?</b></span><br/><br/><br/>"
+msgstr ""
+"<br/><br/><br/><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>您的公司属于以下哪个行业？</b></span><br/><br/><br/>"
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.first_time_login_wizard
+msgid ""
+"<br/><br/><br/><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>We can automatically set a due date</b></span><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>to your leads in each stage.</b></span><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>On average, how many DAYS would you estimate</b></span><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>for leads in each stage to be due?</b></span><br/><br/><br/>"
+msgstr ""
+"<br/><br/><br/><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>我们可以自动设置每个阶段的线索</b></span><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>的截止日期。</b></span><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>您平均估计多少天</b></span><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>在每个阶段的线索？</b></span><br/><br/><br/>"
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.first_time_login_wizard
+msgid ""
+"<br/><br/><br/><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>We can help you to move inactive leads to \"LOST\" state.</b></span><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>After how many DAYS of no action since lead is created </b></span><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>would you prefer it to be considered as a lost lead?</b></span><br/><br/><br/>"
+msgstr ""
+"<br/><br/><br/><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>我们可以帮助您将无效的销售线索移至 \“已丢失\”状态。</b></span><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>若线索经过了几天的时间没有采取任何措施</b></span><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>您是否希望将其视为失去的线索？</b></span><br/><br/><br/>"
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.first_time_login_wizard
+msgid ""
+"<br/><br/><br/><br/><br/><br/><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>We can help set KPIs to reach your ultimate goal.</b></span><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>What is your target sales per month?</b></span><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\">i,e, RM 5000 / $1000 </span><br/><br/><br/>"
+msgstr ""
+"<br/><br/><br/><br/><br/><br/><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>我们可以帮助您设定KPI，以实现您的最终目标。</b></span><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>您每月的目标销售量是多少？</b></span><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\">例：RM 5000 / $1000 </span><br/><br/><br/>"
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.first_time_login_wizard
+msgid ""
+"<span style=\"horizontal-align: middle; font-size: 15px;\"><b>Thank you !</b></span><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>That was a quick one !</b></span><br/><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\">Hang on while we are working on the final configuration.</span><br/><br/><br/>"
+msgstr ""
+"<span style=\"horizontal-align: middle; font-size: 15px;\"><b>谢谢您！</b></span><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\"><b>非常快速的！</b></span><br/><br/>\n"
+"                                <span style=\"horizontal-align: middle; font-size: 15px;\">在我们进行最终配置时，请稍候。</span><br/><br/><br/>"
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_video_1
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_video_2
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_video_3
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_video_4
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_video_5
+msgid "Back to Selection"
+msgstr "回到选项"
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_res_users__clogin
+msgid "Clogin"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_wizard_view
+msgid "Close"
+msgstr "关闭"
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__create_uid
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_pivotino_preconfigured_data__create_uid
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_starter_wizard__create_uid
+msgid "Created by"
+msgstr "创建者"
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__create_date
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_pivotino_preconfigured_data__create_date
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_starter_wizard__create_date
+msgid "Created on"
+msgstr "创建于"
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_video_1
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_video_2
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_video_3
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_video_4
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_video_5
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_wizard_view
+msgid "Dashboard Quick Review"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_starter_wizard__dashboard_url
+msgid "Dashboard Url"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_pivotino_preconfigured_data__days_before_lead_lost
+msgid "Day(s) Before Lead Lost"
+msgstr "线索丢失前的天数"
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__display_name
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_pivotino_preconfigured_data__display_name
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_starter_wizard__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.first_time_login_wizard
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.starter_wizard_view_video
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.starter_wizard_view_video_bo
+msgid "Done"
+msgstr "完成"
+
+#. module: pivotino_pre_config
+#: model:ir.model,name:pivotino_pre_config.model_first_time_login
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.first_time_login_wizard
+msgid "First Time Login"
+msgstr "第一次登入"
+
+#. module: pivotino_pre_config
+#: model:ir.actions.act_window,name:pivotino_pre_config.action_first_time_login_wizard
+msgid "First Time Login Wizard"
+msgstr "首次登录向导"
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.first_time_login_wizard
+msgid "First slide"
+msgstr "首张幻灯片"
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__id
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_pivotino_preconfigured_data__id
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_starter_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__industry
+msgid "Industry"
+msgstr "行业"
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_pivotino_preconfigured_data__industry
+msgid "Industry Name"
+msgstr "行业名称"
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__is_other_industry
+msgid "Is Other Industry?"
+msgstr "是其他行业吗？"
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login____last_update
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_pivotino_preconfigured_data____last_update
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_starter_wizard____last_update
+msgid "Last Modified on"
+msgstr "最后更改于"
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__write_uid
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_pivotino_preconfigured_data__write_uid
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_starter_wizard__write_uid
+msgid "Last Updated by"
+msgstr "最后更新者"
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__write_date
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_pivotino_preconfigured_data__write_date
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_starter_wizard__write_date
+msgid "Last Updated on"
+msgstr "最后更新于"
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.first_time_login_wizard
+msgid "Last slide"
+msgstr "最后一张幻灯片"
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_res_users__login_date_1
+msgid "Latest authentication"
+msgstr "最新认证"
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__leads_due_day
+msgid "Leads Due Day"
+msgstr "线索到期日"
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_pivotino_preconfigured_data__leads_due_day
+msgid "Leads Due Day(s)"
+msgstr "线索到期日"
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__days_before_lead_lost
+msgid "Lost Leads Due Day"
+msgstr "线索丢失到期日"
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_pivotino_preconfigured_data__name
+msgid "Name"
+msgstr "名称"
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__num_of_employees
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_pivotino_preconfigured_data__num_of_employees
+msgid "Number of Employee(s)"
+msgstr "员工人数"
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.first_time_login_wizard
+msgid "Other Industries"
+msgstr "其他行业"
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__days_before_lead_lost_others
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__due_day_others
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__industry_others
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__num_of_employees_other
+#: model:ir.model.fields.selection,name:pivotino_pre_config.selection__first_time_login__days_before_lead_lost__other
+#: model:ir.model.fields.selection,name:pivotino_pre_config.selection__first_time_login__leads_due_day__other
+#: model:ir.model.fields.selection,name:pivotino_pre_config.selection__first_time_login__num_of_employees__other
+msgid "Others"
+msgstr "其他"
+
+#. module: pivotino_pre_config
+#: model:ir.model,name:pivotino_pre_config.model_pivotino_preconfigured_data
+msgid "Pre-Configured Data"
+msgstr "预设数据"
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.first_time_login_wizard
+msgid "Proceed/Skip"
+msgstr "下一步/略过"
+
+#. module: pivotino_pre_config
+#: code:addons/pivotino_pre_config/wizard/starter_wizard.py:0
+#, python-format
+msgid "Sorry, Video is not available!"
+msgstr "对不起，视频无法播放！"
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_res_users__starter_view_id
+msgid "Starter Kit ID"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_first_time_login__target_sales
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_pivotino_preconfigured_data__target_sales
+msgid "Target Sales"
+msgstr "销售目标"
+
+#. module: pivotino_pre_config
+#: model:ir.model.fields,field_description:pivotino_pre_config.field_res_users__first_log_bool
+msgid "Test"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model:ir.model,name:pivotino_pre_config.model_res_users
+msgid "Users"
+msgstr "用户"
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.starter_wizard_view_video_bo
+msgid "View Salesperson Video"
+msgstr "观看销售员视频"
+
+#. module: pivotino_pre_config
+#: model:ir.actions.act_window,name:pivotino_pre_config.action_starter_wizard_business
+#: model:ir.actions.act_window,name:pivotino_pre_config.action_starter_wizard_sales
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.starter_wizard_view_video
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.starter_wizard_view_video_bo
+msgid "Welcome To PIVOTINO"
+msgstr "欢迎来到PIVOTINO"
+
+#. module: pivotino_pre_config
+#: model:ir.model,name:pivotino_pre_config.model_starter_wizard
+msgid "Welcome to PIVOTINO"
+msgstr "欢迎来到PIVOTINO "
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_wizard_view
+msgid "missed_sales"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_wizard_view
+msgid "sales_target"
+msgstr ""
+
+#. module: pivotino_pre_config
+#: model_terms:ir.ui.view,arch_db:pivotino_pre_config.dashboard_wizard_view
+msgid "sales_velocity"
+msgstr ""

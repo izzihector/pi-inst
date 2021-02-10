@@ -1,0 +1,231 @@
+$pivotino-primary: #274D5F;
+$pivotino-primary-dark: #002434;
+$pivotino-secondary: #F08013;
+
+@include media-breakpoint-down(sm) {
+    .o_main_navbar {
+        .o_menu_sections.show {
+            .o_menu_header_lvl_1, {
+                font-size: 18px;
+            }
+            .o_menu_entry_lvl_1, {
+                font-size: 18px;
+            }
+            .o_menu_header_lvl_2, {
+                font-size: 14px;
+            }
+            .o_menu_entry_lvl_2, {
+                font-size: 18px;
+            }
+            .o_menu_entry_lvl_3, {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.o_mail_thread {
+    .o_thread_message {
+        .o_thread_message_core {
+            .text-muted {
+                .o_thread_author {
+                    color: $pivotino-primary;
+                }
+            }
+        }
+    }
+}
+
+//calendar view
+.fc-time-grid {
+    .fc-now-indicator-arrow {
+        border-color: $pivotino-secondary;
+    }
+    .fc-now-indicator-line {
+        border-color: $pivotino-secondary;
+    }
+}
+
+
+.o_calendar_view {
+    .o_calendar_widget {
+        .fc-month-view {
+            .fc-content-skeleton .fc-today .fc-day-number {
+                background: $pivotino-secondary;
+            }
+        }
+    }
+}
+
+//activity view
+.o_activity_view {
+    .o_record_selector {
+        color: $pivotino-secondary;
+    }
+}
+
+//error toast
+.toast-header {
+    background-color: $pivotino-secondary;
+    color: black;
+}
+.toast-body {
+    background-color: lighten($pivotino-secondary, 15%) ! important;
+}
+
+//general settings
+.o_base_settings {
+    .o_setting_container {
+        .settings_tab {
+            background-color: $pivotino-primary;
+
+            .tab {
+                // Mobile Tabs
+                @include media-breakpoint-down(sm) {
+                    &.current {
+                        background: $pivotino-primary-dark;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// graph view content
+html .o_web_client .o_action_manager .o_action {
+    @include media-breakpoint-down(sm) {
+        .o_content {
+            overflow: auto;
+        }
+    }
+}
+
+.o_content {
+    .o_form_view {
+        @include media-breakpoint-down(sm) {
+            // avoid blocking the image button
+            .oe_avatar ~ .oe_title
+            {
+                padding-right: 100px;
+            }
+        }
+
+        // floating of percentage in CRM probability
+        .oe_title {
+            span.o_field_widget {
+                overflow: visible;
+            }
+        }
+    }
+}
+
+// systray dropdown
+.o_mail_systray_item {
+    .o_mail_systray_dropdown {
+        .o_mail_systray_mobile_header {
+            .o_new_message {
+                color: $pivotino-secondary;
+            }
+        }
+    }
+}
+
+// mail systray footer
+.o_mail_preview {
+    .o_preview_info {
+        .o_preview_title {
+            .o_last_message_date {
+                color: $pivotino-secondary;
+            }
+        }
+    }
+}
+
+// no content helper
+.o_view_nocontent {
+    .o_nocontent_help {
+        .o_view_nocontent_smiling_face:before {
+            @include size(130px, 140px);
+            background: transparent url(/pivotino_web_responsive/static/src/img/no-content.png) no-repeat center;
+        }
+
+        .o_view_nocontent_neutral_face:before {
+            @include size(130px, 140px);
+            background: transparent url(/pivotino_web_responsive/static/src/img/no-content.png) no-repeat center;
+        }
+    }
+}
+
+// note toolbar panel
+@include media-breakpoint-down(sm) {
+    odoo-wysiwyg-container {
+        .panel-heading.note-toolbar {
+            overflow: initial;
+        }
+    }
+}
+
+// kanban group tab for wider screen
+@include media-breakpoint-down(md) {
+    .o_kanban_view.o_kanban_grouped {
+        display: block;
+        position: relative;
+        overflow-x: hidden;
+        &.o_renderer_with_searchpanel {
+            width: 100%;
+        }
+
+        .o_kanban_mobile_tabs {
+            display:flex;
+            width: 100%;
+            height: $o-kanban-mobile-tabs-height;
+            position: relative;
+            overflow-x: auto;
+            background-color: $pivotino-primary;
+
+            .o_kanban_mobile_tab {
+                height: $o-kanban-mobile-tabs-height;
+                padding: 10px 20px;
+                font-size: 14px;
+                color: white;
+
+                &.o_current {
+                    background-color: $pivotino-primary-dark;
+                }
+                .o_column_title {
+                    white-space: nowrap;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        // [class] to get same specificity as elsewhere (kanban_view.less)
+        &[class] .o_kanban_group:not(.o_column_folded) {
+            @include o-position-absolute($top: $o-kanban-mobile-tabs-height, $left: 0, $bottom: 0);
+            width: 100%;
+            padding: 0;
+            margin-left: 0; // override the margin-left: -1px of the desktop mode
+            border: none;
+
+            &.o_current {
+                position: inherit;
+                top: 0;
+
+                &.o_kanban_no_records {
+                    // set a default height for clarity when embedded in another view
+                    min-height: $o-kanban-mobile-empty-height;
+                }
+            }
+
+            .o_kanban_header {
+                display: none;
+            }
+            .o_kanban_record, .o_kanban_quick_create {
+                border: none;
+                border-bottom: 1px solid lightgray;
+                padding: 10px 16px;
+                margin: 0;
+            }
+        }
+    }
+}

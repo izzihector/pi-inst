@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="pivotino_base.group_pivotino_user" model="res.groups">
+            <field name="implied_ids"
+                   eval="[
+                   (4, ref('product.group_product_pricelist')),
+                   (4, ref('sale_management.group_sale_order_template')),
+                   ]"/>
+        </record>
+
+        <record id="pivotino_base.group_pivotino_owner" model="res.groups">
+            <field name="implied_ids"
+                   eval="[
+                   (4, ref('product.group_discount_per_so_line')),
+                   (4, ref('uom.group_uom')),
+                   ]"/>
+        </record>
+    </data>
+</odoo>

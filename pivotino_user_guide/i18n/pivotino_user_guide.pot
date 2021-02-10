@@ -1,0 +1,929 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pivotino_user_guide
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-25 04:53+0000\n"
+"PO-Revision-Date: 2020-08-25 04:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/set_sales_target.js:0
+#, python-format
+msgid "<b> Choose a month</b> for your sales target."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_new_user.js:0
+#, python-format
+msgid "<b> Choose a name</b> for user, example: <i>'Sarah'</i>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_contact.js:0
+#, python-format
+msgid "<b> Choose a name</b> for your customer / contact."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_product.js:0
+#, python-format
+msgid "<b> Choose a name</b> for your product, example: <i>'Apple'</i>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_meeting_in_calendar.js:0
+#, python-format
+msgid "<b> Click here to </b> add new attendees for meeting."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_meeting_in_calendar.js:0
+#, python-format
+msgid "<b> Click here to </b> add summary of meeting."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_meeting_in_calendar.js:0
+#, python-format
+msgid "<b> Click here to </b> edit the meeting."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_meeting_in_calendar.js:0
+#, python-format
+msgid ""
+"<b> Click here to </b> save the meeting.<br/><br/> Congratulations, You are "
+"successfull Created New Meeting."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_new_user.js:0
+#, python-format
+msgid ""
+"<b> Click here to</b> enter email for login, example: "
+"<i>'admin@pivotino.com'</i>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/change_password.js:0
+#, python-format
+msgid "<b> Enter New Password</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_meeting_in_calendar.js:0
+#, python-format
+msgid "<b> Select a date</b> for set the meeting."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_contact.js:0
+#, python-format
+msgid "<b>Choose a name</b> for your contact, example: <i>'Sarah'</i>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/convert_opportunity_to_confirm_sales_order.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/drag_and_drop_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/mark_as_lost_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/mark_as_won_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/plan_your_activity_and_confirm_sales.js:0
+#, python-format
+msgid ""
+"<b>Choose a name</b> for your opportunity, example: <i>'Need a new "
+"website'</i>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/convert_opportunity_to_confirm_sales_order.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/drag_and_drop_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/mark_as_lost_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/mark_as_won_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/plan_your_activity_and_confirm_sales.js:0
+#, python-format
+msgid ""
+"<b>Choose a partner (optional)</b> for your opportunity, example: <b>Onnet "
+"Sdn Bhd</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/drag_and_drop_opportunity.js:0
+#, python-format
+msgid ""
+"<b>Drag &amp; drop opportunities</b> between columns as you progress in your"
+" sales cycle."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_contact.js:0
+#, python-format
+msgid "<b>Enter Your Customer / Contact Address </b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/convert_opportunity_to_confirm_sales_order.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/drag_and_drop_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/mark_as_lost_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/mark_as_won_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/plan_your_activity_and_confirm_sales.js:0
+#, python-format
+msgid ""
+"<b>Enter the expected revenue</b> of your opportunity, example: <b>25000 "
+"EURO</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#: model:ir.model,name:pivotino_user_guide.model_analytic_tracking
+msgid "Analytic Tracking"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/plan_your_activity_and_confirm_sales.js:0
+#, python-format
+msgid "Choose an <b>activity type.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/change_password.js:0
+#, python-format
+msgid "Clcik here to save your <b> New Password.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/plan_your_activity_and_confirm_sales.js:0
+#, python-format
+msgid "Click her to <b>Schedule your activity</b>."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_sales_quotation.js:0
+#, python-format
+msgid "Click here and <b> Choose the customer</b> from the list."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_sales_quotation.js:0
+#, python-format
+msgid "Click here and <b> choose the quotation menu.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_sales_quotation.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/plan_your_activity_and_confirm_sales.js:0
+#, python-format
+msgid "Click here to  <b>select product</b> from product list."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_meeting_in_calendar.js:0
+#, python-format
+msgid "Click here to <b>  view calendar by month.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_contact.js:0
+#, python-format
+msgid "Click here to <b> Add Contact </b> for Your Customer "
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_contact.js:0
+#, python-format
+msgid ""
+"Click here to <b> Create Your Customer as a Company / Contact as a "
+"Individual </b> and add it to your customer / contact list."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_contact.js:0
+#, python-format
+msgid "Click here to <b> Save Your Contact.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_contact.js:0
+#, python-format
+msgid "Click here to <b> Save Your Customer / Contact Details.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/apply_filter_groupby.js:0
+#, python-format
+msgid "Click here to <b> add current search.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_sales_quotation.js:0
+#, python-format
+msgid "Click here to <b> add new quotation.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/set_sales_target.js:0
+#, python-format
+msgid "Click here to <b> add new sales target.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/set_sales_target.js:0
+#, python-format
+msgid "Click here to <b> configure monthly sales target.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_product.js:0
+#, python-format
+msgid "Click here to <b> create new product.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_new_user.js:0
+#, python-format
+msgid "Click here to <b> create new user.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/change_password.js:0
+#, python-format
+msgid "Click here to <b> open change password menu.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_product.js:0
+#, python-format
+msgid "Click here to <b> open product </b> menu to create new product"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_new_user.js:0
+#, python-format
+msgid "Click here to <b> open users </b> menu."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/convert_opportunity_to_confirm_sales_order.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/drag_and_drop_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/mark_as_lost_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/mark_as_won_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/plan_your_activity_and_confirm_sales.js:0
+#, python-format
+msgid "Click here to <b> open your opportunity pipeline.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/set_sales_target.js:0
+#, python-format
+msgid ""
+"Click here to <b> save sales target.</b> <br/> Congratulations, You are "
+"successfull <b> set the monthly sales target.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_new_user.js:0
+#, python-format
+msgid ""
+"Click here to <b> save your product.</b> <br/> Congratulations, You are "
+"successfull Created New User."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_product.js:0
+#, python-format
+msgid ""
+"Click here to <b> save your product.</b> <br/><br/> Congratulations, You are"
+" successfull Created New Product."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_sales_quotation.js:0
+#, python-format
+msgid "Click here to <b> see all your quotation.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/activity_dashboard.js:0
+#, python-format
+msgid "Click here to <b> submit your feedback.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/drag_and_drop_opportunity.js:0
+#, python-format
+msgid "Click here to <b>Add your opportunity</b>."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/change_password.js:0
+#, python-format
+msgid "Click here to <b>Change Password.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/mark_as_lost_opportunity.js:0
+#, python-format
+msgid "Click here to <b>Submit Lost Reason</b>."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/convert_opportunity_to_confirm_sales_order.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_sales_quotation.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/plan_your_activity_and_confirm_sales.js:0
+#, python-format
+msgid "Click here to <b>add product</b> in quotation."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/set_sales_target.js:0
+#, python-format
+msgid "Click here to <b>add sales person.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_opportunity.js:0
+#, python-format
+msgid ""
+"Click here to <b>add your opportunity</b>. <br/> </br> Once you finished the"
+" first activity of opportunity, <br/> you can <b> Drag &amp; drop "
+"opportunities</b> between columns as you progress in your sales cycle. <br/>"
+" <br/> Congratulations! <b> You completed the tour of Create Opportunity "
+"with Drag and Drop.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/convert_opportunity_to_confirm_sales_order.js:0
+#, python-format
+msgid "Click here to <b>confirm</b> your quotation."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/plan_your_activity_and_confirm_sales.js:0
+#, python-format
+msgid ""
+"Click here to <b>confirm</b> your quotation. <br/> Good job! You completed "
+"the tour <b>Plan Activity & Confirm Sales.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/convert_opportunity_to_confirm_sales_order.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/mark_as_lost_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/plan_your_activity_and_confirm_sales.js:0
+#, python-format
+msgid "Click here to <b>create new quotation</b> from opportunity."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_opportunity.js:0
+#, python-format
+msgid ""
+"Click here to <b>create your first opportunity</b> and add it to your "
+"pipeline."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/convert_opportunity_to_confirm_sales_order.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/drag_and_drop_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/mark_as_lost_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/mark_as_won_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/plan_your_activity_and_confirm_sales.js:0
+#, python-format
+msgid ""
+"Click here to <b>create your opportunity</b> and add it to your pipeline."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_sales_quotation.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/plan_your_activity_and_confirm_sales.js:0
+#, python-format
+msgid "Click here to <b>customer reference</b> for quotation"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/convert_opportunity_to_confirm_sales_order.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/mark_as_lost_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/mark_as_won_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/plan_your_activity_and_confirm_sales.js:0
+#, python-format
+msgid "Click here to <b>edit your opportunity</b>."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/apply_filter_groupby.js:0
+#, python-format
+msgid "Click here to <b>enter your favorites search name.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/mark_as_won_opportunity.js:0
+#, python-format
+msgid "Click here to <b>mark your opportunity as a Won.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/convert_opportunity_to_confirm_sales_order.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/drag_and_drop_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/mark_as_lost_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/mark_as_won_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/plan_your_activity_and_confirm_sales.js:0
+#, python-format
+msgid "Click here to <b>open your pipeline menu.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/plan_your_activity_and_confirm_sales.js:0
+#, python-format
+msgid "Click here to <b>save this quotation.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_sales_quotation.js:0
+#, python-format
+msgid ""
+"Click here to <b>save this quotation.</b> <br/><br/> Congratulations, You "
+"are successfull <b>created quotation manually.</b> <br/></br> You can "
+"<b>confirm the order</b> by clicking the <b>Confim</b> button and system "
+"will automatically create <b> opportunity </b> in <b>won</b> stage for you."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/apply_filter_groupby.js:0
+#, python-format
+msgid ""
+"Click here to <b>save your current search.</b>.<br/> Congratulations, You "
+"are successfull <b> apply the filters, group by & save current search as a "
+"favorites.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/apply_filter_groupby.js:0
+#, python-format
+msgid "Click here to apply <b> Filters </b> for your sales quotation."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/apply_filter_groupby.js:0
+#, python-format
+msgid "Click here to apply <b> Group By </b> for your sales quotation"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/activity_dashboard.js:0
+#, python-format
+msgid ""
+"Click here to mark your activity as <b> Done. </b> </br></br> In this view, "
+"youc can do mark activity as <b> Done / Cancel / View Source Document </b> "
+"but you can't edit.</br></br> To edit your activity, click on <b>view "
+"document</b> > find your activity in chatter > click on edit."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/apply_filter_groupby.js:0
+#, python-format
+msgid "Click here to save <b> current search as default </b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/apply_filter_groupby.js:0
+#, python-format
+msgid "Click here to save <b> current search. </b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/activity_dashboard.js:0
+#, python-format
+msgid ""
+"Click here to see <b> your all activities.</b> <br/> This dashboard helps "
+"you get instant view of all your business activities."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/set_sales_target.js:0
+#, python-format
+msgid "Click here to select <b>sales person from the list.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/activity_dashboard.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/apply_filter_groupby.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/change_password.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/convert_opportunity_to_confirm_sales_order.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_contact.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_meeting_in_calendar.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_new_user.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_product.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_sales_quotation.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/drag_and_drop_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/mark_as_lost_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/mark_as_won_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/plan_your_activity_and_confirm_sales.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/set_sales_target.js:0
+#, python-format
+msgid "Click on the <i><b>Home icon</b></i> to navigate across apps."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/change_password.js:0
+#, python-format
+msgid ""
+"Click on the user to <b> Change Password.</b> <br/> Choose on the user to "
+"change their login password."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_product.js:0
+#, python-format
+msgid "Click this menu to <b> see all product.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/systray.js:0
+#, python-format
+msgid "Close"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/convert_opportunity_to_confirm_sales_order.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/mark_as_lost_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/mark_as_won_opportunity.js:0
+#, python-format
+msgid "Confirm your <b>Expected Closing Date</b> for This opportunity."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_product.js:0
+#, python-format
+msgid "Enter the <b>sales price for your product.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/set_sales_target.js:0
+#, python-format
+msgid "Enter the <b>target amount</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/activity_dashboard.js:0
+#, python-format
+msgid "Enter your<b> feedback </b> for your activity."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/xml/systray.xml:0
+#: code:addons/pivotino_user_guide/static/src/xml/systray.xml:0
+#, python-format
+msgid "Get Started"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/xml/systray.xml:0
+#: code:addons/pivotino_user_guide/static/src/xml/systray.xml:0
+#, python-format
+msgid "Help"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/plan_your_activity_and_confirm_sales.js:0
+#, python-format
+msgid "Let's schedule an activity."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/xml/systray.xml:0
+#: code:addons/pivotino_user_guide/static/src/xml/systray.xml:0
+#, python-format
+msgid "OnScreen Guide"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/xml/systray.xml:0
+#, python-format
+msgid "Pivotino User Guide"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/change_password.js:0
+#, python-format
+msgid ""
+"Ready to <b> Change Password </b> for user? Your <b>all users </b> can be "
+"found here, under the <b>Configuration</b> app."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/apply_filter_groupby.js:0
+#, python-format
+msgid "Ready to <b>apply filters, group by & save as favorites? </b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/convert_opportunity_to_confirm_sales_order.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/drag_and_drop_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/mark_as_lost_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/mark_as_won_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/plan_your_activity_and_confirm_sales.js:0
+#, python-format
+msgid ""
+"Ready to boost your sales? Your <b>Pipeline</b> can be found here, under the"
+" <b>CRM</b> app."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_sales_quotation.js:0
+#, python-format
+msgid ""
+"Ready to manage Your Sales Quotation? You <b>can found all sales "
+"quotation</b>, under the <b>Sales</b> app."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/set_sales_target.js:0
+#, python-format
+msgid ""
+"Ready to manage Your Sales Target? You <b>can found monthly sales "
+"target</b>, under the <b>Sales</b> app."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_contact.js:0
+#, python-format
+msgid ""
+"Ready to manage your Customer / Contact ? Your <b>all Customer / Contact</b>"
+" can be found here, under the <b>Contact</b> app."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_meeting_in_calendar.js:0
+#, python-format
+msgid ""
+"Ready to manage your Meetings ? Your <b>all meeting </b> can be found here, "
+"under the <b>Calendar</b> app."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/activity_dashboard.js:0
+#, python-format
+msgid ""
+"Ready to manage your activities ? your <b>all activities</b> can be found "
+"here, under the <b>Activities</b> app."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_new_user.js:0
+#, python-format
+msgid ""
+"Ready to manage your all users? Your <b>all users </b> can be found here, "
+"under the <b>Configuration</b> app."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_product.js:0
+#, python-format
+msgid ""
+"Ready to manage your product? Your <b>all product </b> can be found here, "
+"under the <b>Sales</b> app."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/convert_opportunity_to_confirm_sales_order.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/convert_opportunity_to_confirm_sales_order.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/mark_as_lost_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/mark_as_won_opportunity.js:0
+#: code:addons/pivotino_user_guide/static/src/js/tours/plan_your_activity_and_confirm_sales.js:0
+#, python-format
+msgid "Save this opportunity</b>."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/mark_as_lost_opportunity.js:0
+#, python-format
+msgid "Select <b>Lost Reason</b>."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/plan_your_activity_and_confirm_sales.js:0
+#, python-format
+msgid "Select <b>the PIC </b>for your activity"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/plan_your_activity_and_confirm_sales.js:0
+#, python-format
+msgid "Select <b>the due date </b>for your activity."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_new_user.js:0
+#, python-format
+msgid "Select a <b> roll of user.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tour_manager.js:0
+#, python-format
+msgid "Skip tour"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/xml/systray.xml:0
+#, python-format
+msgid "Sorry, PivotinoBot can not help you at this moment."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/apply_filter_groupby.js:0
+#, python-format
+msgid ""
+"The system allowed to apply any predefined filters from the list. </br> "
+"Also, you can apply custom filters by clicking on the <b> Add Custom "
+"Filter.</b> </br> example: <i>'Let's apply <b> Sales Order </b> filter. </i>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/apply_filter_groupby.js:0
+#, python-format
+msgid ""
+"The system allowed to apply any predefined group by from the list. </br> "
+"Also, you can apply custom group by clicking on the <b> Add Custom "
+"Group.</b> </br> example: <i>'Let's see the quotation group by <b> Customer "
+"</b>.</i>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#: model:ir.model,name:pivotino_user_guide.model_web_tour_tour
+msgid "Tours"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/create_contact.js:0
+#, python-format
+msgid ""
+"Use the breadcrumbs to <b>go back to your Customer / Contact list. </b> "
+"<br/><br/> Good job! You completed the tour of Customer / Contact Creation."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/activity_dashboard.js:0
+#, python-format
+msgid ""
+"Use the breadcrumbs to <b>go back to your activities dashboard</b> <br/> "
+"Good job! You completed the tour of <b> Activity Dashboard </b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/convert_opportunity_to_confirm_sales_order.js:0
+#, python-format
+msgid ""
+"Use the breadcrumbs to <b>go back to your opportunity</b> <br/> See the "
+"<b>status of your opportunity. </b> It's Won. <br/> Good job! You completed "
+"the tour of Convert Opportunity to Confirm Sales."
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/js/tours/plan_your_activity_and_confirm_sales.js:0
+#, python-format
+msgid ""
+"Use the breadcrumbs to <b>go back to your opportunity</b> and <br/> See the "
+"<b>status of your opportunity. It's Won.</b>"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/xml/systray.xml:0
+#: code:addons/pivotino_user_guide/static/src/xml/systray.xml:0
+#, python-format
+msgid "User Guide"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/xml/systray.xml:0
+#: code:addons/pivotino_user_guide/static/src/xml/systray.xml:0
+#, python-format
+msgid "Videos"
+msgstr ""
+
+#. module: pivotino_user_guide
+#. openerp-web
+#: code:addons/pivotino_user_guide/static/src/xml/systray.xml:0
+#, python-format
+msgid "Welcome to the"
+msgstr ""

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sale.sale_menu_root" model="ir.ui.menu">
+            <field name="sequence">13</field>
+            <field name="web_icon">pivotino_branding_sale,static/description/icon.png</field>
+            <field name="web_large_icon">pivotino_branding_sale,static/description/icon_large.png</field>
+        </record>
+    </data>
+</odoo>

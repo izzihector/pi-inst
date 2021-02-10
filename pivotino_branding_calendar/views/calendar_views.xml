@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Calendar root icon -->
+        <record id="calendar.mail_menu_calendar" model="ir.ui.menu">
+            <field name="sequence">10</field>
+            <field name="web_icon">pivotino_branding_calendar,static/description/icon.png</field>
+            <field name="web_large_icon">pivotino_branding_calendar,static/description/icon_large.png</field>
+        </record>
+    </data>
+</odoo>

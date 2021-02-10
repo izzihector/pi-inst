@@ -1,0 +1,9 @@
+html {
+    .o_web_client {
+        // remove the margin bottom for footer as footer is hidden
+        > .o_action_manager {
+            margin-bottom: 0 !important;
+        }
+    }
+}
+

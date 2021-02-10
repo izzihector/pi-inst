@@ -1,0 +1,108 @@
+$pivotino-primary: #274D5F;
+$pivotino-secondary: #F08013;
+
+.o_web_client {
+    /* do not display for screen size larger than SM */
+    .pivo_nav_footer {
+        display: none;
+    }
+
+    @include media-breakpoint-down(sm) {
+        .pivo_nav_footer {
+            display: flex;
+            flex-flow: column nowrap;
+            background: white;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+
+            .nav_footer_tabs {
+                display: flex;
+                flex: 0 0 auto;
+                z-index: 1;
+                background-color: white;
+                box-shadow: 0 0 8px gray('400');
+                cursor: pointer;
+
+                .nav_footer_tab {
+                    display: flex;
+                    flex: 1 1 auto;
+                    width: 20%;
+                    flex-flow: column nowrap;
+                    justify-content: space-between;
+                    padding: 2% 4%;
+                    box-shadow: 1px 0 0 gray('400');
+                    text-align: center;
+
+                cursor: pointer;
+
+                    > span {
+                       display: block;
+                       font-weight: 500;
+                       font-size: 14px;
+                       color: $pivotino-primary;
+
+                       &.fa {
+                           padding-bottom: 4%;
+                           font-size: 1.3em;
+                       }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .o_control_panel {
+        .o_cp_middle {
+            display: flex;
+            justify-content: center;
+            margin-top: 5px;
+
+            .o_cp_sidebar {
+                display: initial;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .o_control_panel {
+        .o_searchview {
+            border: 0;
+            border-radius: 0;
+            padding-right: 0px;
+            text-align: right;
+        }
+
+        .breadcrumb-item {
+            &:nth-last-of-type(2) {
+                &::before {
+                    //change back icon to fa-arrow-left
+                    content: "\f060";
+                    padding-right: 5px;
+                    color: $pivotino-secondary;
+                }
+            }
+        }
+
+        .o_cp_left, .o_cp_middle, .o_cp_right {
+            flex: 1 1 auto;
+        }
+
+        .o_cp_sidebar {
+            display: none;
+        }
+    }
+}
+
+html {
+    .o_web_client {
+        @include media-breakpoint-down(sm) {
+            > .o_action_manager {
+                margin-bottom: 55px;
+            }
+        }
+    }
+}

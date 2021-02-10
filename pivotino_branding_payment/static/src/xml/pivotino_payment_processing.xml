@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates id="pivotino_payment" xml:space="preserve">
+    <t t-extend="payment.rpc_error">
+        <t t-jquery='div.text-center' t-operation='replace'>
+            <div class="text-center">
+                <p><strong>Server error:</strong> Unable to contact the Pivotino server.</p>
+                <p>Please wait ... <i class="fa fa-refresh fa-spin"></i></p>
+            </div>
+        </t>
+    </t>
+</templates>

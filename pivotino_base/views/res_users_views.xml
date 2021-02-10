@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_users_view_form_pivotino" model="ir.ui.view">
+            <field name="name">res.users.view.form.pivotino</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('oe_title')]/group//field[@name='partner_id']" position="after">
+                    <field name="is_hide_access" groups="base.group_no_one"
+                           attrs="{'invisible': [('id', '=', False)]}"/>
+                </xpath>
+                <xpath expr="//button[@name='%(base.res_lang_act_window)d']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//page[@name='access_rights']" position="attributes">
+                    <attribute name="groups">pivotino_base.group_view_access</attribute>
+                </xpath>
+
+                <xpath expr="//page[@name='access_rights']" position="after">
+                    <page name="quick_setup" string="Quick User Setup">
+                        <group col="3">
+                            <group colspan="1">
+                                <field name="user_role" required="True"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="base.change_password_wizard_action" model="ir.actions.act_window">
+            <field name="groups_id" eval="[(6, 0, [ref('pivotino_base.hide')])]"/>
+        </record>
+    </data>
+</odoo>

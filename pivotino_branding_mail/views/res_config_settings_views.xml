@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit.branding</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="mail.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='emails']/div[2]" position="attributes">
+                    <attribute name="title">Using your own email server is required to send/receive emails in Community and Enterprise versions. Online users already benefit from a ready-to-use email server (@mycompany.pivotino.com).</attribute>
+                </xpath>
+                <xpath expr="//field[@name='alias_domain']" position="attributes">
+                    <attribute name="placeholder">mycompany.pivotino.com</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<odoo>
+        <!--    Mail Feedback Wizard Form View    -->
+        <record id="mail_feedback_wizard_view_form" model="ir.ui.view">
+            <field name="name">mail.feedback.wizard.view.form</field>
+            <field name="model">mail.feedback</field>
+            <field name="arch" type="xml">
+                <form string="Activity Feedback">
+                    <group class="oe_title">
+                        <field name="feedback"/>
+                    </group>
+                    <footer>
+                        <button name="action_mail_feedback" string="Submit" type="object" class="btn-primary feedback-apply"/>
+                        <button string="Cancel" class="btn-secondary feedback-cancel" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!--    Mail Feedback Wizard Action    -->
+        <record id="mail_feedback_wizard_action" model="ir.actions.act_window">
+            <field name="name">Activity Feedback</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mail.feedback</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="mail_feedback_wizard_view_form"/>
+            <field name="target">new</field>
+        </record>
+</odoo>

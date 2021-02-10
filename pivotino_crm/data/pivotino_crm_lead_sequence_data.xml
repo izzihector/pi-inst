@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="lead_sequence_1" model="crm.lead.sequence">
+        <field name="name">Due Date (Expected Closing)</field>
+        <field name="include_sequence">True</field>
+        <field name="lead_sequence">1</field>
+        <field name="field_id" ref="crm.field_crm_lead__date_action_last"/>
+        <field name="asc_desc">asc</field>
+    </record>
+    <record id="lead_sequence_2" model="crm.lead.sequence">
+        <field name="name">Priority</field>
+        <field name="include_sequence">True</field>
+        <field name="lead_sequence">2</field>
+        <field name="field_id" ref="crm.field_crm_lead__priority"/>
+        <field name="asc_desc">desc</field>
+    </record>
+    <record id="lead_sequence_3" model="crm.lead.sequence">
+        <field name="name">Expected Revenue</field>
+        <field name="include_sequence">True</field>
+        <field name="lead_sequence">3</field>
+        <field name="field_id" ref="crm.field_crm_lead__planned_revenue"/>
+        <field name="asc_desc">desc</field>
+    </record>
+</odoo>

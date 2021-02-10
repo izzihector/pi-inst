@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="analytic_opportunity_count" model="analytic.tracking">
+            <field name="name">Opportunity Count</field>
+            <field name="value">0</field>
+        </record>
+
+    </data>
+</odoo>

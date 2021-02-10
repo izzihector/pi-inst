@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!--    Sale Target Form View   -->
+    <record id="sale_target_view_form" model="ir.ui.view">
+        <field name="name">sale.target.form</field>
+        <field name="model">sale.target</field>
+        <field name="arch" type="xml">
+            <form string="Sale Target">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="target_month" placeholder="Month" required="1"/>
+                            <field name="target_year" placeholder="Year. e.g. 2020"/>
+                            <field name="target_date" invisible="1"/>
+                            <field name="company_id" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="target_amount"/>
+                            <field name="actual_amount"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Target and Actual" name="individual_ids">
+                            <field name="individual_ids" widget="section_and_note_one2many" mode="tree,kanban">
+                                <form>
+                                    <group>
+                                        <field name="company_id" invisible="1"/>
+                                        <field name="target_month" invisible="1"/>
+                                        <field name="target_year" invisible="1"/>
+                                        <field name="target_date" invisible="1"/>
+                                        <field name="user_id" options="{'no_create': True, 'no_open': True}"/>
+                                        <field name="target_sales"/>
+                                        <field name="actual_sales"/>
+                                        <field name="variance"/>
+                                    </group>
+                                </form>
+                                <tree editable="bottom">
+                                    <field name="target_id" invisible="1"/>
+                                    <field name="company_id" invisible="1"/>
+                                    <field name="target_month" invisible="1"/>
+                                    <field name="target_year" invisible="1"/>
+                                    <field name="target_date" invisible="1"/>
+                                    <field name="user_id" options="{'no_create': True, 'no_open': True}"/>
+                                    <field name="target_sales"/>
+                                    <field name="actual_sales"/>
+                                    <field name="variance"/>
+                                </tree>
+                                <kanban class="o_kanban_mobile">
+                                    <field name="target_id" invisible="1"/>
+                                    <field name="company_id" invisible="1"/>
+                                    <field name="target_month" invisible="1"/>
+                                    <field name="target_year" invisible="1"/>
+                                    <field name="target_date" invisible="1"/>
+                                    <field name="user_id" options="{'no_create': True, 'no_open': True}"/>
+                                    <field name="target_sales"/>
+                                    <field name="actual_sales"/>
+                                    <field name="variance"/>
+                                    <templates>
+                                        <t t-name="kanban-box">
+                                            <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+                                                <div class="row">
+                                                    <div class="col-8">
+                                                        <strong>
+                                                            <span>
+                                                                <t t-esc="record.user_id.value"/>
+                                                            </span>
+                                                        </strong>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <strong>
+                                                            <span class="float-right text-right">
+                                                                <t t-esc="record.variance.value"/>
+                                                            </span>
+                                                        </strong>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <span>
+                                                            Target:
+                                                            <t t-esc="record.target_sales.value"/>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <span>
+                                                            Actual:
+                                                            <t t-esc="record.actual_sales.value"/>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </t>
+                                    </templates>
+                                </kanban>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--    Sale Target Tree View   -->
+    <record id="sale_target_view_tree" model="ir.ui.view">
+        <field name="name">sale.target.tree</field>
+        <field name="model">sale.target</field>
+        <field name="arch" type="xml">
+            <tree string="Sale Target">
+                <field name="name"/>
+                <field name="target_amount"/>
+                <field name="actual_amount"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Sale Target Kanban View -->
+    <record id="sale_target_view_kanban" model="ir.ui.view">
+        <field name="name">sale.target.kanban</field>
+        <field name="model">sale.target</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile">
+                <field name="name"/>
+                <field name="target_amount"/>
+                <field name="actual_amount"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div class="row mb4">
+                                <div class="col-6">
+                                    <strong>
+                                        <span>
+                                            <t t-esc="record.name.value"/>
+                                        </span>
+                                    </strong>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <strong>
+                                        <span>Target:</span>
+                                    </strong>
+                                    <field name="target_amount" digits="[12,6]"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <strong>
+                                        <span>Actual:</span>
+                                    </strong>
+                                    <field name="actual_amount" digits="[12,6]"/>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!--    Sale Target Action   -->
+    <record id="sale_target_action" model="ir.actions.act_window">
+        <field name="name">Sale Target</field>
+        <field name="res_model">sale.target</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <!--    Sale Target Menuitem in Sales   -->
+    <menuitem
+            id="menu_sale_target_sales"
+            action="sale_target_action"
+            parent="sale.sale_menu_root"
+            groups="sales_team.group_sale_salesman_all_leads"
+            sequence="4"/>
+
+</odoo>

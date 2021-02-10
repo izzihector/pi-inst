@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="1">
+        <record id="digest.digest_digest_default" model="digest.digest">
+            <field name="name">Weekly Stats in Pivotino</field>
+            <field name="user_ids" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="next_run_date" eval="(DateTime.now() + timedelta(days=7)).strftime('%Y-%m-%d')"/>
+            <field name="kpi_res_users_connected">True</field>
+            <field name="kpi_mail_message_total">True</field>
+            <field name="state">deactivated</field>
+        </record>
+    </data>
+</odoo>

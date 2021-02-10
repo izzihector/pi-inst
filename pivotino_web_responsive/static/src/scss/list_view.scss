@@ -1,0 +1,12 @@
+// fix mobile horizontal scrolling for list view
+@include media-breakpoint-down(sm) {
+    .o_view_controller {
+        > .o_content {
+            > .o_list_view {
+                .table-responsive {
+                    overflow: auto;
+                }
+            }
+        }
+    }
+}

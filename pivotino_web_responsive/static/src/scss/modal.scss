@@ -1,0 +1,18 @@
+// fix the alignment of modal in mobile view
+@include media-breakpoint-down(sm) {
+    .modal {
+        .modal-content {
+            .modal-body.o_act_window {
+                .o_action {
+                    .o_content {
+                        .o_form_view.o_xxs_form_view {
+                            .o_group.o_inner_group {
+                                width: 100% !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

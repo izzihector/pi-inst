@@ -1,0 +1,25 @@
+@media (max-width: 575.98px) {
+    .o_chatter
+    .o_chatter_topbar{
+        text-align: left;
+    }
+
+    .o_chatter
+    .o_chatter_topbar
+    > .o_topbar_right_area {
+        display: initial;
+        border-bottom: 1px solid #D8D7D7;
+    }
+
+    .o_content
+    .o_form_view
+    .o_chatter
+    .o_chatter_topbar
+    > .o_topbar_right_area
+    .o_followers{
+        padding-bottom: 5px;
+    }
+}
+
+
+

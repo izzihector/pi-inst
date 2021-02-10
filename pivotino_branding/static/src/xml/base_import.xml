@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates>
+
+    <t t-extend="ImportView">
+        <t t-jquery="p.oe_import_noheaders.text-muted" t-operation="replace">
+            <p class="oe_import_noheaders text-muted">If the file contains
+                the column names, Pivotino can try auto-detecting the
+                field corresponding to the column. This makes imports
+                simpler especially when the file has many columns.
+            </p>
+        </t>
+
+        <t t-jquery="a[target='new']" t-operation="replace">
+            <a target="new" href="https://www.pivotino.com">Import FAQ</a>
+        </t>
+
+    </t>
+
+</templates>

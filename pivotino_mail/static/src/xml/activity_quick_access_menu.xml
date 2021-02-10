@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="pivotino_mail.activity_quick_access_menu">
+        <div class="container">
+            <section class="counter-area">
+	        <div id="pivotino_activity_cards" class="col-md-12">
+			</div>
+            </section>
+        </div>
+    </t>
+</templates>

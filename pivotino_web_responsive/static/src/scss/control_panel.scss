@@ -1,0 +1,7 @@
+.o_control_panel {
+    @include media-breakpoint-down(md) {
+        .breadcrumb {
+            font-size: 22px;
+        }
+    }
+}

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="web_tour_assets_common" inherit_id="web_tour.assets_common">
+        <xpath expr="//script[@src='/web_tour/static/src/js/tour_service.js']" position="replace">
+            <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tour_service.js"/>
+        </xpath>
+    </template>
+
+    <template id="assets_common" inherit_id="web.assets_common">
+        <xpath expr="." position="inside">
+            <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tour_manager.js"/>
+            <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tour_disable.js"/>
+        </xpath>
+    </template>
+
+    <template id="assets_backend" inherit_id="web.assets_backend">
+        <xpath expr=".">
+            <link rel="stylesheet" type="text/scss"
+                  href="/pivotino_user_guide/static/src/scss/systray.scss"/>
+            <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/systray.js"/>
+
+            <!-- All Backend Tour(s)  *** START *** -->
+
+            <!-- Get Started & On Screen Guide -->
+            <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tours/create_contact.js"/>
+            <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tours/create_opportunity.js"/>
+            <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tours/create_product.js"/>
+            <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tours/create_sales_quotation.js"/>
+            <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tours/plan_your_activity_and_confirm_sales.js"/>
+<!--             <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tours/drag_and_drop_opportunity.js"/> -->
+<!--             <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tours/mark_as_won_opportunity.js"/> -->
+<!--             <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tours/mark_as_lost_opportunity.js"/> -->
+<!--             <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tours/convert_opportunity_to_confirm_sales_order.js"/> -->
+            <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tours/create_meeting_in_calendar.js"/>
+            <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tours/activity_dashboard.js"/>
+            <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tours/create_new_user.js"/>
+            <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tours/set_sales_target.js"/>
+            <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tours/apply_filter_groupby.js"/>
+            <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tours/change_password.js"/>
+
+
+            <!-- User Guide (Links) -->
+<!--             <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tours/links/activities_link.js"/> -->
+            <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tours/links/dashboard_link.js"/>
+            <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tours/links/crm_link.js"/>
+            <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tours/links/sales_link.js"/>
+            <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tours/links/configuration_link.js"/>
+
+            <!-- Videos -->
+            <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tours/videos/starter_kit_bo.js"/>
+            <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tours/videos/starter_kit_sp.js"/>
+            <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tours/videos/dashboard_missed_sales.js"/>
+            <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tours/videos/dashboard_actual_vs_target.js"/>
+            <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tours/videos/dashboard_sales_cycle_length.js"/>
+            <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tours/videos/dashboard_win_loss_ratio.js"/>
+            <script type="text/javascript"
+                    src="/pivotino_user_guide/static/src/js/tours/videos/dashboard_current_year_revenue.js"/>
+            <!-- All Backend Tour(s)  *** END *** -->
+
+        </xpath>
+    </template>
+
+</odoo>

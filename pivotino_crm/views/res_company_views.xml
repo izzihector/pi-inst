@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="pivotino_crm_view_company_form" model="ir.ui.view">
+            <field name="name">pivotino.crm.res.company.form</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="pivotino_base.pivotino_base_view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='industry']" position="after">
+                    <separator string="CRM"/>
+                    <field name="day_set_lost"/>
+                    <field name="day_set_due"/>
+                    <field name="default_sale_target" invisible="1"/>
+                    <field name="auto_lead"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

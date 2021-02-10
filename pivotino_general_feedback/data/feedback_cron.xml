@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!--re-call api and send over positive feedback to portal-->
+        <record id="ir_cron_positive_feedback_api" model="ir.cron">
+            <field name="name">SaaS: Send Positive General Feedback to Portal</field>
+            <field name="model_id" ref="model_positive_general_feedback"/>
+            <field name="state">code</field>
+            <field name="code">model._cron_api_positive_feedback()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="active" eval="True"/>
+        </record>
+
+        <!--re-call api and send over negative feedback to portal-->
+        <record id="ir_cron_negative_feedback_api" model="ir.cron">
+            <field name="name">SaaS: Send Negative General Feedback to Portal</field>
+            <field name="model_id" ref="model_negative_general_feedback"/>
+            <field name="state">code</field>
+            <field name="code">model._cron_api_negative_feedback()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="active" eval="True"/>
+        </record>
+
+        <!--re-call api and send over additional feedback to portal-->
+        <record id="ir_cron_additional_feedback_api" model="ir.cron">
+            <field name="name">SaaS: Send Additional General Feedback to Portal</field>
+            <field name="model_id" ref="model_additional_general_feedback"/>
+            <field name="state">code</field>
+            <field name="code">model._cron_api_additional_feedback()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="active" eval="True"/>
+        </record>
+
+    </data>
+</odoo>

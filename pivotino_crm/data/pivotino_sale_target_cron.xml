@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--    Cron Job: Create Sale Target Based on Latest Record    -->
+    <record id="ir_cron_auto_create_sale_target" model="ir.cron">
+        <field name="name">Auto Create Sale Target</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">months</field>
+        <field name="numbercall">-1</field>
+        <field name="nextcall" eval="(DateTime.now().replace(day=14, hour=16, minute=0, second=0)).strftime('%Y-%m-%d %H:%M:%S')" />
+        <field name="doall" eval="False"/>
+        <field name="model_id" ref="model_sale_target"/>
+        <field name="code">model._auto_create_sale_target()</field>
+        <field name="state">code</field>
+    </record>
+</odoo>

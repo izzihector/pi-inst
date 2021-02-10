@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="sh_mail_schedule_activity_view_tree" model="ir.ui.view">
+            <field name="name">sh.mail.schedule.activity.view.tree</field>
+            <field name="model">mail.activity</field>
+            <field name="arch" type="xml">
+                <tree string="Activities" decoration-danger="date_deadline &lt; current_date" decoration-success="date_deadline == current_date" default_order="date_deadline" create="false">
+                    <field name="res_name" />
+                    <field name="activity_type_id" />
+                    <field name="summary" />
+                    <field name="date_deadline" />
+                </tree>
+            </field>
+        </record>
+		<record id="sh_mail_activity_view_tree" model="ir.ui.view">
+	        <field name="name">sh.mail.activity.view.tree</field>
+	        <field name="model">mail.activity</field>
+	        <field name="inherit_id" ref="mail.mail_activity_view_tree"/>
+	        <field name="arch" type="xml">
+	            <field name="date_deadline" position="after">
+	                <field name="state"/>
+	                <field name="date_done"/>
+	            </field>
+	            <tree position="attributes">
+	                <attribute name="decoration-muted">state == 'done'</attribute>
+	                <attribute name="decoration-danger">date_deadline &lt; current_date and state != 'done'</attribute>
+	                <attribute name="decoration-success">date_deadline == current_date and state != 'done'</attribute>
+	            </tree>
+	        </field>
+    	</record>
+
+        <record id="sh_mail_activity_type_view_form_inherit" model="ir.ui.view">
+            <field name="name">sh.mail.activity.inherit</field>
+            <field name="model">mail.activity</field>
+            <field name="inherit_id" ref="mail.mail_activity_view_form_popup" />
+            <field name="arch" type="xml">
+            	<xpath expr="//form//sheet" position="before">
+					<header>
+						<field name="state" widget="statusbar"/>
+					</header>            		
+            	</xpath>
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="supervisor_id" />
+                </xpath>
+                <field name="activity_type_id" position="after">
+	                <field name="date_done"/>
+            	</field>
+	            <button name="action_done" position="attributes">
+	                <attribute name="attrs">{'invisible':[('state', '=', 'done')]}</attribute>
+	            </button>
+            </field>
+        </record>
+
+
+        <record id="sh_mail_schedule_activity_view_kanban" model="ir.ui.view">
+            <field name="name">sh.mail.schedule.activity.view.kanban</field>
+            <field name="model">mail.activity</field>
+            <field name="arch" type="xml">
+                <kanban class="o_kanban_mobile">
+                    <field name="res_name" />
+                    <field name="activity_type_id" />
+                    <field name="summary" />
+                    <field name="date_deadline" />
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click">
+                                <div class="row mb3">
+                                    <strong class="col-6">
+                                        <field name="res_name" />
+                                    </strong>
+                                </div>
+                                <div class="row mb3">
+                                    <div class="col-6">
+                                        <strong>
+                                            <field name="activity_type_id" />
+                                        </strong>
+                                    </div>
+                                </div>
+                                <div class="row mb3">
+                                    <div class="col-6">
+                                        <field name="date_deadline" />
+                                    </div>
+                                </div>
+                                <div class="o_kanban_record_bottom">
+                                    <div class="oe_kanban_bottom_left">
+                                        <span>
+                                            <field name="user_id" />
+                                        </span>
+                                    </div>
+                                    <div class="oe_kanban_bottom_right">
+                                        <img t-att-src="kanban_image('res.users', 'image_small', record.user_id.raw_value)" t-att-title="record.user_id.value" t-att-alt="record.user_id.value" width="24" height="24" class="oe_kanban_avatar" />
+                                    </div>
+                                </div>
+                                <div class="oe_clear" />
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+
+        <record id="sh_mail_schedule_activity_view_calendar" model="ir.ui.view">
+            <field name="name">sh.mail.schedule.activity.view.calendar</field>
+            <field name="model">mail.activity</field>
+            <field name="arch" type="xml">
+                <calendar string="Schedule Activity">
+                    <field name="res_name" />
+                    <field name="activity_type_id" />
+                    <field name="summary" />
+                    <field name="date_deadline" />
+                </calendar>
+            </field>
+        </record>
+
+
+        <record id="sh_mail_schedule_activity_view_pivot" model="ir.ui.view">
+            <field name="name">sh.mail.schedule.activity.view.pivot</field>
+            <field name="model">mail.activity</field>
+            <field name="arch" type="xml">
+                <pivot string="Schedule Activity" disable_linking="True">
+                    <field name="res_name" />
+                    <field name="activity_type_id" type="row" />
+                    <field name="summary" />
+                    <field name="date_deadline" />
+                    <field name="user_id" type="col" />
+                </pivot>
+            </field>
+        </record>
+
+
+        <record id="sh_mail_schedule_activity_view_graph" model="ir.ui.view">
+            <field name="name">sh.mail.schedule.activity.view.graph</field>
+            <field name="model">mail.activity</field>
+            <field name="arch" type="xml">
+                <graph string="Schedule Activity">
+                    <field name="activity_type_id" />
+                    <field name="user_id" />
+                </graph>
+            </field>
+        </record>
+		<record id="sh_mail_activity_view_search" model="ir.ui.view">
+	        <field name="name">sh.mail.activity.view.search</field>
+	        <field name="model">mail.activity</field>
+	        <field name="inherit_id" ref="mail.mail_activity_view_search"/>
+	        <field name="arch" type="xml">
+	            <field name="res_model_id" position="after">
+	                <field name="done"/>
+	                <filter string="Completed Activities" name="activities_completed"
+	                        domain="[('state', '=', 'done')]"/>
+	            </field>
+	        </field>
+    	</record>
+	
+
+        <record model="ir.actions.act_window" id="sh_all_activity_action">
+            <field name="name">All Activities</field>
+            <field name="res_model">mail.activity</field>
+            <field name="view_mode">tree,kanban,form,pivot,calendar,graph</field>
+        </record>
+
+
+         <record model="ir.actions.act_window" id="sh_reporting_action">
+            <field name="name">All Activities</field>
+            <field name="res_model">mail.activity</field>
+            <field name="view_mode">pivot,graph</field>
+        </record>
+
+
+        <record id="sh_action_my_activities" model="ir.actions.act_window">
+            <field name="name">My Activities</field>
+            <field name="res_model">mail.activity</field>
+            <field name="domain">[('user_id', '=', uid)]</field>
+        </record>
+
+
+        <record id="sh_supervisor_activity_action" model="ir.actions.act_window">
+            <field name="name">Supervisor Activities</field>
+            <field name="res_model">mail.activity</field>
+            <field name="domain">[('supervisor_id', '!=', False)]</field>
+        </record>
+
+        <menuitem name="Activity Dashboard" id="sh_activity_dashboard" />
+        <record id="sh_activities_management.sh_activity_dashboard" model="ir.ui.menu">
+            <field name="name">Activities</field>
+            <field name="web_icon">sh_activities_management,static/description/activity.png</field>
+            <field name="web_large_icon">sh_activities_management,static/description/activity_large.png</field>
+        </record>
+
+        <menuitem name="Activity" id="sh_activity" parent="sh_activity_dashboard" action="sh_all_activity_action" />
+
+        <menuitem name="All Activities" id="all_activity" parent="sh_activity" action="sh_all_activity_action" groups="sh_activities_management.group_activity_manager" />
+
+        <menuitem name="Supervisor Activities" id="sh_supervisor_activity" parent="sh_activity" action="sh_supervisor_activity_action" groups="sh_activities_management.group_activity_supervisor" />
+        
+        <menuitem name="My Activities" id="sh_my_activity" parent="sh_activity" action="sh_action_my_activities" />
+
+        <menuitem name="Reporting" id="reporting" parent="sh_activity_dashboard" action="sh_reporting_action" groups="sh_activities_management.group_activity_manager" />
+
+    </data>
+</odoo>

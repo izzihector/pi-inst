@@ -1,0 +1,117 @@
+// feedback popup
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes snackbar-fadein {
+  from {bottom: -10px; opacity: 0;}
+  to {bottom: 10px; opacity: 1;}
+}
+
+@keyframes snackbar-fadein {
+  from {bottom: -10px; opacity: 0;}
+  to {bottom: 10px; opacity: 1;}
+}
+
+.feedback_snackbar_root {
+    display: flex;
+    justify-content: center;
+
+    .feedback_snackbar {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color: #3D3C3A;
+        opacity: 1;
+        z-index: 500;
+        width: 90%;
+        bottom: 10px;
+        border-radius: 4px;
+        text-align: center;
+        color: white;
+        font-size: 13px;
+        -webkit-animation: snackbar-fadein 1s;
+        animation: snackbar-fadein 1s;
+
+        .snackbar_appreciate {
+            display: none;
+            padding: 15px 0;
+
+            span {
+                font-size: 14px;
+            }
+        }
+
+        .snackbar_top {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+            span {
+                padding: 20px 0;
+                margin-right: 5px;
+            }
+
+            .snackbar_btn_group {
+                display: flex;
+
+                .snackbar_btn {
+                    width: 70px;
+                    height: 30px;
+                    line-height: 30px;
+                    border-radius: 4px;
+                    margin: auto 5px;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        cursor: pointer;
+                    }
+
+                    &.active {
+                        pointer-events: none;
+                        background-color: grey;
+                    }
+                }
+
+                .btn-agree {
+                    background-color: green;
+                }
+
+                .btn-disagree {
+                    background-color: red;
+                }
+            }
+        }
+
+        .snackbar_bottom {
+            margin-bottom: 20px;
+            display: none;
+
+            .snackbar_feedback {
+                padding-bottom: 10px;
+
+                textarea {
+                    border-radius: 4px;
+                }
+            }
+
+            .btn-send {
+                background-color: #f08013;
+                color: white;
+                font-size: 14px;
+                border-radius: 4px;
+                height: 30px;
+                line-height: 30px;
+                width: 30%;
+                margin: auto;
+
+                span {
+                    margin: 5px;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

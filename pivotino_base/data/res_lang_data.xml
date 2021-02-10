@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- change the date format -->
+        <record model="res.lang" id="base.lang_en">
+            <field name="date_format">%d/%m/%Y</field>
+        </record>
+    </data>
+</odoo>

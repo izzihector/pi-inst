@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+    <!-- feedback popup template -->
+    <div t-name="FeedbackSnackbar" class="feedback_snackbar_root">
+        <div class="feedback_snackbar" id="snackbar">
+            <div class="snackbar_top">
+                <span class="question_value"><t t-esc="widget.value"/></span>
+                <div class="snackbar_btn_group">
+                    <div class="snackbar_btn btn-agree" id="agree">
+                        <span>YES</span>
+                    </div>
+                    <div class="snackbar_btn btn-disagree" id="disagree">
+                        <span>NO</span>
+                    </div>
+                </div>
+            </div>
+            <div class="snackbar_bottom">
+                <div class="snackbar_feedback">
+                    <textarea id="feedback" name="feedback"
+                              placeholder="Not happy with the feature? Please provide us your feedback. Thank you"
+                              rows="4" cols="60"/>
+                </div>
+                <div class="btn-send" id="send_feedback">
+                    <span>Send</span>
+                </div>
+            </div>
+            <div class="snackbar_appreciate">
+                <span>Thank you for the feedback!</span>
+            </div>
+        </div>
+    </div>
+</templates>

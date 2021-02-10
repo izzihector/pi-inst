@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- ir menu form view -->
+        <record id="edit_menu_access_pivotino" model="ir.ui.view">
+            <field name="model">ir.ui.menu</field>
+            <field name="inherit_id" ref="base.edit_menu_access"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='web_icon_data']" position="after">
+                    <field name="web_large_icon"/>
+                    <field name="web_large_icon_data"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Settings menu -->
+        <record id="base.menu_administration" model="ir.ui.menu">
+            <field name="groups_id" eval="[(6,0, [ref('base.group_system')])]"/>
+            <field name="web_icon">pivotino_base,static/description/setting.png</field>
+            <field name="web_large_icon">pivotino_base,static/description/setting_large.png</field>
+        </record>
+
+        <!-- Apps menu -->
+        <record id="base.menu_management" model="ir.ui.menu">
+            <field name="web_icon">pivotino_base,static/description/app.png</field>
+            <field name="web_large_icon">pivotino_base,static/description/app_large.png</field>
+        </record>
+
+        <!-- Users & Companies menus -->
+        <menuitem id="menu_user_company_root"
+                  name="Configurations"
+                  web_icon="pivotino_base,static/description/user.png"
+                  groups="base.group_erp_manager"
+                  sequence="16"/>
+        <record id="pivotino_base.menu_user_company_root" model="ir.ui.menu">
+            <field name="web_large_icon">pivotino_base,static/description/user_large.png</field>
+        </record>
+
+        <menuitem id="menu_res_users"
+                  name="Users"
+                  parent="pivotino_base.menu_user_company_root"
+                  sequence="10"
+                  action="base.action_res_users"/>
+
+        <menuitem id="menu_res_company"
+                  name="Companies"
+                  parent="pivotino_base.menu_user_company_root"
+                  sequence="15"
+                  action="base.action_res_company_form"/>
+    </data>
+</odoo>

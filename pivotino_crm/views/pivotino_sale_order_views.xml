@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem
+        id="sale_crm.sale_order_menu_quotations_crm"
+        groups="pivotino_base.hide"
+        name="My Quotations"
+        action="sale.action_quotations"
+        parent="crm.crm_menu_sales"
+        sequence="2"/>
+
+    <record id="pivotino_view_order_form_inherit" model="ir.ui.view">
+        <field name="name">pivotino.sale.order.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="auto_lead" invisible="1"/>
+            </xpath>
+            <xpath expr="//group[@name='sale_reporting']" position="attributes">
+                <attribute name="groups"/>
+            </xpath>
+            <xpath expr="//field[@name='amount_total']" position="after">
+                <field name="company_currency_id" invisible="1"/>
+                <field name="amount_total_base" string="Total (Base Currency)"
+                       widget="monetary"
+                       options="{'currency_field': 'company_currency_id'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="pivotino_sale_view_inherit123_inherit" model="ir.ui.view">
+        <field name="name">pivotino.sale.view.inherit123.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale_crm.sale_view_inherit123"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='opportunity_id']" position="attributes">
+                <attribute name="groups"/>
+            </xpath>
+            <xpath expr="//field[@name='user_id']" position="attributes">
+                <attribute name="options">{'no_create': True, 'no_open': True}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="assets_backend" inherit_id="web.assets_backend">
+        <xpath expr=".">
+            <link rel="stylesheet" type="text/css"
+                  href="/pivotino_mobile/static/src/css/date_picker.css"/>
+
+            <script type="text/javascript"
+                    src="/pivotino_mobile/static/src/js/date_picker.js"/>
+            <script type="text/javascript"
+                    src="/pivotino_mobile/static/src/js/user_menu.js"/>
+            <script type="text/javascript"
+                    src="/pivotino_mobile/static/src/js/change_password.js"/>
+        </xpath>
+    </template>
+
+</odoo>

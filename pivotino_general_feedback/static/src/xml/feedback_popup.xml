@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+
+    <div t-name="FeedbackGeneralPopUp" class="feedback_general_popup">
+        <div class="feedback_general" id="feedbackgeneral">
+            <div class="main_view">
+                <span class="feedback_title">Your Feedback Matters !</span>
+                <div class="button_all" id="all_button">
+                    <div class="general_top">
+                        <div class="general_btn_group">
+                            <div class="main-icon smile_main" id="smile">
+                                <div>
+                                    <i class="fa fa-smile-o fa-9x"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="general_top">
+                        <div class="general_btn_group">
+                            <div class="main-icon frown_main" id="frown">
+                                <div>
+                                    <i class="fa fa-frown-o fa-9x"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="general_top mb32">
+                        <button class="btn btn-lg btn-primary btn-block btn-cancel">Cancel</button>
+                    </div>
+                </div>
+            </div>
+            <div class="happy_view">
+                <span class="feedback_title">Your Feedback Matters !</span><br/>
+                <span class="feedback_title">(POSITIVE)</span>
+                <div class="button_all" id="all_button">
+                    <t t-foreach="widget.positive" t-as="p">
+                        <div class="general_top">
+                            <div class="general_btn_group mb-2">
+                                <t t-foreach="p" t-as="p1">
+                                    <div class="general_btn btn-value btn-positive" t-att-id="p1.code">
+                                        <div>
+                                            <i class="fa fa-smile-o fa-2x"/>
+                                        </div>
+                                        <t t-esc="p1.value"/>
+                                    </div>
+                                </t>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+                <div class="general_bottom">
+                    <div class="general_feedback">
+                        <span class="addition_feedback">Additional feedback (optional)</span>
+                        <textarea id="pos_add_feedback" name="feedback"
+                                  class="feedback_text"
+                                  placeholder="Enter up to 4, 000 characters..."
+                                  rows="4" cols="60"/>
+                    </div>
+                    <hr/>
+                </div>
+                <div class="general_top mb16">
+                    <button class="btn btn-lg btn-primary btn-send-smile btn-block">Submit</button>
+                </div>
+                <div class="general_top mb32">
+                    <button class="btn btn-lg btn-link btn-block btn-cancel">Cancel</button>
+                </div>
+            </div>
+            <div class="sad_view">
+                <span class="feedback_title">Your Feedback Matters !</span><br/>
+                <span class="feedback_title">(NEGATIVE)</span>
+                <div class="button_all" id="all_button">
+                    <t t-foreach="widget.negative" t-as="n">
+                        <div class="general_top">
+                            <div class="general_btn_group mb-2">
+                                <t t-foreach="n" t-as="n1">
+                                    <div class="general_btn btn-value btn-negative" t-att-id="n1.code">
+                                        <div>
+                                            <i class="fa fa-frown-o fa-2x"/>
+                                        </div>
+                                        <t t-esc="n1.value"/>
+                                    </div>
+                                </t>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+                <div class="general_bottom">
+                    <div class="general_feedback">
+                        <span class="addition_feedback">Additional feedback (optional)</span>
+                        <textarea id="neg_add_feedback" name="feedback"
+                                  class="feedback_text"
+                                  placeholder="Enter up to 4, 000 characters..."
+                                  rows="4" cols="60"/>
+                    </div>
+                    <hr/>
+                </div>
+                <div class="general_top mb16 btn_btm">
+                    <button class="btn btn-lg btn-primary btn-send-frown btn-block">Submit</button>
+                </div>
+                <div class="general_top mb32 btn_btm">
+                    <button class="btn btn-lg btn-link btn-block btn-cancel">Cancel</button>
+                </div>
+            </div>
+            <div class="feedback_appreciate">
+                <div class="general_top">
+                    <span class="feedback_title">We Value Your Feedback!</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</templates>

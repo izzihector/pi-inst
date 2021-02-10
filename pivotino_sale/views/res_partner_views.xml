@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- res partner form hide smart button -->
+        <record id="res_partner_view_form_hide_buttons" model="ir.ui.view">
+            <field name="name">res.partner.form.hide.buttons</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="account.partner_view_buttons"/>
+            <field name="arch" type="xml">
+                <!-- hide Invoiced smart button -->
+                <xpath expr="//button[@name='action_view_partner_invoices']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

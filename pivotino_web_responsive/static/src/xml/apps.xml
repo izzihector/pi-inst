@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+    <t t-extend="AppsMenu">
+        <!-- Hide Search bar -->
+        <t t-jquery="div.search-container" t-operation="replace"/>
+    </t>
+</template>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <function name="write" model="ir.model.data">
+            <function name="search" model="ir.model.data">
+                <value eval="[('module', '=', 'base'), ('name', '=', 'main_partner')]"/>
+            </function>
+            <value eval="{'noupdate': False}"/>
+        </function>
+
+        <record id="base.main_partner" model="res.partner">
+            <field name="email"></field>
+            <field name="website"></field>
+        </record>
+
+        <function name="write" model="ir.model.data">
+            <function name="search" model="ir.model.data">
+                <value eval="[('module', '=', 'base'), ('name', '=', 'partner_root')]"/>
+            </function>
+            <value eval="{'noupdate': False}"/>
+        </function>
+
+        <function name="write" model="ir.model.data">
+            <function name="search" model="ir.model.data">
+                <value eval="[('module', '=', 'base'), ('name', '=', 'partner_admin')]"/>
+            </function>
+            <value eval="{'noupdate': False}"/>
+        </function>
+
+        <record model="res.partner" id="base.partner_root">
+            <field name="is_admin">True</field>
+        </record>
+
+        <record model="res.partner" id="base.partner_admin">
+            <field name="is_admin">True</field>
+        </record>
+    </data>
+</odoo>
